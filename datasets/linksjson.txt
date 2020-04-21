@@ -1,0 +1,3 @@
+https://developer.riotgames.com/docs/lol?fbclid=IwAR3yzatdcAidJdqhoHB8lGsS7BALDf3y8LHrztHAB8C813TC3mFVDDfQ6OQ#data-dragon_champions
+
+http://ddragon.leagueoflegends.com/cdn/10.8.1/data/en_US/champion/Aatrox.json?fbclid=IwAR1vHwLAYo8_5UC9JpZAtO3OFXTgdWYAJNi4paU-z4oa8osN2_C9Bo56mGs
