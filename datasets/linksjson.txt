@@ -10,8 +10,8 @@ Estrutura:
 - cada champion tem umas tags, podem ter 1 ou 2 tags que identifica o tipo de combate de cada um. 
 - cada jogador controla um champion, os champions tem 4 abilidades + 1 abilidade passiva
 - cada champion tem tipo de ataque que são 4
-- cada champion tem 4 abilidades únicas + 2 especiais (hasSpecialAbility)
-- hasPassiveAbility/hasUltimateAbility/hasSummonerSpell que é a abilidade que escolhe no inciio
+- cada champion tem 4 abilidades únicas + 2 especiais (hasSummonerSpell)
+- hasSummonerSpell que é a abilidade que escolhe no inciio
 - cada champion tem um tipo de energia (resource)
 - vários types "essentials" "offensive" "defensive" -> cada champion pode comprar items no jogo e pode ter items recomendados
 - cada champion tem várias skins

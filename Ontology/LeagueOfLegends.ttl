@@ -48,10 +48,21 @@
 :hasItemType rdf:type owl:ObjectProperty .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasRunes
+:hasRunes rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isFromTree .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasTag
 :hasTag rdf:type owl:ObjectProperty ;
         rdfs:domain :Champion ;
         rdfs:range :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#isFromTree
+:isFromTree rdf:type owl:ObjectProperty ;
+            rdfs:domain :Rune ;
+            rdfs:range :RuneTree .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#itemCost
@@ -237,7 +248,15 @@
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RuneTree
-:RuneTree rdf:type owl:Class .
+:RuneTree rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:oneOf ( :Domination
+                                            :Inspiration
+                                            :Precision
+                                            :Resolve
+                                            :Sorcery
+                                          )
+                              ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerSpell
@@ -255,7 +274,8 @@
 #################################################################
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Aatrox
-:Aatrox rdf:type owl:NamedIndividual ;
+:Aatrox rdf:type owl:NamedIndividual ,
+                 :Champion ;
         :hasAbility :AatroxQ ;
         :hasInfo :AatroxInfo ;
         :hasTag :Fighter ,
@@ -321,6 +341,14 @@
                 :ItemTag .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CheapShot
+:CheapShot rdf:type owl:NamedIndividual ,
+                    :Rune ;
+           :isFromTree :Domination ;
+           :id 8126 ;
+           :name "Cheap Shot"^^xsd:string .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Clarity
 :Clarity rdf:type owl:NamedIndividual ,
                   :SummonerSpell .
@@ -361,9 +389,30 @@
                  :ItemTag .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#DarkHarvest
+:DarkHarvest rdf:type owl:NamedIndividual ,
+                      :Rune ;
+             :isFromTree :Domination ;
+             :id 8128 ;
+             :name "Dark Harvest"^^xsd:string .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Defense
 :Defense rdf:type owl:NamedIndividual ,
                   :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Domination
+:Domination rdf:type owl:NamedIndividual ,
+                     :RuneTree .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Eletrocute
+:Eletrocute rdf:type owl:NamedIndividual ,
+                     :Rune ;
+            :isFromTree :Domination ;
+            :id 8112 ;
+            :name "Eletrocute"^^xsd:string .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Energy
@@ -374,6 +423,14 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Exhaust
 :Exhaust rdf:type owl:NamedIndividual ,
                   :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#EyeballCollection
+:EyeballCollection rdf:type owl:NamedIndividual ,
+                            :Rune ;
+                   :isFromTree :Domination ;
+                   :id 8138 ;
+                   :name "Eyeball Collection"^^xsd:string .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ferocity
@@ -406,6 +463,14 @@
                 :SummonerSpell .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GhostPoro
+:GhostPoro rdf:type owl:NamedIndividual ,
+                    :Rune ;
+           :isFromTree :Domination ;
+           :id 8120 ;
+           :name "Ghost Poro"^^xsd:string .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GoldIncome
 :GoldIncome rdf:type owl:NamedIndividual ,
                      :ItemTag .
@@ -414,6 +479,14 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Grit
 :Grit rdf:type owl:NamedIndividual ,
                :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HailOfBlades
+:HailOfBlades rdf:type owl:NamedIndividual ,
+                       :Rune ;
+              :isFromTree :Domination ;
+              :id 9923 ;
+              :name "Hail Of Blades"^^xsd:string .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Heal
@@ -439,6 +512,19 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ignite
 :Ignite rdf:type owl:NamedIndividual ,
                  :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#IngeniousHunter
+:IngeniousHunter rdf:type owl:NamedIndividual ,
+                          :Rune ;
+                 :isFromTree :Domination ;
+                 :id 8134 ;
+                 :name "Ingenious Hunter"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Inspiration
+:Inspiration rdf:type owl:NamedIndividual ,
+                      :RuneTree .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Jungling
@@ -497,9 +583,43 @@
                              :ItemTag .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Precision
+:Precision rdf:type owl:NamedIndividual ,
+                    :RuneTree .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Predator
+:Predator rdf:type owl:NamedIndividual ,
+                   :Rune ;
+          :isFromTree :Domination ;
+          :id 8124 ;
+          :name "Predator"^^xsd:string .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Rage
 :Rage rdf:type owl:NamedIndividual ,
                :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RavenousHunter
+:RavenousHunter rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree :Domination ;
+                :id 8135 ;
+                :name "Ravenous Hunter"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RelentlessHunter
+:RelentlessHunter rdf:type owl:NamedIndividual ,
+                           :Rune ;
+                  :isFromTree :Domination ;
+                  :id 9105 ;
+                  :name "Relentless Hunter"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Resolve
+:Resolve rdf:type owl:NamedIndividual ,
+                  :RuneTree .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Shield
@@ -512,9 +632,22 @@
                 :SummonerSpell .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Sorcery
+:Sorcery rdf:type owl:NamedIndividual ,
+                  :RuneTree .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#StarterItems
 :StarterItems rdf:type owl:NamedIndividual ,
                        :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SuddenImpact
+:SuddenImpact rdf:type owl:NamedIndividual ,
+                       :Rune ;
+              :isFromTree :Domination ;
+              :id 8143 ;
+              :name "Sudden Impact"^^xsd:string .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Support
@@ -527,6 +660,14 @@
                :ChampionTag .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TasteOfBlood
+:TasteOfBlood rdf:type owl:NamedIndividual ,
+                       :Rune ;
+              :isFromTree :Domination ;
+              :id 8139 ;
+              :name "Taste Of Blood"^^xsd:string .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Teleport
 :Teleport rdf:type owl:NamedIndividual ,
                    :SummonerSpell .
@@ -535,6 +676,22 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Tools
 :Tools rdf:type owl:NamedIndividual ,
                 :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#UltimateHunter
+:UltimateHunter rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree :Domination ;
+                :id 8106 ;
+                :name "Ultimate Hunter"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ZombieWard
+:ZombieWard rdf:type owl:NamedIndividual ,
+                     :Rune ;
+            :isFromTree :Domination ;
+            :id 8136 ;
+            :name "Zombie Ward"^^xsd:string .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001
