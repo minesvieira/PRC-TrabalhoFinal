@@ -1,3 +1,20 @@
 https://developer.riotgames.com/docs/lol?fbclid=IwAR3yzatdcAidJdqhoHB8lGsS7BALDf3y8LHrztHAB8C813TC3mFVDDfQ6OQ#data-dragon_champions
 
 http://ddragon.leagueoflegends.com/cdn/10.8.1/data/en_US/champion/Aatrox.json?fbclid=IwAR1vHwLAYo8_5UC9JpZAtO3OFXTgdWYAJNi4paU-z4oa8osN2_C9Bo56mGs
+
+https://ddragon.leagueoflegends.com/cdn/10.8.1/data/en_US/runesReforged.json?fbclid=IwAR1s_1_maN926AkYl0s36dRwVebrIvyOuu7k8C9BwO0q0gdzcuMn22ynfrU
+
+Estrutura:
+
+- 148 personagens
+- cada champion tem umas tags, podem ter 1 ou 2 tags que identifica o tipo de combate de cada um. 
+- cada jogador controla um champion, os champions tem 4 abilidades + 1 abilidade passiva
+- cada champion tem tipo de ataque que são 4
+- cada champion tem 4 abilidades únicas + 2 especiais (hasSpecialAbility)
+- hasPassiveAbility/hasUltimateAbility/hasSummonerSpell que é a abilidade que escolhe no inciio
+- cada champion tem um tipo de energia (resource)
+- vários types "essentials" "offensive" "defensive" -> cada champion pode comprar items no jogo e pode ter items recomendados
+- cada champion tem várias skins
+- cada jogador define um conjunto de runes que se adaptem ao seu tipo de jogabilidade
+- há 2 tipos de items (componentes e itens inteiros) 
+- componentes são itens que podem tornar em outros itens e items inteiros são itens que não se transformam em mais items
