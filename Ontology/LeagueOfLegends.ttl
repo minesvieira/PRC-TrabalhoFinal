@@ -1,0 +1,632 @@
+@prefix : <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.tartesdajulia.com/ontologies/LeagueOfLegends> .
+
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#abilityFrom
+:abilityFrom rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasAbility .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#buildsFrom
+:buildsFrom rdf:type owl:ObjectProperty ;
+            owl:inverseOf :buildsInto .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#buildsInto
+:buildsInto rdf:type owl:ObjectProperty ;
+            rdfs:domain :Component ;
+            rdfs:range :FullItem .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasAbility
+:hasAbility rdf:type owl:ObjectProperty ;
+            rdfs:domain :Champion ;
+            rdfs:range :Ability .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasInfo
+:hasInfo rdf:type owl:ObjectProperty ;
+         rdfs:domain :Champion ;
+         rdfs:range :ChampionInfo .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemTag
+:hasItemTag rdf:type owl:ObjectProperty .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemType
+:hasItemType rdf:type owl:ObjectProperty .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasTag
+:hasTag rdf:type owl:ObjectProperty ;
+        rdfs:domain :Champion ;
+        rdfs:range :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#itemCost
+:itemCost rdf:type owl:ObjectProperty ;
+          rdfs:domain :Item .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#restoresResource
+:restoresResource rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Ability ;
+                  rdfs:range :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#usesResource
+:usesResource rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Ability
+                                          :Champion
+                                        )
+                          ] ;
+              rdfs:range :Resource .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#attack
+:attack rdf:type owl:DatatypeProperty ;
+        rdfs:domain :ChampionInfo .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#blurb
+:blurb rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Champion .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#defense
+:defense rdf:type owl:DatatypeProperty ;
+         rdfs:domain :ChampionInfo .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#description
+:description rdf:type owl:DatatypeProperty .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#difficulty
+:difficulty rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ChampionInfo .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#id
+:id rdf:type owl:DatatypeProperty .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#key
+:key rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Champion .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#magic
+:magic rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ChampionInfo .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#name
+:name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Champion .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ability
+:Ability rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Champion
+:Champion rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ChampionInfo
+:ChampionInfo rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ChampionTag
+:ChampionTag rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :Assassin
+                                               :Fighter
+                                               :Mage
+                                               :Marksman
+                                               :Support
+                                               :Tank
+                                             )
+                                 ] .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Component
+:Component rdf:type owl:Class ;
+           rdfs:subClassOf :Item .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FullItem
+:FullItem rdf:type owl:Class ;
+          rdfs:subClassOf :Item .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Item
+:Item rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ItemTag
+:ItemTag rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:oneOf ( :AbilityPower
+                                           :Armor
+                                           :AttackSpeed
+                                           :Boots
+                                           :Consumable
+                                           :CooldownReduction
+                                           :CriticalStrike
+                                           :Damage
+                                           :GoldIncome
+                                           :Health
+                                           :HealthRegen
+                                           :Jungling
+                                           :Laning
+                                           :LifeSteal
+                                           :Mana
+                                           :ManaRegen
+                                           :OtherMovementItems
+                                           <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Vision&Trinkets>
+                                         )
+                             ] .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ItemType
+:ItemType rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:oneOf ( :Attack
+                                            :Defense
+                                            :Magic
+                                            :Movement
+                                            :StarterItems
+                                            :Tools
+                                          )
+                              ] .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Passive
+:Passive rdf:type owl:Class ;
+         rdfs:subClassOf :Ability .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Resource
+:Resource rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:oneOf ( :Blood_Well
+                                            :Courage
+                                            :Crimson_Rush
+                                            :Energy
+                                            :Ferocity
+                                            :Flow
+                                            :Fury
+                                            :Grit
+                                            :Heat
+                                            :Mana
+                                            :None
+                                            :Rage
+                                            :Shield
+                                          )
+                              ] .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Rune
+:Rune rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RuneTree
+:RuneTree rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerSpell
+:SummonerSpell rdf:type owl:Class ;
+               rdfs:subClassOf :Ability .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ultimate
+:Ultimate rdf:type owl:Class ;
+          rdfs:subClassOf :Ability .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Aatrox
+:Aatrox rdf:type owl:NamedIndividual ;
+        :hasAbility :AatroxQ ;
+        :hasInfo :AatroxInfo ;
+        :hasTag :Fighter ,
+                :Tank ;
+        :blurb "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find..."^^xsd:string ;
+        :key "266"^^xsd:positiveInteger ;
+        :name "Aatrox"^^xsd:string ;
+        :title "the Darkin Blade"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxInfo
+:AatroxInfo rdf:type owl:NamedIndividual ;
+            :attack "8"^^xsd:positiveInteger ;
+            :defense "4"^^xsd:positiveInteger ;
+            :difficulty "4"^^xsd:positiveInteger ;
+            :magic "3"^^xsd:positiveInteger .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxQ
+:AatroxQ rdf:type owl:NamedIndividual ,
+                  :Ability ;
+         :description "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect."^^xsd:string ;
+         :name "The Darkin Blade"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AbilityPower
+:AbilityPower rdf:type owl:NamedIndividual ,
+                       :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Armor
+:Armor rdf:type owl:NamedIndividual ,
+                :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Assassin
+:Assassin rdf:type owl:NamedIndividual ,
+                   :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Attack
+:Attack rdf:type owl:NamedIndividual ,
+                 :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AttackSpeed
+:AttackSpeed rdf:type owl:NamedIndividual ,
+                      :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Barrier
+:Barrier rdf:type owl:NamedIndividual ,
+                  :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Blood_Well
+:Blood_Well rdf:type owl:NamedIndividual ,
+                     :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Boots
+:Boots rdf:type owl:NamedIndividual ,
+                :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Clarity
+:Clarity rdf:type owl:NamedIndividual ,
+                  :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Cleanse
+:Cleanse rdf:type owl:NamedIndividual ,
+                  :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Consumable
+:Consumable rdf:type owl:NamedIndividual ,
+                     :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CooldownReduction
+:CooldownReduction rdf:type owl:NamedIndividual ,
+                            :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Courage
+:Courage rdf:type owl:NamedIndividual ,
+                  :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Crimson_Rush
+:Crimson_Rush rdf:type owl:NamedIndividual ,
+                       :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CriticalStrike
+:CriticalStrike rdf:type owl:NamedIndividual ,
+                         :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Damage
+:Damage rdf:type owl:NamedIndividual ,
+                 :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Defense
+:Defense rdf:type owl:NamedIndividual ,
+                  :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Energy
+:Energy rdf:type owl:NamedIndividual ,
+                 :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Exhaust
+:Exhaust rdf:type owl:NamedIndividual ,
+                  :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ferocity
+:Ferocity rdf:type owl:NamedIndividual ,
+                   :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Fighter
+:Fighter rdf:type owl:NamedIndividual ,
+                  :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Flash
+:Flash rdf:type owl:NamedIndividual ,
+                :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Flow
+:Flow rdf:type owl:NamedIndividual ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Fury
+:Fury rdf:type owl:NamedIndividual ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ghost
+:Ghost rdf:type owl:NamedIndividual ,
+                :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GoldIncome
+:GoldIncome rdf:type owl:NamedIndividual ,
+                     :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Grit
+:Grit rdf:type owl:NamedIndividual ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Heal
+:Heal rdf:type owl:NamedIndividual ,
+               :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Health
+:Health rdf:type owl:NamedIndividual ,
+                 :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HealthRegen
+:HealthRegen rdf:type owl:NamedIndividual ,
+                      :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Heat
+:Heat rdf:type owl:NamedIndividual ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ignite
+:Ignite rdf:type owl:NamedIndividual ,
+                 :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Jungling
+:Jungling rdf:type owl:NamedIndividual ,
+                   :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Laning
+:Laning rdf:type owl:NamedIndividual ,
+                 :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LifeSteal
+:LifeSteal rdf:type owl:NamedIndividual ,
+                    :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Mage
+:Mage rdf:type owl:NamedIndividual ,
+               :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Magic
+:Magic rdf:type owl:NamedIndividual ,
+                :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Mana
+:Mana rdf:type owl:NamedIndividual ,
+               :ItemTag ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ManaRegen
+:ManaRegen rdf:type owl:NamedIndividual ,
+                    :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Marksman
+:Marksman rdf:type owl:NamedIndividual ,
+                   :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Movement
+:Movement rdf:type owl:NamedIndividual ,
+                   :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#None
+:None rdf:type owl:NamedIndividual ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#OtherMovementItems
+:OtherMovementItems rdf:type owl:NamedIndividual ,
+                             :ItemTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Rage
+:Rage rdf:type owl:NamedIndividual ,
+               :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Shield
+:Shield rdf:type owl:NamedIndividual ,
+                 :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Smite
+:Smite rdf:type owl:NamedIndividual ,
+                :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#StarterItems
+:StarterItems rdf:type owl:NamedIndividual ,
+                       :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Support
+:Support rdf:type owl:NamedIndividual ,
+                  :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Tank
+:Tank rdf:type owl:NamedIndividual ,
+               :ChampionTag .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Teleport
+:Teleport rdf:type owl:NamedIndividual ,
+                   :SummonerSpell .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Tools
+:Tools rdf:type owl:NamedIndividual ,
+                :ItemType .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> rdf:type owl:NamedIndividual ,
+                                                                        :Component ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +25 Movement Speed"^^xsd:string ;
+                                                               :id 1001 ;
+                                                               :name "Boots Of Speed"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3006
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3006> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats> +35% Attack Speed</stats><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed"^^xsd:string ;
+                                                               :id 3006 ;
+                                                               :name "Berserker's Greaves"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3009
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3009> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +60 Movement Speed<br><unique>UNIQUE Passive - Slow Resist:</unique> Movement slowing effects are reduced by 25%."^^xsd:string ;
+                                                               :id 3009 ;
+                                                               :name "Boots of Swiftness"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3020
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3020> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats>+18 <a href='FlatMagicPen'>Magic Penetration</a></stats><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed"^^xsd:string ;
+                                                               :id 3020 ;
+                                                               :name "Sorcerer's Shoes"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3047
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3047> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats>+20 Armor</stats><br><br><unique>UNIQUE Passive:</unique> Blocks 12% of the damage from basic attacks.<br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed"^^xsd:string ;
+                                                               :id 3047 ;
+                                                               :name "Ninja Tabi"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3111
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3111> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats>+25 Magic Resist</stats><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed<br><unique>UNIQUE Passive - Tenacity:</unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 30%."^^xsd:string ;
+                                                               :id 3111 ;
+                                                               :name "Mercury's Treads"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3117
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3117> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +25 Movement Speed. Increases to +115 Movement Speed when out of combat for 5 seconds."^^xsd:string ;
+                                                               :id 3117 ;
+                                                               :name "Boots of Mobility"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3158
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3158> rdf:type owl:NamedIndividual ,
+                                                                        :FullItem ;
+                                                               :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemTag :Boots ;
+                                                               :hasItemType :Movement ;
+                                                               :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><unique>UNIQUE Passive:</unique> +10% Cooldown Reduction<br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed<br><unique>UNIQUE Passive:</unique> Reduces Summoner Spell cooldowns by 10%<br><br><br><rules><font color='#FDD017'>''This item is dedicated in honor of Ionia's victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.''</font></rules>"^^xsd:string ;
+                                                               :id 3158 ;
+                                                               :name "Ionian Boots of Lucidity"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Vision&Trinkets
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Vision&Trinkets> rdf:type owl:NamedIndividual ,
+                                                                                   :ItemTag .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
