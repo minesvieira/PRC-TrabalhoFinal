@@ -52,6 +52,12 @@
          rdfs:range :ChampionInfo .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItem
+:hasItem rdf:type owl:ObjectProperty ;
+         rdfs:domain :Recomended ;
+         rdfs:range :Item .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemEffect
 :hasItemEffect rdf:type owl:ObjectProperty ;
                rdfs:domain :Item ;
@@ -174,6 +180,11 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#blurb
 :blurb rdf:type owl:DatatypeProperty ;
        rdfs:domain :Champion .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#champion
+:champion rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Recomended .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#chromas
@@ -317,6 +328,11 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#maxrank
 :maxrank rdf:type owl:DatatypeProperty .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#mode
+:mode rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Recomended .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#movespeed
@@ -519,6 +535,10 @@
          rdfs:subClassOf :Ability .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Recomended
+:Recomended rdf:type owl:Class .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Resource
 :Resource rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Class ;
@@ -587,6 +607,15 @@
         :name "Aatrox"^^xsd:string ;
         :partype "Blood Well" ;
         :title "the Darkin Blade"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxARAM
+:AatroxARAM rdf:type owl:NamedIndividual ,
+                     :Recomended ;
+            :hasItem <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+            :champion "Aatrox" ;
+            :mode "ARAM" ;
+            :title "AatroxARAM" .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxImage
