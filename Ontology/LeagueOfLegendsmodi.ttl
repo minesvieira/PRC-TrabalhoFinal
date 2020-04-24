@@ -411,7 +411,11 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#title
 :title rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Champion .
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( :Champion
+                                   :Recomended
+                                 )
+                   ] .
 
 
 #################################################################
