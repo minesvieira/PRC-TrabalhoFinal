@@ -22,6 +22,6 @@ Estrutura:
 DÚVIDAS:
 -recommended
 - nos items (item effect, item stats)
-- falta o summoner
+- falta o summoner (arrays)
 
 

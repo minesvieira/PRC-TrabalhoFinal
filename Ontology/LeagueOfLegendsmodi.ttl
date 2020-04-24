@@ -186,9 +186,17 @@
           rdfs:domain :Ability .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#cooldownBurn
+:cooldownBurn rdf:type owl:DatatypeProperty .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#cost
 :cost rdf:type owl:DatatypeProperty ;
       rdfs:domain :Ability .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#costBurn
+:costBurn rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#crit
@@ -288,6 +296,10 @@
        rdfs:domain :ChampionInfo .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#maxrank
+:maxrank rdf:type owl:DatatypeProperty .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#movespeed
 :movespeed rdf:type owl:DatatypeProperty ;
            rdfs:domain :ChampionStats .
@@ -348,6 +360,10 @@
 :sprite rdf:type owl:DatatypeProperty ;
         rdfs:domain :AbilityImage ,
                     :ChampionImage .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#summonerLevel
+:summonerLevel rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#title
@@ -629,7 +645,17 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Barrier
 :Barrier rdf:type owl:NamedIndividual ,
-                  :SummonerSpell .
+                  :SummonerSpell ;
+         :cooldown "[180]" ;
+         :cooldownBurn 180 ;
+         :cost "[0]" ;
+         :costBurn 0 ;
+         :description "Shields your champion from 115-455 damage (depending on champion level) for 2 seconds.\",\"tooltip\":\"Temporarily shields {{ f1 }} damage from your champion for 2 seconds." ;
+         :id "SummonerBarrier" ;
+         :key 21 ;
+         :maxrank 1 ;
+         :name "Barrier" ;
+         :summonerLevel 4 .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Blood_Well
