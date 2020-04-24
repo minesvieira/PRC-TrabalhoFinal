@@ -19,6 +19,5 @@ Estrutura:
 - há 2 tipos de items (componentes e itens inteiros) 
 - componentes são itens que podem tornar em outros itens e items inteiros são itens que não se transformam em mais items
 
-- falta o summoner (arrays)
 
 
