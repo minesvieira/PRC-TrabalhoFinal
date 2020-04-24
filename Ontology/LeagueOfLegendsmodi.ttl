@@ -509,7 +509,8 @@
                                             :Rage
                                             :Shield
                                           )
-                              ] .
+                              ] ;
+          rdfs:subClassOf :RuneTree .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Rune
@@ -546,7 +547,9 @@
 :Aatrox rdf:type owl:NamedIndividual ,
                  :Champion ;
         :hasAbility :AatroxQ ;
+        :hasChampionImage :AatroxImage ;
         :hasInfo :AatroxInfo ;
+        :hasStat :AatroxStats ;
         :hasTag :Fighter ,
                 :Tank ;
         :allytips "Use Umbral Dash while casting The Darkin Blade to increase your chances of hitting the enemy, Crowd Control abilities like Infernal Chains or your allies' immobilizing effects will help you set up The Darkin Blade, Cast World Ender when you are sure you can force a fight." ;
@@ -646,6 +649,7 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Barrier
 :Barrier rdf:type owl:NamedIndividual ,
                   :SummonerSpell ;
+         :hasAbilityImage :BarrierImage ;
          :cooldown "[180]" ;
          :cooldownBurn 180 ;
          :cost "[0]" ;
@@ -656,6 +660,11 @@
          :maxrank 1 ;
          :name "Barrier" ;
          :summonerLevel 4 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#BarrierImage
+:BarrierImage rdf:type owl:NamedIndividual ,
+                       :AbilityImage .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Blood_Well
@@ -1038,6 +1047,7 @@
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3006> rdf:type owl:NamedIndividual ,
                                                                         :FullItem ;
                                                                :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1001> ;
+                                                               :hasItemImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3006Image> ;
                                                                :hasItemTag :Boots ;
                                                                :hasItemType :Movement ;
                                                                :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats> +35% Attack Speed</stats><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed"^^xsd:string ;
