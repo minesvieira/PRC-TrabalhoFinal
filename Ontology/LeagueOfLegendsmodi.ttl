@@ -637,6 +637,7 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxQ
 :AatroxQ rdf:type owl:NamedIndividual ,
                   :Ability ;
+         :hasAbilityImage :AatroxQImage ;
          :cooldown "14, 12, 10, 8, 6" ;
          :cost "0, 0, 0, 0, 0" ;
          :description "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect."^^xsd:string ;
