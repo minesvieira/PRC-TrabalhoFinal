@@ -52,6 +52,24 @@
          rdfs:range :ChampionInfo .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemEffect
+:hasItemEffect rdf:type owl:ObjectProperty ;
+               rdfs:domain :Item ;
+               rdfs:range :ItemEffect .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemImage
+:hasItemImage rdf:type owl:ObjectProperty ;
+              rdfs:domain :Item ;
+              rdfs:range :ItemImage .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemStats
+:hasItemStats rdf:type owl:ObjectProperty ;
+              rdfs:domain :Item ;
+              rdfs:range :ItemStats .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasItemTag
 :hasItemTag rdf:type owl:ObjectProperty .
 
@@ -235,6 +253,11 @@
                  rdfs:domain :ChampionStats .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#icon
+:icon rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Rune .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#id
 :id rdf:type owl:DatatypeProperty ;
     rdfs:domain :Ability .
@@ -248,6 +271,11 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#key
 :key rdf:type owl:DatatypeProperty ;
      rdfs:domain :Champion .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#longDesc
+:longDesc rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Rune .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#lore
@@ -299,6 +327,11 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#partype
 :partype rdf:type owl:DatatypeProperty ;
          rdfs:domain :Champion .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#shortDesc
+:shortDesc rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Rune .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#spellblock
@@ -385,6 +418,19 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Item
 :Item rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ItemEffect
+:ItemEffect rdf:type owl:Class .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ItemImage
+:ItemImage rdf:type owl:Class ;
+           rdfs:subClassOf :Image .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ItemStats
+:ItemStats rdf:type owl:Class .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ItemTag
@@ -666,8 +712,11 @@
 :Eletrocute rdf:type owl:NamedIndividual ,
                      :Rune ;
             :isFromTree :Domination ;
+            :icon "perk-images/Styles/Domination/Electrocute/Electrocute.png" ;
             :id 8112 ;
-            :name "Eletrocute"^^xsd:string .
+            :longDesc "Hitting a champion with 3 <b>separate</b> attacks or abilities within 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Damage: 30 - 180 (+0.4 bonus AD, +0.25 AP) damage.<br><br>Cooldown: 25 - 20s<br><br><hr><i>'We called them the Thunderlords, for to speak of their lightning" ;
+            :name "Eletrocute"^^xsd:string ;
+            :shortDesc "Hitting a champion with 3 <b>separate</b> attacks or abilities in 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword>." .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Energy
@@ -968,6 +1017,14 @@
                                                                :description "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats> +35% Attack Speed</stats><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed"^^xsd:string ;
                                                                :id 3006 ;
                                                                :name "Berserker's Greaves"^^xsd:string .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3006Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3006Image> rdf:type owl:NamedIndividual ,
+                                                                             :ItemImage ;
+                                                                    :full "3006.png" ;
+                                                                    :group "item" ;
+                                                                    :sprite "item0.png" .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3009
