@@ -216,7 +216,11 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#description
 :description rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Ability .
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Ability
+                                         :Item
+                                       )
+                         ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#difficulty
@@ -231,14 +235,20 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#full
 :full rdf:type owl:DatatypeProperty ;
-      rdfs:domain :AbilityImage ,
-                  :ChampionImage .
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :AbilityImage
+                                  :ChampionImage
+                                )
+                  ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#group
 :group rdf:type owl:DatatypeProperty ;
-       rdfs:domain :AbilityImage ,
-                   :ChampionImage .
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( :AbilityImage
+                                   :ChampionImage
+                                 )
+                   ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hp
@@ -268,7 +278,12 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#id
 :id rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Ability .
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf ( :Ability
+                                :Champion
+                                :Item
+                              )
+                ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#id_skin
@@ -278,7 +293,11 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#key
 :key rdf:type owl:DatatypeProperty ;
-     rdfs:domain :Champion .
+     rdfs:domain [ rdf:type owl:Class ;
+                   owl:unionOf ( :Ability
+                                 :Champion
+                               )
+                 ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#longDesc
@@ -327,8 +346,13 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Ability ,
-                  :ChampionSkins .
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Ability
+                                  :Champion
+                                  :ChampionSkins
+                                  :Item
+                                )
+                  ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#num
@@ -358,8 +382,11 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#sprite
 :sprite rdf:type owl:DatatypeProperty ;
-        rdfs:domain :AbilityImage ,
-                    :ChampionImage .
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :AbilityImage
+                                    :ChampionImage
+                                  )
+                    ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#summonerLevel
