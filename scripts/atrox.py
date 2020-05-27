@@ -6,7 +6,7 @@ import requests
 champions = []
 
 def readFile():
-    with open('../datasets/champion.json', encoding='utf-8') as f:
+    with open('../datasets/champions/Aatrox.json', encoding='utf-8') as f:
         data = json.loads(f.read())
     champion = ""
     nome = ""
@@ -36,6 +36,22 @@ def readFile():
                         if str(var1) == 'key':
                             key = str(lista[valores][valor][var1])
                             print(key)
+                        if str(var1) == 'allytips':
+                            allytips = str(lista[valores][valor][var1])
+                            print(allytips)
+                        if str(var1) == 'enemytips':
+                            enemytips = str(lista[valores][valor][var1])
+                            print(enemytips)
+                        if str(var1) == 'lore':
+                            lore = str(lista[valores][valor][var1])
+                            print(lore)
+                        if str(var1) == 'partype':
+                            partype = str(lista[valores][valor][var1])
+                            print(partype)
+                        if str(var1) == 'title':
+                            title = str(lista[valores][valor][var1])
+                            print(title)
+                        #champion = str(lista[valores][valor][var1])
                         
                 nome = re.sub(r'[ \'.()–’]', '_', str(nome))
                 if(not(champions.__contains__(nome))):
@@ -46,11 +62,16 @@ def readFile():
                         print("                :hasChampionImage :AatroxImage ;")
                         print("                :hasInfo :AatroxInfo ;")
                         print("                :hasStat :AatroxStats ;")
-                        print("                :hasTag :" + tag)
-                        print("                :allytips ""Use Umbral Dash while casting The Darkin Blade to increase your chances of hitting the enemy, Crowd Control abilities like Infernal Chains or your allies immobilizing effects will help you set up The Darkin Blade, Cast World Ender when you are sure you can force a fight. ;")
+                        print("                :hasTag : " + tag)
+                        print("                :allytips" +  allytips)
                         print("                :blurb " + blurb + "^^xsd:string ;")
-                        print("                :enemytips ""Aatrox's attacks are very telegraphed, so use the time to dodge the hit zones, \"Aatrox's Infernal Chains are easier to exit when running towards the sides or at Aatrox, Keep your distance when Aatrox uses his Ultimate to prevent him from reviving. ;")
+                        print("                :enemytips" + enemytips)
                         print("                :key " + key + " ^^xsd:positiveInteger ;")
+                        print("                :lore " + lore)
+                        print("                :name "+ nome + " ^^xsd:string ;")
+                        print("                 :partype " +  partype)
+                        print("                :title " + title + "^^xsd:string .")
+
                         champions.append(nome)
                 i = i + 1
         
