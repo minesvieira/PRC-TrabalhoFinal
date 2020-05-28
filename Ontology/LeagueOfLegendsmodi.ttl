@@ -631,7 +631,8 @@
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxInfo
-:AatroxInfo rdf:type owl:NamedIndividual ;
+:AatroxInfo rdf:type owl:NamedIndividual ,
+                     :ChampionInfo ;
             :attack "8"^^xsd:positiveInteger ;
             :defense "4"^^xsd:positiveInteger ;
             :difficulty "4"^^xsd:positiveInteger ;
