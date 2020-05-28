@@ -51,8 +51,15 @@ def readFile():
                         if str(var1) == 'title':
                             title = str(lista[valores][valor][var1])
                             print(title)
-                        #champion = str(lista[valores][valor][var1])
-                        
+                        if str(var1) == 'spells':
+                            #print (eval(str(lista[valores][valor][var1])).__len__())
+                            for var2 in eval(str(lista[valores][valor][var1])):
+                                print(eval(str(var2))['id'])
+
+                        #for var2 in lista[valores][valor][var1]:
+                            #if str(var2) == 'id':
+                                #id = str(lista[valores][valor][var1][var2])
+                                #print(str(lista[valores][valor][var1][var2])
                 nome = re.sub(r'[ \'.()–’]', '_', str(nome))
                 if(not(champions.__contains__(nome))):
                         print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + nome)
@@ -68,7 +75,7 @@ def readFile():
                         print("                :enemytips" + enemytips)
                         print("                :key " + key + " ^^xsd:positiveInteger ;")
                         print("                :lore " + lore)
-                        print("                :name "+ nome + " ^^xsd:string ;")
+                        print('            :name ' + '"' + nome + '" ^^xsd:string ;')
                         print("                 :partype " +  partype)
                         print("                :title " + title + "^^xsd:string .")
 
