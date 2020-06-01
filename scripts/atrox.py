@@ -66,7 +66,7 @@ def readFile():
                         print(":" + nome, "rdf:type owl:NamedIndividual ,")
                         print("                         :Champion ;")
                         print("                :hasAbility :" )
-                        print("                :hasChampionImage :AatroxImage ;")
+                        print("                :hasChampionImage :" + nome + "Image ;")
                         print("                :hasInfo :AatroxInfo ;")
                         print("                :hasStat :AatroxStats ;")
                         print("                :hasTag : " + tag + ";")
