@@ -26,16 +26,16 @@ def readFile():
                             sprite = str(lista[valores][valor][var1]['sprite'])
                         if str(var1) == 'name':
                             nome = str(lista[valores][valor][var1])
-                nome = re.sub(r'[ \'.()–’]', '_', str(nome))
-                if(not(champions.__contains__(nome))):
-                        print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + nome + "Image")
-                        print(":" + nome + "Image", "rdf:type owl:NamedIndividual ,")
-                        print("                         :ChampionImage ;")
-                        print("                :full " +  '"' + full  + '" ;' )
-                        print("                :group " +  '"' + group + '" ;')
-                        print("                :sprite " +  '"' + sprite +  '" ;')
+                    nome = re.sub(r'[ \'.()–’]', '_', str(nome))
+                    if(not(champions.__contains__(nome))):
+                            print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + nome + "Image")
+                            print(":" + nome + "Image", "rdf:type owl:NamedIndividual ,")
+                            print("                         :ChampionImage ;")
+                            print("                :full " +  '"' + full  + '" ;' )
+                            print("                :group " +  '"' + group + '" ;')
+                            print("                :sprite " +  '"' + sprite +  '" ;')
 
-                        champions.append(nome)
+                            champions.append(nome)
                 i = i + 1
         
 readFile()
