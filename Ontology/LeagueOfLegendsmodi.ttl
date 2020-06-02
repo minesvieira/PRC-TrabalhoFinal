@@ -89,6 +89,13 @@
           owl:inverseOf :isFromTree .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasSkin
+:hasSkin rdf:type owl:ObjectProperty ;
+         owl:inverseOf :skinFrom ;
+         rdfs:domain :Champion ;
+         rdfs:range :ChampionSkins .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasStat
 :hasStat rdf:type owl:ObjectProperty ;
          rdfs:domain :Champion ;
@@ -116,6 +123,10 @@
 :restoresResource rdf:type owl:ObjectProperty ;
                   rdfs:domain :Ability ;
                   rdfs:range :Resource .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#skinFrom
+:skinFrom rdf:type owl:ObjectProperty .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#usesResource
@@ -600,6 +611,7 @@
         :hasAbility :AatroxQ ;
         :hasChampionImage :AatroxImage ;
         :hasInfo :AatroxInfo ;
+        :hasSkin :AatroxSkins ;
         :hasStat :AatroxStats ;
         :hasTag :Fighter ,
                 :Tank ;
@@ -656,6 +668,15 @@
               :full "AatroxQ.png" ;
               :group "spell" ;
               :sprite "spell0.png" .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxSkins
+:AatroxSkins rdf:type owl:NamedIndividual ,
+                      :ChampionSkins ;
+             :chromas "false"^^xsd:boolean ;
+             :id 266000 ;
+             :name "default" ;
+             :num 0 .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxStats

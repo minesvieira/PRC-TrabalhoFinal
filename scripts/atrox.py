@@ -58,6 +58,7 @@ def readFile():
                                         print("                :hasAbility :" +  abi + ";")
                                         print("                :hasChampionImage :" + nome + "Image ;")
                                         print("                :hasInfo :" + nome + "Info ;")
+                                        print("                :hasSkin :" + nome + "Skins ;")
                                         print("                :hasStat :" + nome + "Stats ;")
                                         print("                :hasTag : " + tag + ";")
                                         print("                :allytips " +  '"' + allytips  + '" ;' )

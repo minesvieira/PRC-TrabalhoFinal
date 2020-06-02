@@ -28,8 +28,10 @@ def readFile():
                                     full = str(lista[valores][valor][var1][var2])
                                 if str(var2) == 'sprite':
                                     sprite = str(lista[valores][valor][var1][var2])
+                                    print(sprite)
                                 if str(var2) == 'group':
                                     group = str(lista[valores][valor][var1][var2])
+                                    print(group)
                                     #abi = eval(str(var2))['full']
                                 nome = re.sub(r'[ \'.()–’]', '_', str(nome))
                                 if(not(champions.__contains__(name))):
