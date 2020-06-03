@@ -1,3 +1,3 @@
-#Things to do
+# Things to do
 
--Make sure itemTags are constrained in the specific itemType.
+- Make sure itemTags are constrained in the specific itemType.
