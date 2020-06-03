@@ -28,11 +28,13 @@ def readFile():
                                 print(abi)
                                 num = eval(str(var2))['num']
                                 name = eval(str(var2))['name']
+                                print(name)
                                 chromas = eval(str(var2))['chromas']
-                                nome = re.sub(r'[ \'.()–’]', '_', str(nome))
+                                #n = re.sub(r"[^\w\s]", '', name)
+                                sentence = re.sub(r"\s+", "", name, flags=re.UNICODE)
                                 if(not(champions.__contains__(abi))):
-                                        print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + nome + "Skins")
-                                        print(":" + nome + "Skins", "rdf:type owl:NamedIndividual ,")
+                                        print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + abi)
+                                        print(":" + abi, "rdf:type owl:NamedIndividual ,")
                                         print("                         :ChampionSkins ;")
                                         print('                :chromas "' + str(chromas) + '"^^xsd:boolean ; ')
                                         print('                :id ' + abi + ' ; ')

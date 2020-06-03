@@ -41,11 +41,15 @@ def readFile():
                             partype = str(lista[valores][valor][var1])
                         if str(var1) == 'title':
                             title = str(lista[valores][valor][var1])
+                        if str(var1) == 'skins':
+                            #print (eval(str(lista[valores][valor][var1])).__len__())
+                            for var2 in eval(str(lista[valores][valor][var1])):
+                                skin = eval(str(var2))['id']
+                                print(skin)
                         if str(var1) == 'spells':
                             #print (eval(str(lista[valores][valor][var1])).__len__())
                             for var2 in eval(str(lista[valores][valor][var1])):
                                 abi = eval(str(var2))['id']
-
                         #for var2 in lista[valores][valor][var1]:
                             #if str(var2) == 'id':
                                 #id = str(lista[valores][valor][var1][var2])
@@ -58,7 +62,7 @@ def readFile():
                                         print("                :hasAbility :" +  abi + ";")
                                         print("                :hasChampionImage :" + nome + "Image ;")
                                         print("                :hasInfo :" + nome + "Info ;")
-                                        print("                :hasSkin :" + nome + "Skins ;")
+                                        print("                :hasSkin :" + skin + " ;")
                                         print("                :hasStat :" + nome + "Stats ;")
                                         print("                :hasTag : " + tag + ";")
                                         print("                :allytips " +  '"' + allytips  + '" ;' )

@@ -34,7 +34,7 @@ def readFile():
                                     group = str(lista[valores][valor][var1][var2])
                                     print(group)
                                     #abi = eval(str(var2))['full']
-                                    nome = re.sub(r'[ \'.()–’]', '_', str(nome))
+                                    name = re.sub(r'[ \'.()–’]', '_', str(name))
                                     if(not(champions.__contains__(name))):
                                             print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name + "Image")
                                             print(":" + name + "Image", "rdf:type owl:NamedIndividual ,")
