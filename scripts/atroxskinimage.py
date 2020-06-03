@@ -25,10 +25,8 @@ def readFile():
                             #print (eval(str(lista[valores][valor][var1])).__len__())
                             for var2 in eval(str(lista[valores][valor][var1])):
                                 abi = eval(str(var2))['id']
-                                print(abi)
                                 num = eval(str(var2))['num']
                                 name = eval(str(var2))['name']
-                                print(name)
                                 chromas = eval(str(var2))['chromas']
                                 #n = re.sub(r"[^\w\s]", '', name)
                                 sentence = re.sub(r"\s+", "", name, flags=re.UNICODE)
