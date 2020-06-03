@@ -41,7 +41,7 @@ def readFile():
                                     for itemi in items:
                                         for iteu in itemi:
                                             var = iteu['id']
-                                            print('                :hasItem <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#>' + var + ';' )
+                                            print('                :hasItem <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + var + '> ;' )
                                     print('                :champion "' + champion + '" ;' )
                                     print('                :mode "' + mode + '" ;' )
                                     print('                :title "' + title + '" .' )
