@@ -392,6 +392,11 @@
          rdfs:domain :Champion .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#path
+:path rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Image .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#shortDesc
 :shortDesc rdf:type owl:DatatypeProperty ;
            rdfs:domain :Rune .
@@ -545,6 +550,11 @@
                               ] .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LoadingImage
+:LoadingImage rdf:type owl:Class ;
+              rdfs:subClassOf :ChampionImage .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Passive
 :Passive rdf:type owl:Class ;
          rdfs:subClassOf :Ability .
@@ -591,9 +601,19 @@
                               ] .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SplashImage
+:SplashImage rdf:type owl:Class ;
+             rdfs:subClassOf :ChampionImage .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerSpell
 :SummonerSpell rdf:type owl:Class ;
                rdfs:subClassOf :Ability .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TileImage
+:TileImage rdf:type owl:Class ;
+           rdfs:subClassOf :ChampionImage .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Ultimate
@@ -651,6 +671,12 @@
             :magic "3"^^xsd:positiveInteger .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxLoading0
+:AatroxLoading0 rdf:type owl:NamedIndividual ,
+                         :LoadingImage ;
+                :path "Aatrox_0.jpg" .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxQ
 :AatroxQ rdf:type owl:NamedIndividual ,
                   :Ability ;
@@ -679,6 +705,12 @@
              :num 0 .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxSplash0
+:AatroxSplash0 rdf:type owl:NamedIndividual ,
+                        :SplashImage ;
+               :path "Aatrox_0.jpg" .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxStats
 :AatroxStats rdf:type owl:NamedIndividual ,
                       :ChampionStats ;
@@ -702,6 +734,12 @@
              :mpregenperlevel 0 ;
              :spellblock 32.1 ;
              :spellblockperlevel 1.25 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxTile0
+:AatroxTile0 rdf:type owl:NamedIndividual ,
+                      :TileImage ;
+             :path "Aatrox_0.jpg" .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AbilityPower
