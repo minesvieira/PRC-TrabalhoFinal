@@ -40,12 +40,14 @@ def readFile():
                         if str(var1) == 'summonerLevel':
                             summonerLevel = str(lista[valores][valor][var1])
                             nome = re.sub(r'[ \'.()–’]', '_', str(nome))
+                            co = str(cooldown)[1:-1] 
+                            cost = str(cost)[1:-1] 
                             if(not(champions.__contains__(name))):
                                     print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name)
                                     print(":" + name, "rdf:type owl:NamedIndividual ,")
                                     print("                         :SummonerSpell ;")
                                     print("                         :hasAbilityImage :" + name + "Image ;")
-                                    print('                         :cooldown "' + cooldown + '" ;')
+                                    print('                         :cooldown "' + co + '" ;')
                                     print('                         :cooldownBurn ' + cooldownBurn + ' ;') 
                                     print('                         :cost "' + cost + '" ;')
                                     print('                         :costBurn ' + costBurn + ' ;') 

@@ -10,6 +10,16 @@ def readFile():
         data = json.loads(f.read())
     champion = ""
     nome = ""
+    abi = ""
+    skin = ""
+    tag = ""
+    allytips = ""
+    blurb = ""
+    enemytips = ""
+    key = ""
+    lore = ""
+    partype = ""
+    title = ""
     i = 0
     while i < len(data):
         lista = {}
@@ -50,11 +60,16 @@ def readFile():
                             #print (eval(str(lista[valores][valor][var1])).__len__())
                             for var2 in eval(str(lista[valores][valor][var1])):
                                 abi = eval(str(var2))['id']
+                                print(abi)
                         #for var2 in lista[valores][valor][var1]:
                             #if str(var2) == 'id':
                                 #id = str(lista[valores][valor][var1][var2])
                                 #print(str(lista[valores][valor][var1][var2])
                                 nome = re.sub(r'[ \'.()–’]', '_', str(nome))
+                                a = tag.replace("'", '')[1:-1]
+                                all = allytips.replace("'", '')[1:-1]
+                                enemy = enemytips.replace("'", '')[1:-1]
+                                print(a)
                                 if(not(champions.__contains__(abi))):
                                         print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + nome)
                                         print(":" + nome, "rdf:type owl:NamedIndividual ,")
@@ -64,10 +79,10 @@ def readFile():
                                         print("                :hasInfo :" + nome + "Info ;")
                                         print("                :hasSkin :" + skin + " ;")
                                         print("                :hasStat :" + nome + "Stats ;")
-                                        print("                :hasTag : " + tag + ";")
-                                        print("                :allytips " +  '"' + allytips  + '" ;' )
+                                        print("                :hasTag : " + a + ";")
+                                        print("                :allytips " +  '"' + all  + '" ;' )
                                         print("                :blurb " +  '"' + blurb + '" ^^xsd:string ;')
-                                        print("                :enemytips " +  '"' + enemytips +  '" ;')
+                                        print("                :enemytips " +  '' + enemy +  '" ;')
                                         print("                :key " +  '"' + key + '" ^^xsd:positiveInteger ;')
                                         print("                :lore " +  '"' + lore +  '" ;')
                                         print('                :name ' + '"' + nome + '" ^^xsd:string ;')

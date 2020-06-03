@@ -32,12 +32,14 @@ def readFile():
                                 ida = eval(str(var2))['id']
                                 name = eval(str(var2))['name']
                                 nome = re.sub(r'[ \'.()–’]', '_', str(nome))
+                                co = str(cool)[1:-1] 
+                                cost = str(cost)[1:-1] 
                                 if(not(champions.__contains__(abi))):
                                     print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + abi)
                                     print(":" + abi, "rdf:type owl:NamedIndividual ,")
                                     print("                         :Ability  ;")
                                     print('                :hasAbilityImage :' + abi + 'Image ;' )
-                                    print('                :cooldown "' + str(cool) + '" ;' )
+                                    print('                :cooldown "' + str(co) + '" ;' )
                                     print('                :cost "' + str(cost) + '" ;' )
                                     print('                :description "' + description + '" ;' )
                                     print('                :id "' + ida + '" ;' )
