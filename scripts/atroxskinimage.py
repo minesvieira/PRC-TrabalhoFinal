@@ -33,14 +33,12 @@ def readFile():
                                 #n = re.sub(r"[^\w\s]", '', name)
                                 sentence = re.sub(r"\s+", "", name, flags=re.UNICODE)
                                 if(not(champions.__contains__(abi))):
-                                        print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + abi)
-                                        print(":" + abi, "rdf:type owl:NamedIndividual ,")
-                                        print("                         :ChampionSkins ;")
-                                        print("                :hasSkinImage :" + abi + "Image ;")
-                                        print('                :chromas "' + str(chromas) + '"^^xsd:boolean ; ')
-                                        print('                :id ' + abi + ' ; ')
-                                        print('                :name "' + name + '" ;')
-                                        print('                :num ' + str(num) + ' . ')
+                                        print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + abi + "Image")
+                                        print(":" + abi + "Image", "rdf:type owl:NamedIndividual ,")
+                                        print("                         :SkinImage ;")
+                                        '''print('                :full "' + full + '" ;' )
+                                        print('                :sprite "' + sprite + '" ;' )
+                                        print('                :group "' + group + '" .' )'''
 
 
                                         champions.append(nome)
