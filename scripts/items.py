@@ -30,13 +30,17 @@ def readFile():
                             stats = str(lista[valores][valor][var1])
                             for var2 in lista[valores][valor][var1]:
                                 type = var2
+                        if str(var1) == 'from':
+                            buildFrom = str(lista[valores][valor][var1])
                             nome = re.sub(r'[ \'.()–’]', '_', str(nome))
                             if(not(champions.__contains__(v))):
                                     print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + v)
                                     print("<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#>" + v, "rdf:type owl:NamedIndividual ,")
                                     print("                                                                           :Component ;")
+                                    print("                                                                           :FullItem ;")
                                     print("                :hasItemTag :" + tags +";")
                                     print("                :hasItemType :" + type +";")
+                                    #print("                :buildsFrom <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + buildFrom + "> ;")
                                     print("                :hasItemImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + v + "Image> ;")
                                     print('                :description "' + description +'";')
                                     print('                :name "' + name +'";')
