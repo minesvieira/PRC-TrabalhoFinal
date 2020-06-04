@@ -581,8 +581,7 @@
                                             :Rage
                                             :Shield
                                           )
-                              ] ;
-          rdfs:subClassOf :RuneTree .
+                              ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Rune
