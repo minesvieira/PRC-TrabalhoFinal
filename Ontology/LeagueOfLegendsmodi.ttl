@@ -89,6 +89,12 @@
 :hasItemType rdf:type owl:ObjectProperty .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasRecommended
+:hasRecommended rdf:type owl:ObjectProperty ;
+                rdfs:domain :Champion ;
+                rdfs:range :Recomended .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasRunes
 :hasRunes rdf:type owl:ObjectProperty ;
           owl:inverseOf :isFromTree .
@@ -592,8 +598,7 @@
                                             :Rage
                                             :Shield
                                           )
-                              ] ;
-          rdfs:subClassOf :RuneTree .
+                              ] .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Rune
