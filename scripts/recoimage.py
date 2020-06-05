@@ -6,7 +6,7 @@ import requests
 champions = []
 
 def readFile():
-    with open('../datasets/champions/Amumu.json', encoding='utf-8') as f:
+    with open('../datasets/champions/Ahri.json', encoding='utf-8') as f:
         data = json.loads(f.read())
     champion = ""
     nome = ""
