@@ -1,3 +1,8 @@
 # Things to do
 
-- Make sure itemTags are constrained in the specific itemType.
+- [x] Extract champion info
+- [ ] Complete ontology
+- [ ] Make sure itemTags are constrained in the specific itemType.
+- [ ] Connect recommended item sets to the champion
+- [ ] Make API, controllers!
+- [ ] Make Interface
