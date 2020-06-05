@@ -46,7 +46,7 @@ def readFile():
                                     print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name)
                                     print(":" + name, "rdf:type owl:NamedIndividual ,")
                                     print("                         :SummonerSpell ;")
-                                    print("                         :hasAbilityImage :" + name + "Image ;")
+                                    print("                         :hasSummonerImage :" + name + "Image ;")
                                     print('                         :cooldown "' + co + '" ;')
                                     print('                         :cooldownBurn ' + cooldownBurn + ' ;') 
                                     print('                         :cost "' + cost + '" ;')
@@ -56,7 +56,7 @@ def readFile():
                                     print('                         :key ' + key + ' ;')
                                     print('                         :maxrank ' + maxrank + ' ;')
                                     print('                         :name "' + name + '" ;')
-                                    print('                         :summonerLevel ' + summonerLevel + ' ;')
+                                    print('                         :summonerLevel ' + summonerLevel + ' .')
                                     champions.append(nome)
 
                     i = i + 1

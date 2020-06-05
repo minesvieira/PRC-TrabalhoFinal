@@ -6,7 +6,7 @@ import requests
 champions = []
 
 def readFile():
-    with open('../datasets/champions/Aatrox.json', encoding='utf-8') as f:
+    with open('../datasets/champions/Amumu.json', encoding='utf-8') as f:
         data = json.loads(f.read())
     champion = ""
     nome = ""
@@ -67,7 +67,7 @@ def readFile():
                         print("                :mpregen " +  '"' + mpregen +  '" ;')
                         print("                :mpregenperlevel " +  '"' + mpregenperlevel  + '";' )
                         print("                :spellblock " +  '"' + spellblock + '" ;')
-                        print("                :spellblockperlevel " +  '"' + spellblockperlevel +  '" ;')
+                        print("                :spellblockperlevel " +  '"' + spellblockperlevel +  '" .')
                         
 
                         champions.append(nome)

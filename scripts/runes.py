@@ -19,7 +19,6 @@ def readFile():
         for valores in lista:
             if str(valores) == 'key':
                 keyA = str(lista[valores])
-                print(keyA)
             if str(valores) == 'slots':
                 for valor in lista[valores]:
                    # print(valor['runes'])

@@ -26,19 +26,16 @@ def readFile():
                             for var2 in eval(str(lista[valores][valor][var1])):
                                 if str(var2) == 'full':
                                     full = str(lista[valores][valor][var1][var2])
-                                    print(full)
                                 if str(var2) == 'sprite':
                                     sprite = str(lista[valores][valor][var1][var2])
-                                    print(sprite)
                                 if str(var2) == 'group':
                                     group = str(lista[valores][valor][var1][var2])
-                                    print(group)
                                     #abi = eval(str(var2))['full']
                                     name = re.sub(r'[ \'.()–’]', '_', str(name))
                                     if(not(champions.__contains__(name))):
                                             print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name + "Image")
                                             print(":" + name + "Image", "rdf:type owl:NamedIndividual ,")
-                                            print("                         :AbilityImage ;")
+                                            print("                         :SummonerImage ;")
                                             print('                :full "' + full + '" ;' )
                                             print('                :sprite "' + sprite + '" ;' )
                                             print('                :group "' + group + '" .' )

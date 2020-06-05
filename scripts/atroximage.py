@@ -6,7 +6,7 @@ import requests
 champions = []
 
 def readFile():
-    with open('../datasets/champions/Aatrox.json', encoding='utf-8') as f:
+    with open('../datasets/champions/Amumu.json', encoding='utf-8') as f:
         data = json.loads(f.read())
     champion = ""
     nome = ""
@@ -33,7 +33,7 @@ def readFile():
                             print("                         :ChampionImage ;")
                             print("                :full " +  '"' + full  + '" ;' )
                             print("                :group " +  '"' + group + '" ;')
-                            print("                :sprite " +  '"' + sprite +  '" ;')
+                            print("                :sprite " +  '"' + sprite +  '" .')
 
                             champions.append(nome)
                 i = i + 1

@@ -44,7 +44,7 @@ def readFile():
                         #if len(buildFrom) == 0:
                             #print('ESTOU AQUI')
                             print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + v)
-                            print("<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#>" + v, "rdf:type owl:NamedIndividual ,")
+                            print("<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + v + "> rdf:type owl:NamedIndividual ,")
                             if flag == 0:
                                 print("                                                                           :Component ;")
                             else:
