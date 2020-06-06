@@ -11,7 +11,7 @@ enem = []
 ta = []
 reco = []
 def readFile():
-    with open('../datasets/champions/DrMundo.json', encoding='utf-8') as f:
+    with open('../datasets/champions/Ezreal.json', encoding='utf-8') as f:
         data = json.loads(f.read())
     champion = ""
     nome = ""
