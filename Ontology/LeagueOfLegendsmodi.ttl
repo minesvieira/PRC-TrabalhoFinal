@@ -12,9 +12,6 @@
 #    Annotation properties
 #################################################################
 
-###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasSkinImage
-:hasSkinImage rdf:type owl:AnnotationProperty .
-
 
 #################################################################
 #    Object Properties
@@ -108,6 +105,11 @@
          owl:inverseOf :skinFrom ;
          rdfs:domain :Champion ;
          rdfs:range :ChampionSkins .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasSkinImage
+:hasSkinImage rdf:type owl:ObjectProperty ;
+              rdfs:domain :ChampionSkins .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasStat

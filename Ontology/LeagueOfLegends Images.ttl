@@ -10,11 +10,7 @@
 
 #################################################################
 #    Annotation properties
-#################################################################
-
-###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#hasSkinImage
-:hasSkinImage rdf:type owl:AnnotationProperty .
-
+################################################################
 
 #################################################################
 #    Object Properties

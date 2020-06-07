@@ -24,12 +24,20 @@ for value in dict:
         # Meaning for each champion, get the skins
         for item in championsInfo:
             # championsInfo[item] gets the data for a specific champion
-            print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + abi)
-            print(":" + abi, "rdf:type owl:NamedIndividual ,")
-            print("                         :ChampionSkins ;")
-            print("                :hasSkinImage :" + abi + "Image ;")
-            print('                :chromas "' +
-                  str(chromas) + '"^^xsd:boolean ; ')
-            print('                :id ' + abi + ' ; ')
-            print('                :name "' + name + '" ;')
-            print('                :num ' + str(num) + ' . ')
+            for skins in championsInfo[item]['skins']:
+                individual = item+'_'+str(skins['num'])
+                print(
+                    '###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + skins['id'])
+                print(':' + skins['id'], 'rdf:type owl:NamedIndividual ,')
+                print('                         :ChampionSkins ;')
+                print('                :hasSkinImage :' +
+                      individual + 'Splash ;')
+                print('                :hasSkinImage :' +
+                      individual + 'Loading ;')
+                print('                :hasSkinImage :' +
+                      individual + 'Tile ;')
+                print('                :chromas "' +
+                      str(skins['chromas']) + '"^^xsd:boolean ; ')
+                print('                :id ' + skins['id'] + ' ; ')
+                print('                :name "' + skins['name'] + '" ;')
+                print('                :num ' + str(skins['num']) + ' .\n')

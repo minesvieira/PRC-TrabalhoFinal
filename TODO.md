@@ -3,12 +3,20 @@
 - [x] Extract champion info
 
 - [ ] Complete ontology
-    - [ ] Create All Champions
-    - [ ] Create All Skins
+    - [x] Create All Champions
+    - [x] Create All Skins
     - [x] Create individuals for all ChampionImages
-        - [ ] Connect skin individuals to its image individual
+        - [x] Connect skin individuals to its image individual
+    - [ ] Create all abilities
+        - [ ] Create all abilities images
+    - [ ] Create all items
+        - [ ] Create all items images
+    - [ ] Create all ChampionInfo
+    - [ ] Create all ChampionStats
+    - [ ] Create all Recommended Itemsets
+        - [ ] Connect recommended item sets to the champion
     - [ ] Make sure itemTags are constrained in the specific itemType.
-    - [ ] Connect recommended item sets to the champion
+    
 
 - [ ] Make API, controllers!
 - [ ] Make Interface
