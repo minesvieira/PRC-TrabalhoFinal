@@ -33,7 +33,7 @@ for value in dict:
             for recommended in championsInfo[item]['recommended']:
                 print("                :hasRecommended :" +
                       recommended['title'] + ";")
-            print('                :hasChampionImage :' + item + 'Image ;')
+            print('                :hasImage :' + item + 'Image ;')
             print('                :hasInfo :' + item + 'Info ;')
             for skins in championsInfo[item]['skins']:
                 print(

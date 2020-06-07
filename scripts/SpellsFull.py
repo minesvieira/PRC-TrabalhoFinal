@@ -32,7 +32,7 @@ for value in dict:
                     print('                         :Ultimate ;')
                 else:
                     print('                         :Ability ;')
-                print('                :hasAbilityImage :' +
+                print('                :hasImage :' +
                       spells['id'] + ' ;')
                 print('                :cooldown "' +
                       str(spells['cooldown'])[1:-1] + '" ;')
@@ -49,7 +49,7 @@ for value in dict:
             print(':' + championsInfo[item]['passive']['image']['full'][0: -4] +
                   ' rdf:type owl:NamedIndividual ,')
             print('                         :Passive ;')
-            print('                :hasAbilityImage :' +
+            print('                :hasImage :' +
                   championsInfo[item]['passive']['image']['full'][0: -4] + 'Image ;')
             print('                :description "' +
                   championsInfo[item]['passive']['description'] + '" ;')

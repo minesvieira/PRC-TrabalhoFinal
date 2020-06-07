@@ -30,11 +30,11 @@ for value in dict:
                     '###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + skins['id'])
                 print(':' + skins['id'], 'rdf:type owl:NamedIndividual ,')
                 print('                         :ChampionSkins ;')
-                print('                :hasSkinImage :' +
+                print('                :hasImage :' +
                       individual + 'Splash ;')
-                print('                :hasSkinImage :' +
+                print('                :hasImage :' +
                       individual + 'Loading ;')
-                print('                :hasSkinImage :' +
+                print('                :hasImage :' +
                       individual + 'Tile ;')
                 print('                :chromas "' +
                       str(skins['chromas']) + '"^^xsd:boolean ; ')

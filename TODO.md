@@ -8,9 +8,12 @@
     - [x] Create individuals for all ChampionImages
         - [x] Connect skin individuals to its image individual
     - [x] Create all abilities
-        - [ ] Create all abilities images
+        - [ ] Create all ability images
     - [ ] Create all items
-        - [ ] Create all items images
+        - [x] Create all item images
+    - [x] Create Runes
+        - [x] Create Rune images
+        - [ ] Checking rune images name (spaces and underscores)
     - [ ] Create all ChampionInfo
     - [ ] Create all ChampionStats
     - [ ] Create all Recommended Itemsets

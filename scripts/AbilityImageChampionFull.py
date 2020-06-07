@@ -39,20 +39,20 @@ for item in skinNames:
           skinNames[item] + 'Splash')
     print(':' + skinNames[item] + 'Splash',
           'rdf:type owl:NamedIndividual ,')
-    print('                         :SplashImage ;')
+    print('                         :Image ;')
     print('                :path "/splash/' +
           skinNames[item] + '.png" .\n')
     print('###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' +
           skinNames[item] + 'Loading')
     print(':' + skinNames[item] + 'Loading',
           'rdf:type owl:NamedIndividual ,')
-    print('                         :LoadingImage ;')
+    print('                         :Image ;')
     print('                :path "/loading/' +
           skinNames[item] + '.png" .\n')
     print('###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' +
           skinNames[item] + 'Tile')
     print(':' + skinNames[item] + 'Tile',
           'rdf:type owl:NamedIndividual ,')
-    print('                         :TileImage ;')
+    print('                         :Image ;')
     print('                :path "/tiles/' +
           skinNames[item] + '.png" .\n')
