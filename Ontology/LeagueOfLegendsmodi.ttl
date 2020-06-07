@@ -9,11 +9,6 @@
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends> rdf:type owl:Ontology .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
@@ -803,6 +798,14 @@
             :magic "3"^^xsd:positiveInteger .
 
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxPassive
+:AatroxPassive rdf:type owl:NamedIndividual ,
+                        :Passive ;
+               :hasAbilityImage :DeathBringer_StanceImage ;
+               :description "Periodically, Aatrox's next basic attack deals bonus <physicalDamage>physical damage</physicalDamage> and heals him, based on the target's max health." ;
+               :name "DeathBringer Stance" .
+
+
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxQ
 :AatroxQ rdf:type owl:NamedIndividual ,
                   :Ability ;
@@ -824,7 +827,7 @@
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AatroxR
 :AatroxR rdf:type owl:NamedIndividual ,
-                  :Ability ;
+                  :Ultimate ;
          :hasAbilityImage :AatroxRImage ;
          :cooldown "120, 100, 80" ;
          :cost "0, 0, 0" ;
@@ -1824,6 +1827,11 @@
              :longDesc "Damaging a Champion below 50% health deals <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword> and harvests their soul, permanently increasing Dark Harvest's damage by 5.<br><br>Dark Harvest damage: 20-60 (based on level) (+5 damage per soul) (+0.25 bonus AD) (+0.15 AP)<br>Cooldown: 45s (resets to 1.5s on takedown)" ;
              :name "Dark Harvest"^^xsd:string ;
              :shortDesc "Damaging a low health champion inflicts <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword> and harvests a soul from the victim." .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#DeathBringer_StanceImage
+:DeathBringer_StanceImage rdf:type owl:NamedIndividual ,
+                                   :AbilityImage .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Defense
@@ -2996,121 +3004,169 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103000
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103000> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103000Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103000 ;
                                                                  :name "default" ;
-                                                                 :num 0 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103000Image> .
+                                                                 :num 0 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103000Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103000Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103001
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103001> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103001Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103001 ;
                                                                  :name "Dynasty Ahri" ;
-                                                                 :num 1 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103001Image> .
+                                                                 :num 1 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103001Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103001Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103002
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103002> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103002Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103002 ;
                                                                  :name "Midnight Ahri" ;
-                                                                 :num 2 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103002Image> .
+                                                                 :num 2 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103002Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103002Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103003
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103003> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103003Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103003 ;
                                                                  :name "Foxfire Ahri" ;
-                                                                 :num 3 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103003Image> .
+                                                                 :num 3 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103003Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103003Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103004
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103004> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103004Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103004 ;
                                                                  :name "Popstar Ahri" ;
-                                                                 :num 4 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103004Image> .
+                                                                 :num 4 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103004Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103004Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103005
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103005> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103005Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103005 ;
                                                                  :name "Challenger Ahri" ;
-                                                                 :num 5 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103005Image> .
+                                                                 :num 5 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103005Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103005Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103006
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103006> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103006Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103006 ;
                                                                  :name "Academy Ahri" ;
-                                                                 :num 6 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103006Image> .
+                                                                 :num 6 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103006Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103006Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103007
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103007> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103007Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103007 ;
                                                                  :name "Arcade Ahri" ;
-                                                                 :num 7 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103007Image> .
+                                                                 :num 7 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103007Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103007Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103014
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103014> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103014Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103014 ;
                                                                  :name "Star Guardian Ahri" ;
-                                                                 :num 14 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103014Image> .
+                                                                 :num 14 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103014Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103014Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103015
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103015> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103015Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103015 ;
                                                                  :name "K/DA Ahri" ;
-                                                                 :num 15 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103015Image> .
+                                                                 :num 15 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103015Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103015Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103016
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103016> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103016Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103016 ;
                                                                  :name "K/DA Ahri Prestige Edition" ;
-                                                                 :num 16 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103016Image> .
+                                                                 :num 16 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103016Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103016Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103017
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103017> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103017Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 103017 ;
                                                                  :name "Elderwood Ahri" ;
-                                                                 :num 17 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103017Image> .
+                                                                 :num 17 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103017Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#103017Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#1031
@@ -4063,71 +4119,99 @@
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266000
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266000> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266000Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266000 ;
                                                                  :name "default" ;
-                                                                 :num 0 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266000Image> .
+                                                                 :num 0 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266000Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266000Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266001
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266001> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266001Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266001 ;
                                                                  :name "Justicar Aatrox" ;
-                                                                 :num 1 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266001Image> .
+                                                                 :num 1 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266001Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266001Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266002
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266002> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266002Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266002 ;
                                                                  :name "Mecha Aatrox" ;
-                                                                 :num 2 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266002Image> .
+                                                                 :num 2 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266002Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266002Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266003
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266003> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266003Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266003 ;
                                                                  :name "Sea Hunter Aatrox" ;
-                                                                 :num 3 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266003Image> .
+                                                                 :num 3 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266003Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266003Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266007
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266007> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266007Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266007 ;
                                                                  :name "Blood Moon Aatrox" ;
-                                                                 :num 7 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266007Image> .
+                                                                 :num 7 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266007Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266007Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266008
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266008> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266008Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266008 ;
                                                                  :name "Blood Moon Aatrox Prestige Edition" ;
-                                                                 :num 8 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266008Image> .
+                                                                 :num 8 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266008Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266008Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266009
 <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266009> rdf:type owl:NamedIndividual ,
                                                                           :ChampionSkins ;
+                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266009Image> ;
                                                                  :chromas "false"^^xsd:boolean ;
                                                                  :id 266009 ;
                                                                  :name "Victorious Aatrox" ;
-                                                                 :num 9 ;
-                                                                 :hasSkinImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266009Image> .
+                                                                 :num 9 .
+
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266009Image
+<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#266009Image> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#3001

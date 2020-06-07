@@ -7,7 +7,7 @@
     - [x] Create All Skins
     - [x] Create individuals for all ChampionImages
         - [x] Connect skin individuals to its image individual
-    - [ ] Create all abilities
+    - [x] Create all abilities
         - [ ] Create all abilities images
     - [ ] Create all items
         - [ ] Create all items images
