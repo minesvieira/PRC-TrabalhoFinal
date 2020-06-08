@@ -42,16 +42,14 @@ def readFile():
                             if(not(champions.__contains__(v))):
                                 print(
                                     "###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + v + "Image")
-                                print("<http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" +
-                                      v + "Image>", "rdf:type owl:NamedIndividual ,")
-                                print(
-                                    "                                                                           :ItemImage ;")
+                                print(":" +v + "Image", "rdf:type owl:NamedIndividual ,")
+                                print("         :Image ;")
                                 print('                :full "' + full + '" ;')
                                 print(
                                     '                :path "/items/' + full + '" ;')
                                 print('                :sprite "' +
                                       sprite + '" ;')
-                                print('                :group "' + group + '" .')
+                                print('                :group "' + group + '" .\n')
                                 champions.append(nome)
 
                 i = i + 1

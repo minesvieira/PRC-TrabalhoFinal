@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import json
 import re
-import requests
 
 champions = []
+
 
 def readFile():
     with open('../datasets/summoner.json', encoding='utf-8') as f:
@@ -14,7 +14,7 @@ def readFile():
     while i < len(data):
         lista = {}
         lista.update(data[i])
-        #print(data[i])
+        # print(data[i])
         for valores in lista:
             if valores == 'data':
                 for valor in lista[valores]:
@@ -40,25 +40,37 @@ def readFile():
                         if str(var1) == 'summonerLevel':
                             summonerLevel = str(lista[valores][valor][var1])
                             nome = re.sub(r'[ \'.()–’]', '_', str(nome))
-                            co = str(cooldown)[1:-1] 
-                            cost = str(cost)[1:-1] 
+                            co = str(cooldown)[1:-1]
+                            cost = str(cost)[1:-1]
                             if(not(champions.__contains__(name))):
-                                    print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name)
-                                    print(":" + name, "rdf:type owl:NamedIndividual ,")
-                                    print("                         :SummonerSpell ;")
-                                    print("                         :hasSummonerImage :" + name + "Image ;")
-                                    print('                         :cooldown "' + co + '" ;')
-                                    print('                         :cooldownBurn ' + cooldownBurn + ' ;') 
-                                    print('                         :cost "' + cost + '" ;')
-                                    print('                         :costBurn ' + costBurn + ' ;') 
-                                    print('                         :description "' + description + '" ;')
-                                    print('                         :id "' + idA + '" ;')
-                                    print('                         :key ' + key + ' ;')
-                                    print('                         :maxrank ' + maxrank + ' ;')
-                                    print('                         :name "' + name + '" ;')
-                                    print('                         :summonerLevel ' + summonerLevel + ' .')
-                                    champions.append(nome)
+                                print(
+                                    "###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name)
+                                print(":" + name, "rdf:type owl:NamedIndividual ,")
+                                print("                         :SummonerSpell ;")
+                                print(
+                                    "                         :hasImage :" + name + "Image ;")
+                                print(
+                                    '                         :cooldown "' + co + '" ;')
+                                print(
+                                    '                         :cooldownBurn ' + cooldownBurn + ' ;')
+                                print(
+                                    '                         :cost "' + cost + '" ;')
+                                print(
+                                    '                         :costBurn ' + costBurn + ' ;')
+                                print(
+                                    '                         :description "' + description + '" ;')
+                                print(
+                                    '                         :id "' + idA + '" ;')
+                                print('                         :key ' + key + ' ;')
+                                print(
+                                    '                         :maxrank ' + maxrank + ' ;')
+                                print(
+                                    '                         :name "' + name + '" ;')
+                                print(
+                                    '                         :summonerLevel ' + summonerLevel + ' .\n')
+                                champions.append(nome)
 
                     i = i + 1
-        
+
+
 readFile()

@@ -2,23 +2,26 @@
 
 - [x] Extract champion info
 
-- [ ] Complete ontology
+- [] Complete ontology
     - [x] Create All Champions
     - [x] Create All Skins
     - [x] Create individuals for all ChampionImages
         - [x] Connect skin individuals to its image individual
     - [x] Create all abilities
-        - [ ] Create all ability images
-    - [ ] Create all items
+        - [x] Create all ability images
+    - [x] Create all items
         - [x] Create all item images
     - [x] Create Runes
         - [x] Create Rune images
-        - [ ] Checking rune images name (spaces and underscores)
-    - [ ] Create all ChampionInfo
-    - [ ] Create all ChampionStats
-    - [ ] Create all Recommended Itemsets
-        - [ ] Connect recommended item sets to the champion
-    - [ ] Make sure itemTags are constrained in the specific itemType.
+        - [?] Checking rune images name (spaces and underscores)
+    - [x] Create Summoner spells
+        - [x] Create summoner spell images
+    - [x] Create all ChampionInfo
+    - [x] Create all ChampionStats
+    - [x] Create all Recommended Itemsets
+        - [x] Connect recommended item sets to the champion
+    - [x] Make sure itemTags are constrained in the specific itemType.
+    - [ ] Check if ontology is complete
     
 
 - [ ] Make API, controllers!

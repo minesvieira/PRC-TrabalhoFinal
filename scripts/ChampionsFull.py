@@ -31,13 +31,14 @@ for value in dict:
             for ability in championsInfo[item]['spells']:
                 print('                :hasAbility :' + ability['id'] + ';')
             for recommended in championsInfo[item]['recommended']:
-                print("                :hasRecommended :" +
+                if recommended['map'] == 'SR' and recommended['mode'] == 'CLASSIC':
+                    print("                :hasRecommended :" +
                       recommended['title'] + ";")
             print('                :hasImage :' + item + 'Image ;')
             print('                :hasInfo :' + item + 'Info ;')
             for skins in championsInfo[item]['skins']:
                 print(
-                    '                :hasSkin <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + skins['id'] + '> ;')
+                    '                :hasSkin :' + skins['id'] + ' ;')
             print('                :hasStat :' + item + 'Stats ;')
             for tags in championsInfo[item]['tags']:
                 print('                :hasTag :' + tags + ';')

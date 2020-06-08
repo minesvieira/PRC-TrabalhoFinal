@@ -33,7 +33,7 @@ for value in dict:
                 else:
                     print('                         :Ability ;')
                 print('                :hasImage :' +
-                      spells['id'] + ' ;')
+                      spells['id'] + 'Image ;')
                 print('                :cooldown "' +
                       str(spells['cooldown'])[1:-1] + '" ;')
                 print('                :cost "' +
