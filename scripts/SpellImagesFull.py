@@ -30,6 +30,6 @@ for value in dict:
                 print('                         :Image ;')
                 print('                :path "/spell/' + spells['id'] + '.png" .\n')
             print('###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + championsInfo[item]['passive']['image']['full'][0: -4])
-            print(':' + championsInfo[item]['passive']['image']['full'][0: -4] +' rdf:type owl:NamedIndividual ,')
+            print(':' + championsInfo[item]['passive']['image']['full'][0: -4] +'Image rdf:type owl:NamedIndividual ,')
             print('                         :Image ;')
             print('                :path "/passive/' +championsInfo[item]['passive']['image']['full'][0: -4] + '.png" .\n')

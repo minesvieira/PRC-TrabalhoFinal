@@ -21,6 +21,8 @@
     - [x] Create all Recommended Itemsets
         - [x] Connect recommended item sets to the champion
     - [x] Make sure itemTags are constrained in the specific itemType.
+    - [x] Passives are not correctly created on champion relation :hasAbility
+    - [x] Fix Item image colliding with skin image
     - [ ] Check if ontology is complete
     
 

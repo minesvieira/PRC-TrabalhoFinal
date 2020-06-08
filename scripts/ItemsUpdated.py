@@ -31,11 +31,11 @@ for value in dict:
                     "       :FullItem ;")
 
             print(
-                '                :hasImage <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + item['image']['full'][0: -4] + 'Image> ;')
+                '                :hasImage :' + item['image']['full'][0: -4] + 'Image ;')
             print('                :description "' +
                   item['description'] + '";')
             for tag in item['tags']:
-                print('                :hasItemTag "' + tag + '";')
+                print('                :hasItemTag :' + tag + ';')
             print('                :name "' + item['name'] + '";')
             print('                :id ' +
                   item['image']['full'][0: -4] + ' .\n')

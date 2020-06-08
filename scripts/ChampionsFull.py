@@ -27,7 +27,7 @@ for value in dict:
             print("###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + item)
             print(":" + item, "rdf:type owl:NamedIndividual ,")
             print("                         :Champion ;")
-            print('                :hasAbility :' + item + 'Passive;')
+            print('                :hasAbility :' + str(championsInfo[item]['passive']['image']['full'][0:-4]) + ';')
             for ability in championsInfo[item]['spells']:
                 print('                :hasAbility :' + ability['id'] + ';')
             for recommended in championsInfo[item]['recommended']:
@@ -38,7 +38,7 @@ for value in dict:
             print('                :hasInfo :' + item + 'Info ;')
             for skins in championsInfo[item]['skins']:
                 print(
-                    '                :hasSkin :' + skins['id'] + ' ;')
+                    '                :hasSkin :Skin' + skins['id'] + ' ;')
             print('                :hasStat :' + item + 'Stats ;')
             for tags in championsInfo[item]['tags']:
                 print('                :hasTag :' + tags + ';')

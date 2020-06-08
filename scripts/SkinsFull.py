@@ -28,7 +28,7 @@ for value in dict:
                 individual = item+'_'+str(skins['num'])
                 print(
                     '###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + skins['id'])
-                print(':' + skins['id'], 'rdf:type owl:NamedIndividual ,')
+                print(':Skin' + skins['id'], 'rdf:type owl:NamedIndividual ,')
                 print('                         :ChampionSkins ;')
                 print('                :hasImage :' +
                       individual + 'Splash ;')
@@ -38,6 +38,6 @@ for value in dict:
                       individual + 'Tile ;')
                 print('                :chromas "' +
                       str(skins['chromas']) + '"^^xsd:boolean ; ')
-                print('                :id ' + skins['id'] + ' ; ')
+                print('                :id "Skin' + skins['id'] + '" ; ')
                 print('                :name "' + skins['name'] + '" ;')
                 print('                :num ' + str(skins['num']) + ' .\n')
