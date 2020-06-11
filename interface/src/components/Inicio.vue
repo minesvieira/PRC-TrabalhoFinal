@@ -1,40 +1,18 @@
-<template>
-  <v-card class="ma-2">
-    <v-card-title class="indigo darken-4 white--text" dark>
-      Cinemateca de PRC2020: Lista dos Filmes na BD
-      <v-spacer></v-spacer>
-      <v-text-field
-        v-model="filtrar"
-        label="Filtrar"
-        single-line
-        hide-details
-        dark
-      ></v-text-field>
-    </v-card-title>
-    <v-card-text>
-      <v-data-table
-        :headers="hfilmes"
-        :items="filmes"
-        :footer-props="footer_props"
-        :search="filtrar"
-      >
-          <template v-slot:no-data>
-            <v-alert :value="true" color="warning" icon="warning">
-              Ainda não foi possível apresentar uma lista dos filmes...
-            </v-alert>
-          </template>
-
-          <template v-slot:item.ops="{ item }">
-            <v-icon
-              @click="mostraFilme(item)"
-            >
-              {{ verFilme }}
-            </v-icon>
-          </template>
-
-      </v-data-table>
-    </v-card-text>
+<template >
+  <v-card class="ma-2 black" >
+      <v-space> </v-space>
+      <v-col cols="5"  class="justify-center">
+        <v-img justify-center class="text-center" align="center" src="..\assets\foto.jpg" aspect-ratio="1.3"></v-img>
+      </v-col>
+    <v-row align="center">
+    <v-col class="text-center">
+      <div class="my-2">
+        <v-btn style="color:black">Ir para a Página Principal</v-btn>
+      </div>
+    </v-col>
+    </v-row>
   </v-card>
+  
 </template>
 
 <script>
@@ -85,3 +63,10 @@ export default {
   
 }
 </script>
+<style scoped>
+body {
+    margin: 0;
+    padding: 0;
+    background-color:rgb(250, 28, 65);
+}
+</style>
