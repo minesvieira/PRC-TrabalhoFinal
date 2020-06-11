@@ -1,9 +1,19 @@
 <template >
   <v-card class="ma-2 black" >
+    <v-toolbar color="#D4AF37">
+            <v-btn icon class="hidden-xs-only">
+            </v-btn>
+
+            <v-spacer></v-spacer>
+          </v-toolbar>
       <v-space> </v-space>
-      <v-col cols="5"  class="justify-center">
-        <v-img justify-center class="text-center" align="center" src="..\assets\foto.jpg" aspect-ratio="1.3"></v-img>
-      </v-col>
+      <v-row align="center" justify="center">
+        <v-col cols="5"  class="justify-center">
+          <v-layout flex align-center justify-center>
+            <v-img justify-center class="text-center" align="center" src="..\assets\foto.jpg" aspect-ratio="1.3"></v-img>
+          </v-layout>
+        </v-col>
+      </v-row>
     <v-row align="center">
     <v-col class="text-center">
       <div class="my-2">
@@ -25,6 +35,7 @@ export default {
   name: 'ListaFilmes',
 
   data: () => ({
+    dynamic: " #000000",
     hfilmes: [
       {text: "Título", sortable: true, value: 'titulo', class: 'subtitle-1'},
       {text: "Data", sortable: true, value: 'data', class: 'subtitle-1'},
