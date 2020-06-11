@@ -7,7 +7,7 @@
     <v-row align="center">
     <v-col class="text-center">
       <div class="my-2">
-        <v-btn style="color:black">Ir para a Página Principal</v-btn>
+        <v-btn>Ir para a Página Principal</v-btn>
       </div>
     </v-col>
     </v-row>
