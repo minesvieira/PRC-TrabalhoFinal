@@ -39,6 +39,11 @@ Vue.use(VueRouter)
     name: 'Consulta Personagem',
     component: () => import('../views/ConsultaPersonagem.vue')
   },
+  {
+    path: '/champions',
+    name: 'Página de Champions',
+    component: () => import('../views/PaginaChampions.vue')
+  }  
 ]
 
 const router = new VueRouter({

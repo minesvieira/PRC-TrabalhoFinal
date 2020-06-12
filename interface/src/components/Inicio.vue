@@ -1,6 +1,6 @@
 <template >
   <v-card class="ma-2 black" >
-    <v-toolbar color="#D4AF37">
+    <v-toolbar color="#C5B358" height="50px">
             <v-btn icon class="hidden-xs-only">
             </v-btn>
 
@@ -17,7 +17,7 @@
     <v-row align="center">
     <v-col class="text-center">
       <div class="my-2">
-        <v-btn>Ir para a Página Principal</v-btn>
+        <v-btn href="ListaChampions.vue">Ir para a Página Principal</v-btn>
       </div>
     </v-col>
     </v-row>
