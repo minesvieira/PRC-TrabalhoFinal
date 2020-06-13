@@ -10,12 +10,7 @@ Vue.use(VueRouter)
     component: () => import('../views/Principal.vue')
   },
   {
-    path: '/filmes',
-    name: 'Página Principal',
-    component: () => import('../views/Principal.vue')
-  },
-  {
-    path: '/filmes/:id',
+    path: '/champions/:id',
     name: 'Consulta Filme',
     component: () => import('../views/Consulta.vue')
   },
@@ -43,7 +38,18 @@ Vue.use(VueRouter)
     path: '/champions',
     name: 'Página de Champions',
     component: () => import('../views/PaginaChampions.vue')
-  }  
+  },
+  {
+    path: '/itens',
+    name: 'Página de Itens',
+    component: () => import('../views/PaginaItens.vue')
+  },
+  {
+    path: '/runes',
+    name: 'Página de Runes',
+    component: () => import('../views/PaginaRunes.vue')
+  },
+
 ]
 
 const router = new VueRouter({

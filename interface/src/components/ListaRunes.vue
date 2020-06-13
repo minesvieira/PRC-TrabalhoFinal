@@ -14,13 +14,11 @@
         <v-btn text>
             <p>Runes</p>
         </v-btn>
-        
           </v-toolbar>
+    
     <br>
     <br>
-    <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS SEARCH</h1>
-    <h3 class="white--text" style="margin-left:40px"> Discover the best builds for every champion</h3>
-    <br>
+
     <v-row justify="space-around">
 
     <v-avatar size="150">
@@ -84,6 +82,7 @@
   </v-row>
   
   </v-card>
+  
     
   
 </template>

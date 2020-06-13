@@ -21,6 +21,7 @@
       </div>
     </v-col>
     </v-row>
+    
   </v-card>
   
 </template>
