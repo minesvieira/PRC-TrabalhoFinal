@@ -17,7 +17,13 @@
     <v-row align="center">
     <v-col class="text-center">
       <div class="my-2">
-        <v-btn href="ListaChampions.vue">Ir para a Página Principal</v-btn>
+        <v-btn to="/champions">Champions</v-btn>
+        <br>
+        <br>
+        <v-btn to="/itens">Items</v-btn>
+        <br>
+        <br>
+        <v-btn to="/runes">Runes</v-btn>
       </div>
     </v-col>
     </v-row>
@@ -55,6 +61,8 @@ export default {
     filtrar: "",
     verFilme: mdiMovieOpen
   }),
+  
+  
 
   created: async function(){
     try {
