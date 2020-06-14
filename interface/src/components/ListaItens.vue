@@ -9,77 +9,81 @@
             <p>Champions</p>
         </v-btn>
         <v-btn text>
-            <p>Itens</p>
-        </v-btn>
-        <v-btn text>
             <p>Runes</p>
         </v-btn>
           </v-toolbar>
     
     <br>
     <br>
-
     <v-row justify="space-around">
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar color="orange" size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-    
-
-  </v-row>
+        <v-avatar tile color="blue" size="100">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+        <v-avatar tile color="blue">
+            <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+            >
+        </v-avatar>
+    </v-row>
+    <v-checkbox
+        v-model="ex4"
+        label="red"
+        color="red"
+        value="red"
+        hide-details
+    >bb</v-checkbox>
   
   </v-card>
   
