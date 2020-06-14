@@ -5,31 +5,29 @@
             <v-btn icon class="hidden-xs-only">
             </v-btn>
             <v-spacer></v-spacer>
-        <v-btn text>
-            <p>Champions</p>
+        <v-btn text to="/itens">
+            <p >Items</p>
         </v-btn>
-        <v-btn text>
-            <p>Itens</p>
+        <v-btn text to="/runes">
+            <p >Runes</p>
         </v-btn>
-        <v-btn text>
-            <p>Runes</p>
-        </v-btn>
-        
-          </v-toolbar>
+        <br>
+        <v-text-field
+        hide-details
+        single-line
+        ></v-text-field>
+    </v-toolbar>
     <br>
     <br>
     <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS SEARCH</h1>
     <h3 class="white--text" style="margin-left:40px"> Discover the best builds for every champion</h3>
     <br>
     <v-row justify="space-around">
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-
-    </v-avatar>
+        <v-avatar size="150">
+        <img
+            src="https://cdn.vuetifyjs.com/images/john.jpg"
+        >
+        </v-avatar>
 
     <v-avatar size="150">
       <img
@@ -79,7 +77,17 @@
         alt="John"
       >
     </v-avatar>
-    
+  </v-row>
+  <br>
+  <v-row justify="space-around">
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
+        <p class="white--text"> nome </p>
 
   </v-row>
   
