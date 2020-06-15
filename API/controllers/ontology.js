@@ -20,7 +20,7 @@ var prefixes = `
     PREFIX lol: <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#>
 `;
 
-var getLink = "http://localhost:7200/repositories/LeagueOfLegends" + "?query=";
+var getLink = "http://localhost:7200/repositories/LoLDEVELOPMENT" + "?query=";
 
 Ontology.getClasses = async function () {
   var query = `select ?idClasse where {
@@ -36,9 +36,9 @@ Ontology.getClasses = async function () {
   }
 };
 
-Ontology.getIndividuals = async function (id) {
+Ontology.getIndividuals = async function () {
   var query = `select ?ind where {
-        ?i a lol:${id} .
+        ?i a owl:NamedIndividual .
         bind (STRAFTER(STR(?i), '#') AS ?ind).
      } `;
   var encoded = encodeURIComponent(prefixes + query);
@@ -54,7 +54,7 @@ Ontology.getIndividuals = async function (id) {
 Ontology.getIndividual = async function (id) {
   var query = `select * where {
           lol:${id} ?p ?o .
-          ?o a lol:Pessoa.
+          ?o a owl:NamedIndividual.
        } `;
   var encoded = encodeURIComponent(prefixes + query);
 

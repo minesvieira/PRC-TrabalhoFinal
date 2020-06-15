@@ -2,7 +2,7 @@
 
 - [x] Extract champion info
 
-- [] Complete ontology
+- [x] Complete ontology
     - [x] Create All Champions
     - [x] Create All Skins
     - [x] Create individuals for all ChampionImages
@@ -23,8 +23,21 @@
     - [x] Make sure itemTags are constrained in the specific itemType.
     - [x] Passives are not correctly created on champion relation :hasAbility
     - [x] Fix Item image colliding with skin image
-    - [ ] Check if ontology is complete
+    - [x] Check if ontology is complete
     
 
-- [ ] Make API, controllers!
+- [ ] Make API
+    - [ ] Controllers
+        - [x] Ontology
+        - [ ] Champions
+        - [ ] Items
+        - [ ] Runes
+        - [ ] SummonerSpells
+    - [ ] Routes
+        - [x] Ontology
+            - [ ] Champions
+            - [ ] Items
+            - [ ] Runes
+            - [ ] SummonerSpells
+
 - [ ] Make Interface
