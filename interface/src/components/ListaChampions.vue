@@ -11,7 +11,6 @@
         <v-btn text to="/runes">
             <p >Runes</p>
         </v-btn>
-        <br>
         <v-text-field
         hide-details
         single-line

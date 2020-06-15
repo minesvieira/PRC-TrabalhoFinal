@@ -19,7 +19,7 @@
     <br>
     <br>
 
-    <v-row justify="space-around">
+    <v-row justify="space-around" cols="12">
 
     <v-avatar size="150">
       <img

@@ -5,85 +5,93 @@
             <v-btn icon class="hidden-xs-only">
             </v-btn>
             <v-spacer></v-spacer>
-        <v-btn text>
+        <v-btn text to="/champions">
             <p>Champions</p>
         </v-btn>
-        <v-btn text>
+        <v-btn text to="/runes">
             <p>Runes</p>
         </v-btn>
           </v-toolbar>
     
     <br>
+    <h1 class="white--text" align="center" size="30px"> ALL ITEMS </h1>
     <br>
-    <v-row justify="space-around">
-        <v-avatar tile color="blue" size="100">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
-        <v-avatar tile color="blue">
-            <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-            >
-        </v-avatar>
+    <v-row>
+        <v-col lg="2">
+           <input type="checkbox" id="checkbox" v-model="checked">
+           <label class="white--text" for="checkbox">  Item Type</label>
+           <br>
+           <br>
+           <br>
+           <input type="checkbox" id="checkbox" v-model="checked">
+           <label class="white--text" for="checkbox">  Item Tag</label>
+            
+        </v-col>
+        <v-col lg="10" class="pa-6" v-for="n in 3"
+        :key="n">
+            <v-avatar tile color="blue" size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100" >
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue" size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue" size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue" size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+            <v-avatar tile color="blue"  size="100">
+                <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                >
+            </v-avatar>
+        </v-col>
+        
     </v-row>
-    <v-checkbox
-        v-model="ex4"
-        label="red"
-        color="red"
-        value="red"
-        hide-details
-    >bb</v-checkbox>
   
   </v-card>
   
