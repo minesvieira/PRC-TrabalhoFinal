@@ -66,12 +66,13 @@ Champions.getChampionAbilities = async function (idChamp) {
     }
 }
 
-Champions.getChampionAbilitiesDetails = async function (idChamp) {
-    var query = `select ?name ?description ?image where {
+Champions.getChampionAbilitiesFull = async function (idChamp) {
+    var query = `select ?name ?description ?imagePath where {
                 lol:${idChamp} a lol:Champion.
                 lol:${idChamp} lol:hasAbility ?abilities.
                 ?abilities lol:name ?name.
                 ?abilities lol:hasImage ?image.
+                ?image lol:path ?imagePath.
     			?abilities lol:description ?description.
             } `;
     var encoded = encodeURIComponent(prefixes + query);
@@ -99,10 +100,11 @@ var query = `select  ?skins where {
 }
 
 Champions.getChampionSkinsImages = async function (idChamp) {
-    var query = `select ?image where {
+    var query = `select ?imagePath where {
                     lol:${idChamp} a lol:Champion.
                     lol:${idChamp} lol:hasSkin ?skins.
-                    ?skins lol:hasImage ?image
+                    ?skins lol:hasImage ?image.
+                    ?image lol:path ?imagePath.
                 } `;
         var encoded = encodeURIComponent(prefixes + query);
         try {
@@ -133,19 +135,18 @@ Champions.getChampionSkinsFull = async function (idChamp) {
     try {
         var skinNames   = await Champions.getChampionSkinsNames(idChamp);
         var skinImages  = await Champions.getChampionSkinsImages(idChamp);
-        
+
         var skins = new Array(skinNames.length);
 
         for (let j = 0; j < skinImages.length; j+=3) {
             skinNumber = j/3
             skins[skinNumber] = {
                 name:skinNames[skinNumber].name,
-                loading:skinImages[j].image,
-                splash:skinImages[j+1].image,
-                tile:skinImages[j+2].image
+                loading:skinImages[j].imagePath,
+                splash:skinImages[j+1].imagePath,
+                tile:skinImages[j+2].imagePath
             } 
         }
-        console.log(skins)
         return skins;
       } catch (e) {
         throw e;
@@ -264,10 +265,13 @@ Champions.getChampionRecommended = async function (idChamp) {
 }
 
 Champions.getChampionRecommendedItems = async function (idChamp) {
-    var query = `select  ?item where {
+    var query = `select ?item ?imagePath where {
         lol:${idChamp} a lol:Champion.
         lol:${idChamp} lol:hasRecommended ?recommended .
-        ?recommended lol:hasItem ?item.
+        ?recommended lol:hasItem ?itemLong.
+        ?itemLong lol:hasImage ?image .
+        ?image lol:path ?imagePath .
+        bind(strafter(str(?itemLong),'LeagueOfLegends#') as ?item)
 }`;
     var encoded = encodeURIComponent(prefixes + query);
     try {
@@ -296,7 +300,7 @@ Champions.getChampionRecommendedFull = async function (idChamp) {
 Champions.getChampionFull = async function (idChamp) {
     try {
       var core          = await Champions.getChampionCore(idChamp);
-      var abilities     = await Champions.getChampionAbilitiesDetails(idChamp);
+      var abilities     = await Champions.getChampionAbilitiesFull(idChamp);
       var skins         = await Champions.getChampionSkinsFull(idChamp);
       var stats         = await Champions.getChampionStats(idChamp);
       var recommended   = await Champions.getChampionRecommendedFull(idChamp);
@@ -320,6 +324,38 @@ Champions.getChampionFull = async function (idChamp) {
     } catch (e) {
       throw e;
     }
-  };
+};
   
+Champions.getAbility = async function (idAbility) {
+    var query = `select  ?name ?description ?imagePath where {
+        lol:${idAbility} a lol:Ability.
+        lol:${idAbility} lol:name ?name.
+        lol:${idAbility} lol:description ?description.
+        lol:${idAbility} lol:hasImage ?image.
+        ?image lol:path ?imagePath
+}`;
+    var encoded = encodeURIComponent(prefixes + query);
+    try {
+        var response = await axios.get(getLink + encoded);
+        return myNormalize(response.data);
+    } catch (e) {
+        throw e;
+    }
+}
+
+Champions.getSkin = async function (idskin) {
+    var query = `select  ?name ?imagePath where {
+        lol:${idskin} a lol:ChampionSkins.
+        lol:${idskin} lol:name ?name.
+        lol:${idskin} lol:hasImage ?image.
+        ?image lol:path ?imagePath
+}`;
+    var encoded = encodeURIComponent(prefixes + query);
+    try {
+        var response = await axios.get(getLink + encoded);
+        return myNormalize(response.data);
+    } catch (e) {
+        throw e;
+    }
+}
 

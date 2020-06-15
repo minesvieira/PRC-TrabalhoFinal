@@ -27,6 +27,12 @@ router.get("/:id/abilities", function (req, res) {
     .catch((e) => res.status(500).send(`Error listing abilities: ${e}`));
 });
 
+router.get("/:id/abilitiesFull", function (req, res) {
+  Champion.getChampionAbilitiesFull(req.params.id)
+    .then((dados) => res.jsonp(dados))
+    .catch((e) => res.status(500).send(`Error listing abilities: ${e}`));
+});
+
 router.get("/:id/skins", function (req, res) {
     Champion.getChampionSkins(req.params.id)
       .then((dados) => res.jsonp(dados))
@@ -88,6 +94,16 @@ router.get("/:id/core", function (req, res) {
       .catch((e) => res.status(500).send(`Error listing core information: ${e}`));
 });
 
+router.get("/abilities/:id", function (req, res) {
+  Champion.getAbility(req.params.id)
+    .then((dados) => res.jsonp(dados))
+    .catch((e) => res.status(500).send(`Error listing core information: ${e}`));
+});
 
+router.get("/skins/:id", function (req, res) {
+  Champion.getSkin(req.params.id)
+    .then((dados) => res.jsonp(dados))
+    .catch((e) => res.status(500).send(`Error listing core information: ${e}`));
+});
 
 module.exports = router;

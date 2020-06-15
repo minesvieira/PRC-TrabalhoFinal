@@ -7,6 +7,7 @@ var logger = require("morgan");
 var ontologyRouter = require("./routes/ontology");
 var usersRouter = require("./routes/users");
 var championRouter = require("./routes/champion");
+var itemRouter = require("./routes/items");
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/ontology", ontologyRouter);
 app.use("/users", usersRouter);
 app.use("/champion", championRouter);
+app.use("/item", itemRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

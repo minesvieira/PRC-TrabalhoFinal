@@ -18,15 +18,18 @@ Provides information about the ontology such as classes, individuals etc...
     /champions
         /:id
             /skins
-            /spells
+            /abilities
             /recommended
             /images
             /tags
-            /info
+            /info 
             /details
-            /tips
-        /spells
+            /tips 
+            /full -> Full details about a champion
+        /abilities 
+            /:id 
         /skins
+            /:id
 
 Provides information and details about champions or a specific champion.
 
