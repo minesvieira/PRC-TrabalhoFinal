@@ -10,8 +10,8 @@ with open('../datasets/item.json', encoding='utf-8') as f:
 
 dict = {}
 dict.update(data[0])
-items = {}
-
+intoAndFrom = 0
+control = 0
 
 for value in dict:
     if value == 'data':
@@ -26,10 +26,23 @@ for value in dict:
             if 'into' in item.keys():
                 print(
                     "       :Component ;")
-            else:
+                for component in item['into']:
+                    print("                :buildsInto :" + component + ";")
+                intoAndFrom = 1
+                control = 1
+            if 'from' in item.keys():
+                if intoAndFrom == 0:
+                    print(
+                        "       :FullItem ;")
+                for component in item['from']:
+                    print("                :buildsFrom :" + component+ ";")
+                
+                control = 1
+            if control == 0:
                 print(
-                    "       :FullItem ;")
-
+                        "       :FullItem ;")
+            control = 0
+            intoAndFrom=0
             print(
                 '                :hasImage :' + item['image']['full'][0: -4] + 'Image ;')
             print('                :description "' +
