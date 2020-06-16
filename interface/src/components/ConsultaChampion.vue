@@ -1,8 +1,5 @@
 <template>
-    <div v-if="!this.loaded">
-        Loading...
-    </div>
-    <v-card class="ma-4" v-else>
+    <v-card class="ma-4" >
         <v-card-title class="indigo darken-4 white--text" dark>
             <span class="headline">Filme: "{{ filme.info.titulo }}" ({{id}})</span>
         </v-card-title>

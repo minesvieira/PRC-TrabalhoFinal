@@ -10,8 +10,8 @@ Vue.use(VueRouter)
     component: () => import('../views/Principal.vue')
   },
   {
-    path: '/champions/:id',
-    name: 'Consulta Filme',
+    path: '/champions/info',
+    name: 'Consulta Champion',
     component: () => import('../views/Consulta.vue')
   },
   {
