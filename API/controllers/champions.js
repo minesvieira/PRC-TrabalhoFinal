@@ -37,7 +37,7 @@ Champions.getChampions = async function () {
   }
 };
 
-Champions.getChampion = async function (id) {
+Champions.getChampion = async function (idChamp) {
   var query = `select * where {
           lol:${idChamp} ?p ?o .
           ?o a owl:NamedIndividual.
@@ -131,17 +131,34 @@ Champions.getChampionSkinsNames = async function (idChamp) {
         }
 }
 
+Champions.getChampionSkinsIds = async function (idChamp) {
+    var query = `select ?id where {
+                    lol:${idChamp} a lol:Champion.
+                    lol:${idChamp} lol:hasSkin ?skins.
+                    ?skins lol:id ?id
+                } `;
+        var encoded = encodeURIComponent(prefixes + query);
+        try {
+            var response = await axios.get(getLink + encoded);
+            return myNormalize(response.data);
+        } catch (e) {
+            console.log(e)
+            throw e;
+        }
+}
+
 Champions.getChampionSkinsFull = async function (idChamp) {
     try {
         var skinNames   = await Champions.getChampionSkinsNames(idChamp);
         var skinImages  = await Champions.getChampionSkinsImages(idChamp);
-
+        var skinId     = await Champions.getChampionSkinsIds(idChamp);
         var skins = new Array(skinNames.length);
 
         for (let j = 0; j < skinImages.length; j+=3) {
             skinNumber = j/3
             skins[skinNumber] = {
                 name:skinNames[skinNumber].name,
+                id:skinId[skinNumber].id,
                 loading:skinImages[j].imagePath,
                 splash:skinImages[j+1].imagePath,
                 tile:skinImages[j+2].imagePath

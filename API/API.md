@@ -44,7 +44,11 @@ Provides information and details about champions or a specific champion.
         /fullItems
         /image
         /itemTag
-            /itemType (?)
+            /:tag
+        /itemType
+            /:type
+        /tags
+        /types
 
 Provides information and details about items
 
