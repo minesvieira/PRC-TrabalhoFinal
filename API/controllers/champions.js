@@ -24,7 +24,7 @@ var getLink = "http://localhost:7200/repositories/LoLDEVELOPMENT" + "?query=";
 
 Champions.getChampions = async function () {
   var query = `select ?ind where {
-        ?i a :Champion .
+        ?i a lol:Champion .
         bind (STRAFTER(STR(?i), '#') AS ?ind).
      } `;
   var encoded = encodeURIComponent(prefixes + query);
@@ -36,6 +36,25 @@ Champions.getChampions = async function () {
     throw e;
   }
 };
+
+Champions.getChampionsAndTile = async function () {
+    var query = `select ?ind ?imagePath where {
+        ?i a lol:Champion .
+    	?i lol:hasSkin ?skin .
+        ?skin lol:hasImage ?image .
+        ?image lol:path ?imagePath .
+    	FILTER regex(str(?image), "_0Tile").
+        bind (STRAFTER(STR(?i), '#') AS ?ind).
+     } `;
+    var encoded = encodeURIComponent(prefixes + query);
+  
+    try {
+      var response = await axios.get(getLink + encoded);
+      return myNormalize(response.data);
+    } catch (e) {
+      throw e;
+    }
+  };
 
 Champions.getChampion = async function (idChamp) {
   var query = `select * where {

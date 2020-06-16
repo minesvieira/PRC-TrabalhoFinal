@@ -29,14 +29,14 @@
 - [ ] Make API
     - [ ] Controllers
         - [x] Ontology
-        - [ ] Champions
-        - [ ] Items
+        - [x] Champions
+        - [x] Items
         - [ ] Runes
         - [ ] SummonerSpells
     - [ ] Routes
         - [x] Ontology
-            - [ ] Champions
-            - [ ] Items
+            - [x] Champions
+            - [x] Items
             - [ ] Runes
             - [ ] SummonerSpells
 

@@ -105,26 +105,37 @@ export default {
   name: 'ListaPersonagens',
 
   data: () => ({
-    hpersonagens: [
-      {text: "Id", sortable: true, value: 'id', class: 'subtitle-1'},
-      {text: "Nome", sortable: true, value: 'nome', class: 'subtitle-1'},
-      {text: "Operações", value: 'ops', class: 'subtitle-1'}
-    ],
-    footer_props: {
-      "items-per-page-text": "Mostrar",
-      "items-per-page-options": [10, 20, 50, 100, -1],
-      "items-per-page-all-text": "Todos"
-    }, 
-
-    personagens: [],
+    images: [
+            {
+                title: 'image 1',
+                url: '..'
+            }, {
+                title: 'image 2',
+                url: '..'
+            }, {
+                title: 'image 3',
+                url: '..'
+            }, {
+                title: 'image 4',
+                url: '..'
+            }, {
+                title: 'image 5',
+                url: '..'
+            }, {
+                title: 'image 6',
+                url: '..'
+            }
+        ],
+    champions: [],
     filtrar: "",
     verPersonagem: mdiMovieOpen
   }),
 
   created: async function(){
     try {
-      let response = await axios.get(lhost + "/personagens");
-      this.personagens = response.data
+      let response = await axios.get(lhost + "/champion/main");
+      this.champions = response.data
+      console.log(champions)
     } 
     catch (e) {
       return e;
