@@ -21,7 +21,7 @@
     <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS SEARCH</h1>
     <h3 class="white--text" style="margin-left:40px"> Discover the best builds for every champion</h3>
     <br>
-    <v-row justify="space-around">
+    <v-row justify="space-around" lg="10" class="pa-6" v-for="n in 4" :key="n">
         <v-avatar size="150">
         <img
             src="https://cdn.vuetifyjs.com/images/john.jpg"
@@ -49,33 +49,6 @@
       >
     </v-avatar>
 
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar color="orange" size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
   </v-row>
   <br>
   <v-row justify="space-around">
@@ -105,37 +78,15 @@ export default {
   name: 'ListaPersonagens',
 
   data: () => ({
-    images: [
-            {
-                title: 'image 1',
-                url: '..'
-            }, {
-                title: 'image 2',
-                url: '..'
-            }, {
-                title: 'image 3',
-                url: '..'
-            }, {
-                title: 'image 4',
-                url: '..'
-            }, {
-                title: 'image 5',
-                url: '..'
-            }, {
-                title: 'image 6',
-                url: '..'
-            }
-        ],
+     
     champions: [],
-    filtrar: "",
     verPersonagem: mdiMovieOpen
   }),
 
   created: async function(){
     try {
       let response = await axios.get(lhost + "/champion/main");
-      this.champions = response.data
-      console.log(champions)
+      this.champion = response.data
     } 
     catch (e) {
       return e;

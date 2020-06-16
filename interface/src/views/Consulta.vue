@@ -1,15 +1,15 @@
 <template>
-  <ConsultaFilme :id="$route.params.id"/>
+  <ConsultaChampion/>
 </template>
 
 <script>
 // @ is an alias to /src
-import ConsultaFilme from '@/components/ConsultaFilme.vue'
+import ConsultaChampion from '@/components/ConsultaChampion.vue'
 
 export default {
   name: 'Consulta',
   components: {
-    ConsultaFilme
+    ConsultaChampion
   }
 }
 </script>
