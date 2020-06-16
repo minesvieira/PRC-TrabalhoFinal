@@ -21,7 +21,7 @@
     <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS SEARCH</h1>
     <h3 class="white--text" style="margin-left:40px"> Discover the best builds for every champion</h3>
     <br>
-    <v-row justify="space-around">
+    <v-row justify="space-around" lg="10" class="pa-6" v-for="n in 4" :key="n">
         <v-avatar size="150">
         <img
             src="https://cdn.vuetifyjs.com/images/john.jpg"
@@ -49,33 +49,6 @@
       >
     </v-avatar>
 
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar color="orange" size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
   </v-row>
   <br>
   <v-row justify="space-around">
@@ -105,26 +78,15 @@ export default {
   name: 'ListaPersonagens',
 
   data: () => ({
-    hpersonagens: [
-      {text: "Id", sortable: true, value: 'id', class: 'subtitle-1'},
-      {text: "Nome", sortable: true, value: 'nome', class: 'subtitle-1'},
-      {text: "Operações", value: 'ops', class: 'subtitle-1'}
-    ],
-    footer_props: {
-      "items-per-page-text": "Mostrar",
-      "items-per-page-options": [10, 20, 50, 100, -1],
-      "items-per-page-all-text": "Todos"
-    }, 
-
-    personagens: [],
-    filtrar: "",
+     
+    champions: [],
     verPersonagem: mdiMovieOpen
   }),
 
   created: async function(){
     try {
-      let response = await axios.get(lhost + "/personagens");
-      this.personagens = response.data
+      let response = await axios.get(lhost + "/champion/main");
+      this.champion = response.data
     } 
     catch (e) {
       return e;

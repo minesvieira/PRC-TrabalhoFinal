@@ -9,6 +9,12 @@ router.get("/", function (req, res) { //Make this present some information...
     .catch((e) => res.status(500).send(`Error listing champions: ${e}`));
 });
 
+router.get("/main", function (req, res) { //Make this present some information...
+  Champion.getChampionsAndTile()
+    .then((dados) => res.jsonp(dados))
+    .catch((e) => res.status(500).send(`Error listing champions: ${e}`));
+});
+
 router.get("/:id", function (req, res) {
   Champion.getChampion(req.params.id)
     .then((dados) => res.jsonp(dados))
