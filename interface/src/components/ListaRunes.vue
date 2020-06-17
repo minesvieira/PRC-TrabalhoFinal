@@ -6,107 +6,39 @@
             </v-btn>
             <v-spacer></v-spacer>
         <v-btn text to="/champions">
-            <p>Champions</p>
+            <p >Champions</p>
         </v-btn>
         <v-btn text to="/itens">
-            <p>Items</p>
+            <p >Items</p>
         </v-btn>
-          </v-toolbar>
-        <br>
-        <h1 class="white--text" align="center"> ALL RUNES </h1>
-        <br>
-        <v-row style="margin-left:50px; margin-left:50px" class="pa-6" v-for="n in 4"
-        :key="n" align="center">
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100" >
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-        
+    </v-toolbar>
+    <br>
+    <br>
+    <h1 class="white--text" style="margin-left:40px" align="center"> ALL RUNES</h1>
+    <br>
+
+  <template>
+  <v-container class="black">
+    <v-row no-gutters>
+      <template v-for="item in runes">
+        <v-col :key="item.name">
+          <v-card
+            class="black"
+            outlined
+            tile
+            justify="left"
+          >
+             <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+             <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+             
+          </v-card>
+        </v-col>
+      </template>
     </v-row>
+  </v-container>
+</template>
 
   </v-card>
-  
     
   
 </template>
@@ -118,29 +50,18 @@ const lhost = require("@/config/global").host;
 import { mdiMovieOpen } from '@mdi/js';
 
 export default {
-  name: 'ListaPersonagens',
+  name: 'ListaRunes',
 
   data: () => ({
-    hpersonagens: [
-      {text: "Id", sortable: true, value: 'id', class: 'subtitle-1'},
-      {text: "Nome", sortable: true, value: 'nome', class: 'subtitle-1'},
-      {text: "Operações", value: 'ops', class: 'subtitle-1'}
-    ],
-    footer_props: {
-      "items-per-page-text": "Mostrar",
-      "items-per-page-options": [10, 20, 50, 100, -1],
-      "items-per-page-all-text": "Todos"
-    }, 
 
-    personagens: [],
-    filtrar: "",
+    runes: [],
     verPersonagem: mdiMovieOpen
   }),
 
   created: async function(){
     try {
-      let response = await axios.get(lhost + "/personagens");
-      this.personagens = response.data
+      let response = await axios.get(lhost + "/rune");
+      this.runes = response.data
     } 
     catch (e) {
       return e;

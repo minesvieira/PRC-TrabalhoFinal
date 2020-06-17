@@ -6,95 +6,39 @@
             </v-btn>
             <v-spacer></v-spacer>
         <v-btn text to="/champions">
-            <p>Champions</p>
+            <p >Champions</p>
         </v-btn>
         <v-btn text to="/runes">
-            <p>Runes</p>
+            <p >Runes</p>
         </v-btn>
-          </v-toolbar>
-    
+    </v-toolbar>
     <br>
-    <h1 class="white--text" align="center" size="30px"> ALL ITEMS </h1>
     <br>
-    <v-row>
-        <v-col lg="2"  class="pa-6">
-           <input type="checkbox" id="checkbox" v-model="checked">
-           <label class="white--text" for="checkbox">  Item Type</label>
-           <br>
-           <br>
-           <br>
-           <input type="checkbox" id="checkbox" v-model="checked">
-           <label class="white--text" for="checkbox">  Item Tag</label>
-            
+    <h1 class="white--text" style="margin-left:40px" align="center"> ALL ITEMS</h1>
+    <br>
+
+  <template>
+  <v-container class="black">
+    <v-row no-gutters>
+      <template v-for="item in items">
+        <v-col :key="item.name">
+          <v-card
+            class="black"
+            outlined
+            tile
+            justify="left"
+          >
+             <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+             <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+             
+          </v-card>
         </v-col>
-        <v-col style="margin-left:300px" lg="12" v-for="n in 3"
-        :key="n">
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100" >
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue" size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-            <v-avatar tile color="blue"  size="100">
-                <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                >
-            </v-avatar>
-        </v-col>
-        
+      </template>
     </v-row>
-  
+  </v-container>
+</template>
+
   </v-card>
-  
     
   
 </template>
@@ -106,29 +50,19 @@ const lhost = require("@/config/global").host;
 import { mdiMovieOpen } from '@mdi/js';
 
 export default {
-  name: 'ListaPersonagens',
+  name: 'ListaItens',
 
   data: () => ({
-    hpersonagens: [
-      {text: "Id", sortable: true, value: 'id', class: 'subtitle-1'},
-      {text: "Nome", sortable: true, value: 'nome', class: 'subtitle-1'},
-      {text: "Operações", value: 'ops', class: 'subtitle-1'}
-    ],
-    footer_props: {
-      "items-per-page-text": "Mostrar",
-      "items-per-page-options": [10, 20, 50, 100, -1],
-      "items-per-page-all-text": "Todos"
-    }, 
-
-    personagens: [],
+    items: [],
     filtrar: "",
     verPersonagem: mdiMovieOpen
   }),
 
   created: async function(){
     try {
-      let response = await axios.get(lhost + "/personagens");
-      this.personagens = response.data
+      let response = await axios.get(lhost + "/item");
+      this.items = response.data
+      console.log(this.items)
     } 
     catch (e) {
       return e;
