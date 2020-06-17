@@ -164,7 +164,7 @@ Item.getItemType = async function (idItem) {
     }
 };
 
-Item.getDistinctItemTags = async function (idItem) {
+Item.getDistinctItemTags = async function () {
     var query = `select distinct ?tag where {
         ?items a lol:Item.
         ?items lol:hasItemTag ?tag.
@@ -179,7 +179,7 @@ Item.getDistinctItemTags = async function (idItem) {
     }
 };
 
-Item.getDistinctItemTypes = async function (idItem) {
+Item.getDistinctItemTypes = async function () {
     var query = `select distinct ?type where {
         ?items a lol:Item.
         ?items lol:hasItemTag ?tag.
@@ -230,7 +230,7 @@ Item.getItemsByType = async function (type) {
     }
 };
 
-Item.getFullItems = async function (type) {
+Item.getFullItems = async function () {
     var query = `select ?itemsid ?name where {
         ?items a lol:Item.
         ?items lol:name ?name.
@@ -247,7 +247,7 @@ Item.getFullItems = async function (type) {
     }
 };
 
-Item.getItemComponents = async function (type) {
+Item.getItemComponents = async function () {
     var query = `select ?itemsid ?name where {
         ?items a lol:Item.
         ?items lol:name ?name.

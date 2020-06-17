@@ -8,6 +8,7 @@ var ontologyRouter = require("./routes/ontology");
 var usersRouter = require("./routes/users");
 var championRouter = require("./routes/champion");
 var itemRouter = require("./routes/items");
+var runeRouter = require("./routes/runes");
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use("/ontology", ontologyRouter);
 app.use("/users", usersRouter);
 app.use("/champion", championRouter);
 app.use("/item", itemRouter);
+app.use("/rune", runeRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

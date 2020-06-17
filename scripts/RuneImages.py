@@ -31,22 +31,10 @@ def readFile():
                         shortDesc = eval(str(valor2))['shortDesc']
                         nome = re.sub(r'[ \'.()–’]', '_', str(nome))
                         if(not(champions.__contains__(key))):
-                            print(
-                                "###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + key)
-                            print(":" + key, "rdf:type owl:NamedIndividual ,")
-                            print("                         :Rune ;")
-                            print("                :isFromTree  :" + keyA + " ;")
-                            print("                :hasImage  :" +
-                                  key + "Image ;")
-                            print('                :icon "' + icon + '" ;')
-                            print("                :id " + str(ida) + " ;")
-                            print('                :longDesc "' +
-                                  longDesc + '" ;')
-                            print('                :name "' +
-                                  name + '"^^xsd:string ;')
-                            print('                :shortDesc "' +
-                                  shortDesc + '" .\n')
-                            champions.append(nome)
+                            print('###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#' + key + 'Image')
+                            print(':' + key + 'Image rdf:type owl:NamedIndividual ,')
+                            print('                         :Image ;')
+                            print('                :path "/' + icon + '".\n')
 
                 i = i + 1
 

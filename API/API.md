@@ -58,6 +58,8 @@ Provides information and details about items
         /:id
             /isFromTree
             /image
+        /fromTree
+            /:id
 
 Provides information and details about runes
 

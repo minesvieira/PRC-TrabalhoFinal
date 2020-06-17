@@ -71283,6 +71283,1014 @@
                 :champion "Zyra" ;
                 :mode "CLASSIC" ;
                 :title "ZyraSRMid" .
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Electrocute
+:Electrocute rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :ElectrocuteImage ;
+                :icon "perk-images/Styles/Domination/Electrocute/Electrocute.png" ;
+                :id 8112 ;
+                :longDesc "Hitting a champion with 3 <b>separate</b> attacks or abilities within 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Damage: 30 - 180 (+0.4 bonus AD, +0.25 AP) damage.<br><br>Cooldown: 25 - 20s<br><br><hr><i>'We called them the Thunderlords, for to speak of their lightning was to invite disaster.'</i>" ;
+                :name "Electrocute"^^xsd:string ;
+                :shortDesc "Hitting a champion with 3 <b>separate</b> attacks or abilities in 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword>." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Predator
+:Predator rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :PredatorImage ;
+                :icon "perk-images/Styles/Domination/Predator/Predator.png" ;
+                :id 8124 ;
+                :longDesc "Enchants your boots with the active effect '<font color='#c60300'>Predator</font>.'<br><br>Channel for 1.5s out of combat to gain 45% movement speed for 15s. Damaging attacks or abilities end this effect, dealing 60 - 180 (+<scaleAD>0.4</scaleAD> bonus AD)(+<scaleAP>0.25</scaleAP> AP) bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Cooldown: 150s - 100s. Starts the game on cooldown. 50% cooldown if interrupted while channeling." ;
+                :name "Predator"^^xsd:string ;
+                :shortDesc "Add an active effect to your boots that grants a large boost of <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword> and causes your next attack or ability to deal bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword>." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#DarkHarvest
+:DarkHarvest rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :DarkHarvestImage ;
+                :icon "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png" ;
+                :id 8128 ;
+                :longDesc "Damaging a Champion below 50% health deals <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword> and harvests their soul, permanently increasing Dark Harvest's damage by 5.<br><br>Dark Harvest damage: 20-60 (based on level) (+5 damage per soul) (+0.25 bonus AD) (+0.15 AP)<br>Cooldown: 45s (resets to 1.5s on takedown)" ;
+                :name "Dark Harvest"^^xsd:string ;
+                :shortDesc "Damaging a low health champion inflicts <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword> and harvests a soul from the victim." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HailOfBlades
+:HailOfBlades rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :HailOfBladesImage ;
+                :icon "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png" ;
+                :id 9923 ;
+                :longDesc "Gain 110% Attack Speed when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 8s out of combat with champions.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the attack speed limit.</rules>" ;
+                :name "Hail of Blades"^^xsd:string ;
+                :shortDesc "Gain a large amount of Attack Speed for the first 3 attacks made against enemy champions." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CheapShot
+:CheapShot rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :CheapShotImage ;
+                :icon "perk-images/Styles/Domination/CheapShot/CheapShot.png" ;
+                :id 8126 ;
+                :longDesc "Damaging champions with <b>impaired movement or actions</b> deals 10 - 45 bonus true damage (based on level).<br><br>Cooldown: 4s<br><rules>Activates on damage occurring after the impairment.</rules>" ;
+                :name "Cheap Shot"^^xsd:string ;
+                :shortDesc "Deal bonus true damage to enemy champions with <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairAct'>impaired movement or actions</lol-uikit-tooltipped-keyword>. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TasteOfBlood
+:TasteOfBlood rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :TasteOfBloodImage ;
+                :icon "perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png" ;
+                :id 8139 ;
+                :longDesc "Heal when you damage an enemy champion.<br><br>Healing: 18-35 (+0.2 bonus AD, +0.1 AP) health (based on level)<br><br>Cooldown: 20s" ;
+                :name "Taste of Blood"^^xsd:string ;
+                :shortDesc "Heal when you damage an enemy champion." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SuddenImpact
+:SuddenImpact rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :SuddenImpactImage ;
+                :icon "perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png" ;
+                :id 8143 ;
+                :longDesc "After exiting stealth or using a dash, leap, blink, or teleport, dealing any damage to a champion grants you 7 Lethality and 6 Magic Penetration for 5s.<br><br>Cooldown: 4s" ;
+                :name "Sudden Impact"^^xsd:string ;
+                :shortDesc "Gain a burst of Lethality and Magic Penetration after using a dash, leap, blink, teleport, or when leaving stealth." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ZombieWard
+:ZombieWard rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :ZombieWardImage ;
+                :icon "perk-images/Styles/Domination/ZombieWard/ZombieWard.png" ;
+                :id 8136 ;
+                :longDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Takedowns</lol-uikit-tooltipped-keyword> on enemy Wards cause friendly Zombie Wards to sprout from their corpses.<br><br>Gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 1.2 Attack Damage or 2 Ability Power for every Zombie Ward spawned, up to 10. <br><br>After spawning 10 Zombie Wards, additionally gain 10 adaptive force.<br><br>Zombie Wards are visible, last for 120s and do not count towards your ward limit." ;
+                :name "Zombie Ward"^^xsd:string ;
+                :shortDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Takedowns</lol-uikit-tooltipped-keyword> on enemy Wards cause friendly Zombie Wards to sprout from their corpses. Gain permanent AD or AP, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>adaptive</lol-uikit-tooltipped-keyword> for each Zombie Ward spawned plus bonus upon completion." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GhostPoro
+:GhostPoro rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :GhostPoroImage ;
+                :icon "perk-images/Styles/Domination/GhostPoro/GhostPoro.png" ;
+                :id 8120 ;
+                :longDesc "When your wards expire, they leave behind a Ghost Poro, which grants vision for 60s. Nearby enemy champions scare the Ghost Poro away.<br><br>Gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 1.2 Attack Damage or 2 Ability Power for every Ghost Poro spawned and when your Ghost Poro spots an enemy champion up to 10 stacks. <br><br>After gaining 10 stacks, additionally gain 10 adaptive force." ;
+                :name "Ghost Poro"^^xsd:string ;
+                :shortDesc "When your wards expire, they leave behind a Ghost Poro. The Ghost Poro grants vision until discovered. Gain permanent AD or AP, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>adaptive</lol-uikit-tooltipped-keyword> for each Ghost Poro and when your Ghost Poro spots an enemy champion, plus bonus upon completion." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#EyeballCollection
+:EyeballCollection rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :EyeballCollectionImage ;
+                :icon "perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png" ;
+                :id 8138 ;
+                :longDesc "Collect eyeballs for champion takedowns. Gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 1.2 Attack Damage or 2 Ability Power, per eyeball collected. <br><br>Upon completing your collection at 10 eyeballs, additionally gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 6 Attack Damage, or 10 Ability Power.<br><br>Collect 1 eyeball per champion takedown." ;
+                :name "Eyeball Collection"^^xsd:string ;
+                :shortDesc "Collect eyeballs for champion <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword>. Gain permanent AD or AP, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>adaptive</lol-uikit-tooltipped-keyword> for each eyeball plus bonus upon collection completion." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RavenousHunter
+:RavenousHunter rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :RavenousHunterImage ;
+                :icon "perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png" ;
+                :id 8135 ;
+                :longDesc "Heal for a percentage of the damage dealt by your abilities.<br>Healing: 1.5% + 2.5% per <i>Bounty Hunter</i> stack. <br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion.<br><rules><br>Healing reduced to one third for Area of Effect abilities.</rules>" ;
+                :name "Ravenous Hunter"^^xsd:string ;
+                :shortDesc "<b>Unique</b> <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword> grant permanent healing from ability damage. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#IngeniousHunter
+:IngeniousHunter rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :IngeniousHunterImage ;
+                :icon "perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png" ;
+                :id 8134 ;
+                :longDesc "Gain 15% <b>Active Item CDR</b> plus an additional 5% per <i>Bounty Hunter</i> stack (includes Trinkets).<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion." ;
+                :name "Ingenious Hunter"^^xsd:string ;
+                :shortDesc "<b>Unique</b> <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword> grant permanent Active Item <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>CDR</lol-uikit-tooltipped-keyword> (includes Trinkets)." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RelentlessHunter
+:RelentlessHunter rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :RelentlessHunterImage ;
+                :icon "perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png" ;
+                :id 8105 ;
+                :longDesc "Gain 10 <b>out of combat Movement Speed</b> plus 9 per <i>Bounty Hunter</i> stack.<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion." ;
+                :name "Relentless Hunter"^^xsd:string ;
+                :shortDesc "<b>Unique</b> <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword> grant permanent <b>out of combat <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword></b>. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#UltimateHunter
+:UltimateHunter rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Domination ;
+                :hasImage  :UltimateHunterImage ;
+                :icon "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png" ;
+                :id 8106 ;
+                :longDesc "Your ultimate gains 5% <b>reduced cooldown,</b> plus an additional 4% per <i>Bounty Hunter</i> stack.<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion." ;
+                :name "Ultimate Hunter"^^xsd:string ;
+                :shortDesc "<b>Unique</b> <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword> grant permanent cooldown reduction on your Ultimate. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GlacialAugment
+:GlacialAugment rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :GlacialAugmentImage ;
+                :icon "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png" ;
+                :id 8351 ;
+                :longDesc "Basic attacking a champion slows them for 2s. The slow increases in strength over its duration.<li><i>Ranged</i>: Ranged attacks slow by up to 30% - 40%</li> <li><i>Melee</i>: Melee attacks slow by up to 45% - 55%</li><br>Slowing a champion with active items shoots a freeze ray through them, freezing the nearby ground for 5s, slowing all units inside by 60%.<br><br>Cooldown: 7-4s per unit" ;
+                :name "Glacial Augment"^^xsd:string ;
+                :shortDesc "Your first attack against an enemy champion slows them (per unit cooldown). Slowing champions with active items shoots a freeze ray at them, creating a lingering slow zone." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#UnsealedSpellbook
+:UnsealedSpellbook rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :UnsealedSpellbookImage ;
+                :icon "perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png" ;
+                :id 8360 ;
+                :longDesc "Swap one of your equipped Summoner Spells to a new, single use Summoner Spell. Each unique Summoner Spell you swap to permanently decreases your swap cooldown by 20s (initial swap cooldown is at 4 mins). <br><br>Your first swap becomes available at 6 mins. <br><rules><br>Summoner Spells can only be swapped while out of combat. <br>After using a swapped Summoner Spell you must swap 3 more times before the first can be selected again. </rules>" ;
+                :name "Unsealed Spellbook"^^xsd:string ;
+                :shortDesc "Swap Summoner Spells while out of combat. Swapping to unique Summoner Spells will increase the rate at which you can make future swaps." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MasterKey
+:MasterKey rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :MasterKeyImage ;
+                :icon "perk-images/Styles/Inspiration/MasterKey/MasterKey.png" ;
+                :id 8358 ;
+                :longDesc "Periodically grants a single use of another random keystone.<br><br>5-3  second cooldown between using a keystone and gaining the next. (9-7 seconds for ranged users)<br><br><rules><br>After 40 seconds of not using a given keystone, Omnistone will re-roll when you exit champion combat.<br>Aftershock is only available to champions who have learned a basic spell that can trigger it.<br>Predator is only available to champions who have already purchased boots.<br></rules>" ;
+                :name "Prototype: Omnistone"^^xsd:string ;
+                :shortDesc "Periodically grants a single use of another random keystone." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HextechFlashtraption
+:HextechFlashtraption rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :HextechFlashtraptionImage ;
+                :icon "perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png" ;
+                :id 8306 ;
+                :longDesc "While Flash is on cooldown it is replaced by <i>Hexflash</i>.<br><br><i>Hexflash</i>: Channel for 2s to blink to a new location.<br><br>Cooldown: 20s. Goes on a 10s cooldown when you enter champion combat." ;
+                :name "Hextech Flashtraption"^^xsd:string ;
+                :shortDesc "While Flash is on cooldown it is replaced by <i>Hexflash</i>.<br><br><i>Hexflash</i>: Channel, then blink to a new location." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MagicalFootwear
+:MagicalFootwear rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :MagicalFootwearImage ;
+                :icon "perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png" ;
+                :id 8304 ;
+                :longDesc "You get free Slightly Magical Boots at 12 min, but you cannot buy boots before then. For each takedown you acquire the boots 45s sooner.<br><br>Slightly Magical Boots give you an additional +10 Movement Speed." ;
+                :name "Magical Footwear"^^xsd:string ;
+                :shortDesc "You get free boots at 12 min but you cannot buy boots before then. Each <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedown</lol-uikit-tooltipped-keyword> you get makes your boots come 45s sooner." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PerfectTiming
+:PerfectTiming rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :PerfectTimingImage ;
+                :icon "perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png" ;
+                :id 8313 ;
+                :longDesc "Begin the game with a Commencing Stopwatch that transforms into a Stopwatch after 14 minutes. Each takedown you acquire reduces this timer by 120 seconds.<br><br>Stopwatch can be used for a one time 2.5 second Stasis effect." ;
+                :name "Perfect Timing"^^xsd:string ;
+                :shortDesc "Gain a free Commencing Stopwatch. After 14 minutes, it can be used for a one time <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Stasis'>Stasis</lol-uikit-tooltipped-keyword> effect. <br><br>Each <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedown</lol-uikit-tooltipped-keyword> you get shortens this timer by 120 seconds." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FuturesMarket
+:FuturesMarket rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :FuturesMarketImage ;
+                :icon "perk-images/Styles/Inspiration/FuturesMarket/FuturesMarket.png" ;
+                :id 8321 ;
+                :longDesc "You can enter debt to buy items. The amount you can borrow increases over time.<br><br>Lending Fee: 50 gold" ;
+                :name "Future's Market"^^xsd:string ;
+                :shortDesc "You can enter debt to buy items." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MinionDematerializer
+:MinionDematerializer rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :MinionDematerializerImage ;
+                :icon "perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png" ;
+                :id 8316 ;
+                :longDesc "Start the game with 3 Minion Dematerializers that kill and absorb lane minions instantly. Minion Dematerializers are on cooldown for the first 180s of the game.<br><br>Absorbing a minion increases your damage by +6% against that type of minion permanently, and an extra +3% for each additional minion of that type absorbed.<br>" ;
+                :name "Minion Dematerializer"^^xsd:string ;
+                :shortDesc "Start the game with 3 Minion Dematerializers. Killing minions with the item gives permanent bonus damage vs. that minion type." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#BiscuitDelivery
+:BiscuitDelivery rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :BiscuitDeliveryImage ;
+                :icon "perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png" ;
+                :id 8345 ;
+                :longDesc "Biscuit Delivery: Gain a Total Biscuit of Everlasting Will every 2 mins, until 6 min.<br><br>Biscuits restore 10% of your missing health and mana. Consuming or selling a Biscuit permanently increases your mana cap by 50. <br><br><i>Manaless:</i> Champions without mana restore 12% missing health instead." ;
+                :name "Biscuit Delivery"^^xsd:string ;
+                :shortDesc "Gain a free Biscuit every 2 min, until 6 min. Consuming or selling a Biscuit permanently increases your max mana and restores health and mana." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CosmicInsight
+:CosmicInsight rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :CosmicInsightImage ;
+                :icon "perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png" ;
+                :id 8347 ;
+                :longDesc "+5% CDR<br>+5% Max CDR<br>+5% Summoner Spell CDR<br>+5% Item CDR" ;
+                :name "Cosmic Insight"^^xsd:string ;
+                :shortDesc "+5% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>CDR</lol-uikit-tooltipped-keyword><br>+5% Max CDR<br>+5% Summoner Spell CDR<br>+5% Item CDR" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ApproachVelocity
+:ApproachVelocity rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :ApproachVelocityImage ;
+                :icon "perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png" ;
+                :id 8410 ;
+                :longDesc "Gain 15% Movement Speed towards nearby ally champions that are movement impaired or enemy champions that you impair. <br><br>Range: 1000" ;
+                :name "Approach Velocity"^^xsd:string ;
+                :shortDesc "Bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword> towards nearby ally champions that are <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairMov'>movement impaired</lol-uikit-tooltipped-keyword> or enemy champions that you impair." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TimeWarpTonic
+:TimeWarpTonic rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Inspiration ;
+                :hasImage  :TimeWarpTonicImage ;
+                :icon "perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png" ;
+                :id 8352 ;
+                :longDesc "Consuming a potion or biscuit grants 50% of its health or mana restoration immediately, but puts that consumable on a short cooldown. In addition, gain 5% Movement Speed while under their effects.<br><br>Cooldown: equal to the duration of the consumable." ;
+                :name "Time Warp Tonic"^^xsd:string ;
+                :shortDesc "Potions and biscuits grant some restoration immediately. Gain <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword>  while under their effects." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PressTheAttack
+:PressTheAttack rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :PressTheAttackImage ;
+                :icon "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png" ;
+                :id 8005 ;
+                :longDesc "Hitting an enemy champion with 3 consecutive basic attacks deals 40 - 180 bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword> (based on level) and makes them vulnerable, increasing the damage they take by 8 - 12% from all sources for 6s." ;
+                :name "Press the Attack"^^xsd:string ;
+                :shortDesc "Hitting an enemy champion 3 consecutive times makes them vulnerable, dealing bonus damage and causing them to take more damage from all sources for 6s." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LethalTempo
+:LethalTempo rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :LethalTempoImage ;
+                :icon "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png" ;
+                :id 8008 ;
+                :longDesc "1.5s after damaging a champion gain 40 - 110% Attack Speed (based on level) for 3s. Attacking a champion extends the effect to 6s.<br><br>Cooldown: 6s<br><br>Lethal Tempo allows you to temporarily exceed the attack speed limit." ;
+                :name "Lethal Tempo"^^xsd:string ;
+                :shortDesc "1.5s after damaging a champion gain a large amount of Attack Speed. Lethal Tempo allows you to temporarily exceed the attack speed limit." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FleetFootwork
+:FleetFootwork rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :FleetFootworkImage ;
+                :icon "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png" ;
+                :id 8021 ;
+                :longDesc "Attacking and moving builds Energy stacks. At 100 stacks, your next attack is Energized<br><br>Energized attacks heal you for 3 - 60 (+0.3 Bonus AD, +0.3 AP) and grant +20% movement speed for 1s.<br><br>Healing from minions is 20% effective for Ranged Champions." ;
+                :name "Fleet Footwork"^^xsd:string ;
+                :shortDesc "Attacking and moving builds Energy stacks. At 100 stacks, your next attack heals you and grants increased <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword>." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Conqueror
+:Conqueror rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :ConquerorImage ;
+                :icon "perk-images/Styles/Precision/Conqueror/Conqueror.png" ;
+                :id 8010 ;
+                :longDesc "Basic attacks or spells that deal damage to an enemy champion grant 2 stacks of Conqueror for 6s, gaining 2-5 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword> per stack. Stacks up to 10 times. Ranged champions gain only 1 stack per basic attack.<br><br>When fully stacked, heal for 15% of the damage you deal to champions (8% for ranged champions)." ;
+                :name "Conqueror"^^xsd:string ;
+                :shortDesc "Gain stacks of adaptive force when attacking enemy champions. After reaching 10 stacks, heal for a portion of damage you deal to champions." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Overheal
+:Overheal rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :OverhealImage ;
+                :icon "perk-images/Styles/Precision/Overheal.png" ;
+                :id 9101 ;
+                :longDesc "Excess healing on you becomes a shield, for up to 10 <scaleHealth>(+10% Max Health)</scaleHealth>.<br><br>Shield is built up from 20 to 100% of excess healing from yourself or any ally." ;
+                :name "Overheal"^^xsd:string ;
+                :shortDesc "Excess healing on you becomes a shield." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Triumph
+:Triumph rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :TriumphImage ;
+                :icon "perk-images/Styles/Precision/Triumph.png" ;
+                :id 9111 ;
+                :longDesc "Takedowns restore 12% of your missing health and grant an additional 20 gold. <br><br><hr><br><i>'The most dangerous game brings the greatest glory.' <br>ùNoxian Reckoner</i>" ;
+                :name "Triumph"^^xsd:string ;
+                :shortDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Takedowns</lol-uikit-tooltipped-keyword> restore 12% of your missing health and grant an additional 20 gold. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PresenceOfMind
+:PresenceOfMind rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :PresenceOfMindImage ;
+                :icon "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png" ;
+                :id 8009 ;
+                :longDesc "Takedowns restore 20% of your maximum mana or energy and increase your maximum mana by 100 (up to 500) or your maximum energy by 10 (up to 50). " ;
+                :name "Presence of Mind"^^xsd:string ;
+                :shortDesc "Takedowns restore mana or energy and increase their maximum amounts. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LegendAlacrity
+:LegendAlacrity rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :LegendAlacrityImage ;
+                :icon "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png" ;
+                :id 9104 ;
+                :longDesc "Gain 3% attack speed plus an additional 1.5% for every <i>Legend</i> stack (<statGood>max 10 stacks</statGood>).<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill." ;
+                :name "Legend: Alacrity"^^xsd:string ;
+                :shortDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Takedowns</lol-uikit-tooltipped-keyword> on enemies grant permanent <b>Attack Speed</b>. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LegendTenacity
+:LegendTenacity rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :LegendTenacityImage ;
+                :icon "perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png" ;
+                :id 9105 ;
+                :longDesc "Gain 5% tenacity plus an additional 2.5% for every <i>Legend</i> stack (<statGood>max 10 stacks</statGood>).<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill." ;
+                :name "Legend: Tenacity"^^xsd:string ;
+                :shortDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Takedowns</lol-uikit-tooltipped-keyword> on enemies grant permanent <b>Tenacity</b>. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LegendBloodline
+:LegendBloodline rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :LegendBloodlineImage ;
+                :icon "perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png" ;
+                :id 9103 ;
+                :longDesc "Gain 0.6% life steal for every <i>Legend</i> stack (<statGood>max 20 stacks</statGood>).<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill." ;
+                :name "Legend: Bloodline"^^xsd:string ;
+                :shortDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Takedowns</lol-uikit-tooltipped-keyword> on enemies grant permanent<b> Lifesteal</b>. Weaker earlier but stronger later game than other Legend Runes." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CoupDeGrace
+:CoupDeGrace rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :CoupDeGraceImage ;
+                :icon "perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png" ;
+                :id 8014 ;
+                :longDesc "Deal 8% more damage to champions who have less than 40% health." ;
+                :name "Coup de Grace"^^xsd:string ;
+                :shortDesc "Deal more damage to low health enemy champions." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CutDown
+:CutDown rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :CutDownImage ;
+                :icon "perk-images/Styles/Precision/CutDown/CutDown.png" ;
+                :id 8017 ;
+                :longDesc "Deal 5% to 15% more damage to champions, based on how much more max health they have than you.<br><br><rules>Bonus damage scales up linearly against enemies with 10% to 100% more max health than you.</rules>" ;
+                :name "Cut Down"^^xsd:string ;
+                :shortDesc "Deal more damage to champions with more max health than you." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LastStand
+:LastStand rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Precision ;
+                :hasImage  :LastStandImage ;
+                :icon "perk-images/Styles/Sorcery/LastStand/LastStand.png" ;
+                :id 8299 ;
+                :longDesc "Deal 5% - 11% increased damage to champions while you are below 60% health. Max damage gained at 30% health." ;
+                :name "Last Stand"^^xsd:string ;
+                :shortDesc "Deal more damage to champions while you are low on health." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GraspOfTheUndying
+:GraspOfTheUndying rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :GraspOfTheUndyingImage ;
+                :icon "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png" ;
+                :id 8437 ;
+                :longDesc "Every 4s in combat, your next basic attack on a champion will:<li>Deal bonus magic damage equal to 4% of your max health</li><li>Heals you for 2% of your max health</li><li>Permanently increase your health by 5</li><br><rules><i>Ranged Champions:</i> Damage, healing, and permanent health gained reduced by 40%.</rules><br>" ;
+                :name "Grasp of the Undying"^^xsd:string ;
+                :shortDesc "Every 4s your next attack on a champion deals bonus magic damage, heals you, and permanently increases your health." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Aftershock
+:Aftershock rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :AftershockImage ;
+                :icon "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png" ;
+                :id 8439 ;
+                :longDesc "After immobilizing an enemy champion, increase your Armor and Magic Resist by 35 + 80% of your Bonus Resists for 2.5s. Then explode, dealing magic damage to nearby enemies.<br><br>Damage: 25 - 120 (+8% of your bonus health)<br>Cooldown: 20s<br><br>Resistance bonus from Aftershock capped at: 80-150 (based on level)<br>" ;
+                :name "Aftershock"^^xsd:string ;
+                :shortDesc "After <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Immobilize'>immobilizing</lol-uikit-tooltipped-keyword> an enemy champion gain defenses and later deal a burst of magic damage around you." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Guardian
+:Guardian rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :GuardianImage ;
+                :icon "perk-images/Styles/Resolve/Guardian/Guardian.png" ;
+                :id 8465 ;
+                :longDesc "<i>Guard</i> allies within 175 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take damage, both of you gain a shield and are hasted for 1.5s.<br><br>Cooldown: <scaleLevel>70 - 40</scaleLevel> seconds<br>Shield: <scaleLevel>70 - 150</scaleLevel> + <scaleAP>25%</scaleAP> of your ability power + <scalehealth>12%</scalehealth> of your bonus health.<br>Haste: +20% Movement Speed." ;
+                :name "Guardian"^^xsd:string ;
+                :shortDesc "Guard allies you cast spells on and those that are very nearby. If you or a guarded ally would take damage, you're both hasted and granted a shield." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Demolish
+:Demolish rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :DemolishImage ;
+                :icon "perk-images/Styles/Resolve/Demolish/Demolish.png" ;
+                :id 8446 ;
+                :longDesc "Charge up a powerful attack against a tower over 3s, while within 600 range of it. The charged attack deals 100 (+35% of your max health) bonus physical damage. <br><br>Cooldown: 45s" ;
+                :name "Demolish"^^xsd:string ;
+                :shortDesc "Charge up a powerful attack against a tower while near it." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FontOfLife
+:FontOfLife rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :FontOfLifeImage ;
+                :icon "perk-images/Styles/Resolve/FontOfLife/FontOfLife.png" ;
+                :id 8463 ;
+                :longDesc "Impairing the movement of an enemy champion marks them for 4s.<br><br>Ally champions who attack marked enemies heal for 5 + 1% of your max health over 2s. " ;
+                :name "Font of Life"^^xsd:string ;
+                :shortDesc "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairMov'>Impairing</lol-uikit-tooltipped-keyword> the movement of an enemy champion marks them. Your allies heal when attacking champions you've marked. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ShieldBash
+:ShieldBash rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :ShieldBashImage ;
+                :icon "perk-images/Styles/Resolve/MirrorShell/MirrorShell.png" ;
+                :id 8401 ;
+                :longDesc "While shielded, gain <scaleLevel>1 - 10</scaleLevel> Armor and Magic Resist based on Level.<br><br>Whenever you gain a new shield,  your next basic attack against a champion deals <scaleLevel>5 - 30</scaleLevel> <scaleHealth>(+1.5% Bonus Health)</scaleHealth> <scaleMana>(+8.5% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect." ;
+                :name "Shield Bash"^^xsd:string ;
+                :shortDesc "Whenever you gain a shield, your next basic attack against a champion deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Conditioning
+:Conditioning rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :ConditioningImage ;
+                :icon "perk-images/Styles/Resolve/Conditioning/Conditioning.png" ;
+                :id 8429 ;
+                :longDesc "After 12 min gain +9 Armor and +9 Magic Resist and increase your Armor and Magic Resist by 5%." ;
+                :name "Conditioning"^^xsd:string ;
+                :shortDesc "After 12 min gain +9 Armor and +9 Magic Resist and increase your Armor and Magic Resist by 5%." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SecondWind
+:SecondWind rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :SecondWindImage ;
+                :icon "perk-images/Styles/Resolve/SecondWind/SecondWind.png" ;
+                :id 8444 ;
+                :longDesc "After taking damage from an enemy champion, heal for 4% of your missing health +6 over 10s." ;
+                :name "Second Wind"^^xsd:string ;
+                :shortDesc "After taking damage from an enemy champion heal back some missing health over time. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#BonePlating
+:BonePlating rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :BonePlatingImage ;
+                :icon "perk-images/Styles/Resolve/BonePlating/BonePlating.png" ;
+                :id 8473 ;
+                :longDesc "After taking damage from an enemy champion, the next 3 spells or attacks you receive from them deal 30-60 less damage.<br><br><br>Duration: 1.5s<br>Cooldown: 45s" ;
+                :name "Bone Plating"^^xsd:string ;
+                :shortDesc "After taking damage from an enemy champion, the next 3 spells or attacks you receive from them deal 30-60 less damage.<br><br><br>Duration: 1.5s<br>Cooldown: 45s" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Overgrowth
+:Overgrowth rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :OvergrowthImage ;
+                :icon "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png" ;
+                :id 8451 ;
+                :longDesc "Absorb life essence from monsters or enemy minions that die near you, permanently gaining 3 maximum health for every 8.<br><br>When you've absorbed 120 monsters or enemy minions, gain an additional 3.5% maximum health." ;
+                :name "Overgrowth"^^xsd:string ;
+                :shortDesc "Gain permanent max health when minions or monsters die near you." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Revitalize
+:Revitalize rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :RevitalizeImage ;
+                :icon "perk-images/Styles/Resolve/Revitalize/Revitalize.png" ;
+                :id 8453 ;
+                :longDesc "Heals and shields you cast or receive are 5% stronger and increased by an additional 10% on targets below 40% health." ;
+                :name "Revitalize"^^xsd:string ;
+                :shortDesc "Heals and shields you cast or receive are 5% stronger and increased by an additional 10% on low health targets." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Unflinching
+:Unflinching rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Resolve ;
+                :hasImage  :UnflinchingImage ;
+                :icon "perk-images/Styles/Sorcery/Unflinching/Unflinching.png" ;
+                :id 8242 ;
+                :longDesc "After casting a Summoner Spell, gain 15% Tenacity and Slow Resistance for 10s. Additionally, gain 10% Tenacity and Slow Resistance for each Summoner Spell on cooldown. " ;
+                :name "Unflinching"^^xsd:string ;
+                :shortDesc "After casting a Summoner Spell, gain Tenacity and Slow Resistance for a short duration. Additionally, gain Tenacity and Slow Resistance for each Summoner Spell on cooldown. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonAery
+:SummonAery rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :SummonAeryImage ;
+                :icon "perk-images/Styles/Sorcery/SummonAery/SummonAery.png" ;
+                :id 8214 ;
+                :longDesc "Damaging enemy champions with basic attacks or abilities sends Aery to them, dealing 10 - 40 based on level (+<scaleAP>0.1 AP</scaleAP>) (+<scaleAD>0.15 bonus AD</scaleAD>).<br><br>Empower or protecting allies with abilities sends Aery to them, shielding them for 35 - 80 based on level (+<scaleAP>0.25 AP</scaleAP>) (+<scaleAD>0.4 bonus AD</scaleAD>).<br><br>Aery cannot be sent out again until she returns to you." ;
+                :name "Summon Aery"^^xsd:string ;
+                :shortDesc "Your attacks and abilities send Aery to a target, damaging enemies or shielding allies." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ArcaneComet
+:ArcaneComet rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :ArcaneCometImage ;
+                :icon "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png" ;
+                :id 8229 ;
+                :longDesc "Damaging a champion with an ability hurls a comet at their location, or, if Arcane Comet is on cooldown, reduces its remaining cooldown.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptive Damage</font></lol-uikit-tooltipped-keyword>: 30 - 100 based on level (<scaleAP>+0.2 AP</scaleAP> and <scaleAD>+0.35 bonus AD</scaleAD>)<br>Cooldown: 20 - 8s<br><rules><br>Cooldown Reduction:<br>Single Target: 20%.<br>Area of Effect: 10%.<br>Damage over Time: 5%.<br></rules>" ;
+                :name "Arcane Comet"^^xsd:string ;
+                :shortDesc "Damaging a champion with an ability hurls a damaging comet at their location." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PhaseRush
+:PhaseRush rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :PhaseRushImage ;
+                :icon "perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png" ;
+                :id 8230 ;
+                :longDesc "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants 25 - 40% Movement Speed based on level and 75% Slow Resistance. <br><br>Movement speed is increased to 40 - 60% for Melee champions.<br><br>Duration: 3s<br>Cooldown: 15s" ;
+                :name "Phase Rush"^^xsd:string ;
+                :shortDesc "Hitting an enemy champion with 3 <b>separate</b> attacks or abilities grants a burst of <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword>. " .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#NullifyingOrb
+:NullifyingOrb rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :NullifyingOrbImage ;
+                :icon "perk-images/Styles/Sorcery/NullifyingOrb/Pokeshield.png" ;
+                :id 8224 ;
+                :longDesc "When you take magic damage that would reduce your Health below 30%, gain a shield that absorbs 40 - 120 magic damage based on level (<scaleAP>+0.1 AP</scaleAP> and <scaleAD>+0.15 bonus AD</scaleAD>) for 4s.<br><br>Cooldown: 60s" ;
+                :name "Nullifying Orb"^^xsd:string ;
+                :shortDesc "Gain a magic damage shield when taken to low health by magic damage." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ManaflowBand
+:ManaflowBand rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :ManaflowBandImage ;
+                :icon "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png" ;
+                :id 8226 ;
+                :longDesc "Hitting an enemy champion with an ability permanently increases your maximum mana by 25, up to 250 mana.<br><br>After reaching 250 bonus mana, restore 1% of your missing mana every 5 seconds.<br><br>Cooldown: 15 seconds" ;
+                :name "Manaflow Band"^^xsd:string ;
+                :shortDesc "Hitting an enemy champion with an ability permanently increases your maximum mana by 25, up to 250 mana.<br><br>After reaching 250 bonus mana, restore 1% of your missing mana every 5 seconds." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#NimbusCloak
+:NimbusCloak rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :NimbusCloakImage ;
+                :icon "perk-images/Styles/Sorcery/NimbusCloak/6361.png" ;
+                :id 8275 ;
+                :longDesc "After casting a Summoner Spell, gain a movement speed increase that lasts for 2.5s and allows you to pass through units.<br><br>Increase: 15% - 35% Movement Speed based on the Summoner Spell's cooldown. (Higher cooldown Summoner Spells grant more Movement Speed). " ;
+                :name "Nimbus Cloak"^^xsd:string ;
+                :shortDesc "After casting a Summoner Spell, gain a short movement speed increase that allows you to pass through units." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Transcendence
+:Transcendence rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :TranscendenceImage ;
+                :icon "perk-images/Styles/Sorcery/Transcendence/Transcendence.png" ;
+                :id 8210 ;
+                :longDesc "Gain 10% CDR when you reach level 10.<br><br>Each percent of CDR exceeding the CDR limit is converted to an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 1.2 Attack Damage or 2 Ability Power." ;
+                :name "Transcendence"^^xsd:string ;
+                :shortDesc "Gain 10% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>CDR</lol-uikit-tooltipped-keyword> when you reach level 10. Excess CDR becomes AP or AD, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>adaptive</lol-uikit-tooltipped-keyword>." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Celerity
+:Celerity rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :CelerityImage ;
+                :icon "perk-images/Styles/Sorcery/Celerity/CelerityTemp.png" ;
+                :id 8234 ;
+                :longDesc "All movement bonuses are 7% more effective on you and gain 1% Movement Speed." ;
+                :name "Celerity"^^xsd:string ;
+                :shortDesc "All movement speed bonuses are 7% more effective on you and gain 1% Movement Speed." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AbsoluteFocus
+:AbsoluteFocus rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :AbsoluteFocusImage ;
+                :icon "perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png" ;
+                :id 8233 ;
+                :longDesc "While above 70% health, gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of up to 18 Attack Damage or 30 Ability Power (based on level). <br><br>Grants 1.8 Attack Damage or 3 Ability Power at level 1. " ;
+                :name "Absolute Focus"^^xsd:string ;
+                :shortDesc "While above 70% health, gain extra <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword>." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Scorch
+:Scorch rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :ScorchImage ;
+                :icon "perk-images/Styles/Sorcery/Scorch/Scorch.png" ;
+                :id 8237 ;
+                :longDesc "Your next damaging ability hit sets champions on fire dealing 15 - 35 bonus magic damage based on level after 1s.<br><br>Cooldown: 10s" ;
+                :name "Scorch"^^xsd:string ;
+                :shortDesc "Your first damaging ability hit every 10s burns champions." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Waterwalking
+:Waterwalking rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :WaterwalkingImage ;
+                :icon "perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png" ;
+                :id 8232 ;
+                :longDesc "Gain 25 Movement Speed and an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of up to 18 Attack Damage or 30 Ability Power (based on level) when in the river.<br><br><hr><br><i>May you be as swift as the rushing river and agile as a startled Rift Scuttler.</i><br>" ;
+                :name "Waterwalking"^^xsd:string ;
+                :shortDesc "Gain <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword> and AP or AD, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>adaptive</lol-uikit-tooltipped-keyword> in the river." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GatheringStorm
+:GatheringStorm rdf:type owl:NamedIndividual ,
+                         :Rune ;
+                :isFromTree  :Sorcery ;
+                :hasImage  :GatheringStormImage ;
+                :icon "perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png" ;
+                :id 8236 ;
+                :longDesc "Every 10 min gain AP or AD, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword>.<br><br><i>10 min</i>: + 8 AP or 5 AD <br><i>20 min</i>: + 24 AP or 14 AD<br><i>30 min</i>: + 48 AP or 29 AD<br><i>40 min</i>: + 80 AP or 48 AD<br><i>50 min</i>: + 120 AP or 72 AD<br><i>60 min</i>: + 168 AP or 101 AD<br>etc..." ;
+                :name "Gathering Storm"^^xsd:string ;
+                :shortDesc "Gain increasing amounts of AD or AP, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>adaptive</lol-uikit-tooltipped-keyword> over the course of the game." .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ElectrocuteImage
+:ElectrocuteImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/Electrocute/Electrocute.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PredatorImage
+:PredatorImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/Predator/Predator.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#DarkHarvestImage
+:DarkHarvestImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HailOfBladesImage
+:HailOfBladesImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CheapShotImage
+:CheapShotImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/CheapShot/CheapShot.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TasteOfBloodImage
+:TasteOfBloodImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SuddenImpactImage
+:SuddenImpactImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ZombieWardImage
+:ZombieWardImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/ZombieWard/ZombieWard.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GhostPoroImage
+:GhostPoroImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/GhostPoro/GhostPoro.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#EyeballCollectionImage
+:EyeballCollectionImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RavenousHunterImage
+:RavenousHunterImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#IngeniousHunterImage
+:IngeniousHunterImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RelentlessHunterImage
+:RelentlessHunterImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#UltimateHunterImage
+:UltimateHunterImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GlacialAugmentImage
+:GlacialAugmentImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#UnsealedSpellbookImage
+:UnsealedSpellbookImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MasterKeyImage
+:MasterKeyImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/MasterKey/MasterKey.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HextechFlashtraptionImage
+:HextechFlashtraptionImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MagicalFootwearImage
+:MagicalFootwearImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PerfectTimingImage
+:PerfectTimingImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FuturesMarketImage
+:FuturesMarketImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/FuturesMarket/FuturesMarket.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MinionDematerializerImage
+:MinionDematerializerImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#BiscuitDeliveryImage
+:BiscuitDeliveryImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CosmicInsightImage
+:CosmicInsightImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ApproachVelocityImage
+:ApproachVelocityImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TimeWarpTonicImage
+:TimeWarpTonicImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PressTheAttackImage
+:PressTheAttackImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LethalTempoImage
+:LethalTempoImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FleetFootworkImage
+:FleetFootworkImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ConquerorImage
+:ConquerorImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/Conqueror/Conqueror.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#OverhealImage
+:OverhealImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/Overheal.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TriumphImage
+:TriumphImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/Triumph.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PresenceOfMindImage
+:PresenceOfMindImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LegendAlacrityImage
+:LegendAlacrityImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LegendTenacityImage
+:LegendTenacityImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LegendBloodlineImage
+:LegendBloodlineImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CoupDeGraceImage
+:CoupDeGraceImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CutDownImage
+:CutDownImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Precision/CutDown/CutDown.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#LastStandImage
+:LastStandImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/LastStand/LastStand.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GraspOfTheUndyingImage
+:GraspOfTheUndyingImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AftershockImage
+:AftershockImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GuardianImage
+:GuardianImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/Guardian/Guardian.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#DemolishImage
+:DemolishImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/Demolish/Demolish.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FontOfLifeImage
+:FontOfLifeImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ShieldBashImage
+:ShieldBashImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ConditioningImage
+:ConditioningImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/Conditioning/Conditioning.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SecondWindImage
+:SecondWindImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/SecondWind/SecondWind.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#BonePlatingImage
+:BonePlatingImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/BonePlating/BonePlating.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#OvergrowthImage
+:OvergrowthImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/Overgrowth/Overgrowth.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#RevitalizeImage
+:RevitalizeImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Resolve/Revitalize/Revitalize.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#UnflinchingImage
+:UnflinchingImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/Unflinching/Unflinching.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonAeryImage
+:SummonAeryImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/SummonAery/SummonAery.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ArcaneCometImage
+:ArcaneCometImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#PhaseRushImage
+:PhaseRushImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#NullifyingOrbImage
+:NullifyingOrbImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/NullifyingOrb/Pokeshield.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ManaflowBandImage
+:ManaflowBandImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#NimbusCloakImage
+:NimbusCloakImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/NimbusCloak/6361.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TranscendenceImage
+:TranscendenceImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/Transcendence/Transcendence.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CelerityImage
+:CelerityImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#AbsoluteFocusImage
+:AbsoluteFocusImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ScorchImage
+:ScorchImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/Scorch/Scorch.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#WaterwalkingImage
+:WaterwalkingImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png".
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GatheringStormImage
+:GatheringStormImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :path "/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png".
+
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
