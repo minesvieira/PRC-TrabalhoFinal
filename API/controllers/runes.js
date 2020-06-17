@@ -26,8 +26,8 @@ Rune.getRunes = async function () {
   var query = `select ?rune ?name ?desc ?imagePath where {
     ?rune a lol:Rune.
     ?rune lol:name ?name.
-    ?items lol:longDesc ?desc.
-    ?items lol:hasImage ?image.
+    ?rune lol:longDesc ?desc.
+    ?rune lol:hasImage ?image.
     ?image lol:path ?imagePath.
 }`;
   var encoded = encodeURIComponent(prefixes + query);
