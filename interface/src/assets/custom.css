@@ -1,0 +1,12 @@
+#champion-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+#champion-grid > div {
+    display: flex;
+  }
+  
+#champion-grid > div > div {
+    flex: 1;
+  }

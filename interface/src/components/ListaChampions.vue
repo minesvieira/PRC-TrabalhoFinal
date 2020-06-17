@@ -18,51 +18,30 @@
     </v-toolbar>
     <br>
     <br>
-    <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS SEARCH</h1>
-    <h3 class="white--text" style="margin-left:40px"> Discover the best builds for every champion</h3>
+    <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS</h1>
     <br>
-    <v-row justify="space-around" lg="10" class="pa-6" v-for="n in 4" :key="n">
-        <v-avatar size="150">
-        <img
-            src="https://cdn.vuetifyjs.com/images/john.jpg"
-        >
-        </v-avatar>
 
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
+  <template>
+  <v-container class="black">
+    <v-row no-gutters>
+      <template v-for="item in champions">
+        <v-col :key="item.ind">
+          <v-card
+            class="black"
+            outlined
+            tile
+            justify="left"
+          >
+             <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="100" width="100"> </v-img>
+             <div class="white--text" justify="center" align="center"> {{ item.ind }} </div>
+             
+          </v-card>
+        </v-col>
+      </template>
+    </v-row>
+  </v-container>
+</template>
 
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-    <v-avatar size="150">
-      <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
-        alt="John"
-      >
-    </v-avatar>
-
-  </v-row>
-  <br>
-  <v-row justify="space-around">
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-        <p class="white--text"> nome </p>
-
-  </v-row>
-  
   </v-card>
     
   
@@ -75,18 +54,21 @@ const lhost = require("@/config/global").host;
 import { mdiMovieOpen } from '@mdi/js';
 
 export default {
-  name: 'ListaPersonagens',
+  name: 'ListaChampions',
 
   data: () => ({
-     
     champions: [],
-    verPersonagem: mdiMovieOpen
+    verPersonagem: mdiMovieOpen,
   }),
 
   created: async function(){
     try {
       let response = await axios.get(lhost + "/champion/main");
-      this.champion = response.data
+      this.champions = response.data
+      this.champions.forEach(champ => {
+        champ.imagePath = champ.imagePath.replace(".png",".jpg")
+        console.log(champ.imagePath)
+      });
     } 
     catch (e) {
       return e;
