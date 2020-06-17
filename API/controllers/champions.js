@@ -20,7 +20,7 @@ var prefixes = `
     PREFIX lol: <http://www.tartesdajulia.com/ontologies/LeagueOfLegends#>
 `;
 
-var getLink = "http://localhost:7200/repositories/LOL" + "?query=";
+var getLink = "http://localhost:7200/repositories/LoLDEVELOPMENT" + "?query=";
 
 Champions.getChampions = async function () {
   var query = `select ?ind where {

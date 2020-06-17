@@ -17,7 +17,7 @@
     <h1 class="white--text" align="center" size="30px"> ALL ITEMS </h1>
     <br>
     <v-row>
-        <v-col lg="2">
+        <v-col lg="2"  class="pa-6">
            <input type="checkbox" id="checkbox" v-model="checked">
            <label class="white--text" for="checkbox">  Item Type</label>
            <br>
@@ -27,7 +27,7 @@
            <label class="white--text" for="checkbox">  Item Tag</label>
             
         </v-col>
-        <v-col lg="10" class="pa-6" v-for="n in 3"
+        <v-col style="margin-left:300px" lg="12" v-for="n in 3"
         :key="n">
             <v-avatar tile color="blue" size="100">
                 <img
