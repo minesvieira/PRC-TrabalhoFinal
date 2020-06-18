@@ -17,7 +17,7 @@
     <v-row align="center">
     <v-col class="text-center">
       <div class="my-2">
-        <v-btn to="/champions">Champions</v-btn>
+        <v-btn  to="/champions">Champions</v-btn>
         <br>
         <br>
         <v-btn to="/itens">Items</v-btn>
