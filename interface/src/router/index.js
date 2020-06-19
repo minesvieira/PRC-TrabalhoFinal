@@ -15,24 +15,9 @@ Vue.use(VueRouter)
     component: () => import('../views/Consulta.vue')
   },
   {
-    path: '/atores',
-    name: 'Página de Atores',
-    component: () => import('../views/PaginaAtores.vue')
-  },
-  {
     path: '/atores/:id',
     name: 'Consulta Ator',
     component: () => import('../views/ConsultaAtor.vue')
-  },
-  {
-    path: '/personagens',
-    name: 'Página de Personagens',
-    component: () => import('../views/PaginaPersonagens.vue')
-  },
-  {
-    path: '/personagens/:id',
-    name: 'Consulta Personagem',
-    component: () => import('../views/ConsultaPersonagem.vue')
   },
   {
     path: '/champions',
@@ -48,6 +33,11 @@ Vue.use(VueRouter)
     path: '/runes',
     name: 'Página de Runes',
     component: () => import('../views/PaginaRunes.vue')
+  },
+  {
+    path: '/summoner',
+    name: 'Página de Summoner Spells',
+    component: () => import('../views/PaginaSummoner.vue')
   },
 
 ]

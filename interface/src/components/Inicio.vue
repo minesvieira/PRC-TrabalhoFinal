@@ -24,6 +24,9 @@
         <br>
         <br>
         <v-btn to="/runes">Runes</v-btn>
+        <br>
+        <br>
+        <v-btn to="/summoner">Summoner Spells</v-btn>
       </div>
     </v-col>
     </v-row>
