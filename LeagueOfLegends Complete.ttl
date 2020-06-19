@@ -72291,6 +72291,314 @@
                          :Image ;
                 :path "/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png".
 
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerBarrier
+:SummonerBarrier rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerBarrierImage ;
+                         :cooldown "180" ;
+                         :cooldownBurn 180 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Shields your champion from 115-455 damage (depending on champion level) for 2 seconds." ;
+                         :id "SummonerBarrier" ;
+                         :key 21 ;
+                         :maxrank 1 ;
+                         :name "Barrier" ;
+                         :summonerLevel 4 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerBoost
+:SummonerBoost rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerBoostImage ;
+                         :cooldown "210" ;
+                         :cooldownBurn 210 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Removes all disables (excluding suppression and airborne) and summoner spell debuffs affecting your champion and lowers the duration of incoming disables by 65% for 3 seconds." ;
+                         :id "SummonerBoost" ;
+                         :key 1 ;
+                         :maxrank 1 ;
+                         :name "Cleanse" ;
+                         :summonerLevel 9 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerDot
+:SummonerDot rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerDotImage ;
+                         :cooldown "180" ;
+                         :cooldownBurn 180 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds, grants you vision of the target, and reduces healing effects on them for the duration." ;
+                         :id "SummonerDot" ;
+                         :key 14 ;
+                         :maxrank 1 ;
+                         :name "Ignite" ;
+                         :summonerLevel 9 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerExhaust
+:SummonerExhaust rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerExhaustImage ;
+                         :cooldown "210" ;
+                         :cooldownBurn 210 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Exhausts target enemy champion, reducing their Movement Speed by 30%, and their damage dealt by 40% for 3 seconds." ;
+                         :id "SummonerExhaust" ;
+                         :key 3 ;
+                         :maxrank 1 ;
+                         :name "Exhaust" ;
+                         :summonerLevel 4 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerFlash
+:SummonerFlash rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerFlashImage ;
+                         :cooldown "300" ;
+                         :cooldownBurn 300 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Teleports your champion a short distance toward your cursor's location." ;
+                         :id "SummonerFlash" ;
+                         :key 4 ;
+                         :maxrank 1 ;
+                         :name "Flash" ;
+                         :summonerLevel 7 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerHaste
+:SummonerHaste rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerHasteImage ;
+                         :cooldown "180" ;
+                         :cooldownBurn 180 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Your champion gains increased Movement Speed and can move through units for 10 seconds. Grants a maximum of 28-45% (depending on champion level) Movement Speed after accelerating for 2 seconds." ;
+                         :id "SummonerHaste" ;
+                         :key 6 ;
+                         :maxrank 1 ;
+                         :name "Ghost" ;
+                         :summonerLevel 1 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerHeal
+:SummonerHeal rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerHealImage ;
+                         :cooldown "240" ;
+                         :cooldownBurn 240 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Restores 90-345 Health (depending on champion level) and grants 30% Movement Speed for 1 second to you and target allied champion. This healing is halved for units recently affected by Summoner Heal." ;
+                         :id "SummonerHeal" ;
+                         :key 7 ;
+                         :maxrank 1 ;
+                         :name "Heal" ;
+                         :summonerLevel 1 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerMana
+:SummonerMana rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerManaImage ;
+                         :cooldown "240" ;
+                         :cooldownBurn 240 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Restores 50% of your champion's maximum Mana. Also restores allies for 25% of their maximum Mana." ;
+                         :id "SummonerMana" ;
+                         :key 13 ;
+                         :maxrank 1 ;
+                         :name "Clarity" ;
+                         :summonerLevel 6 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerPoroRecall
+:SummonerPoroRecall rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerPoroRecallImage ;
+                         :cooldown "10" ;
+                         :cooldownBurn 10 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Quickly travel to the Poro King's side." ;
+                         :id "SummonerPoroRecall" ;
+                         :key 30 ;
+                         :maxrank 1 ;
+                         :name "To the King!" ;
+                         :summonerLevel 1 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerPoroThrow
+:SummonerPoroThrow rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerPoroThrowImage ;
+                         :cooldown "20" ;
+                         :cooldownBurn 20 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Toss a Poro at your enemies. If it hits, you can quickly travel to your target as a follow up." ;
+                         :id "SummonerPoroThrow" ;
+                         :key 31 ;
+                         :maxrank 1 ;
+                         :name "Poro Toss" ;
+                         :summonerLevel 1 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerSmite
+:SummonerSmite rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerSmiteImage ;
+                         :cooldown "15" ;
+                         :cooldownBurn 15 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Deals 390-1000 true damage (depending on champion level) to target epic, large, or medium monster or enemy minion. Restores Health based on your maximum life when used against monsters." ;
+                         :id "SummonerSmite" ;
+                         :key 11 ;
+                         :maxrank 1 ;
+                         :name "Smite" ;
+                         :summonerLevel 9 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerSnowURFSnowball_Mark
+:SummonerSnowURFSnowball_Mark rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerSnowURFSnowball_MarkImage ;
+                         :cooldown "80" ;
+                         :cooldownBurn 80 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up." ;
+                         :id "SummonerSnowURFSnowball_Mark" ;
+                         :key 39 ;
+                         :maxrank 1 ;
+                         :name "Mark" ;
+                         :summonerLevel 6 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerSnowball
+:SummonerSnowball rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerSnowballImage ;
+                         :cooldown "80" ;
+                         :cooldownBurn 80 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up." ;
+                         :id "SummonerSnowball" ;
+                         :key 32 ;
+                         :maxrank 1 ;
+                         :name "Mark" ;
+                         :summonerLevel 6 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SummonerTeleport
+:SummonerTeleport rdf:type owl:NamedIndividual ,
+                         :SummonerSpell ;
+                         :hasImage :SummonerTeleportImage ;
+                         :cooldown "0" ;
+                         :cooldownBurn 0 ;
+                         :cost "0" ;
+                         :costBurn 0 ;
+                         :description "After channeling for 4 seconds, teleports your champion to target allied structure, minion, or ward and grants a Movement Speed boost. The cooldown of Teleport scales from 420-240 seconds depending on champion level." ;
+                         :id "SummonerTeleport" ;
+                         :key 12 ;
+                         :maxrank 1 ;
+                         :name "Teleport" ;
+                         :summonerLevel 7 .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#BarrierImage
+:SummonerBarrierImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerBarrier.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#CleanseImage
+:SummonerBoostImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerBoost.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#IgniteImage
+:SummonerDotImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerDot.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ExhaustImage
+:SummonerExhaustImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerExhaust.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#FlashImage
+:SummonerFlashImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerFlash.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#GhostImage
+:SummonerHasteImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerHaste.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#HealImage
+:SummonerHealImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerHeal.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#ClarityImage
+:SummonerManaImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerMana.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#To_the_King!Image
+:SummonerPoroRecallImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerPoroRecall.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#Poro_TossImage
+:SummonerPoroThrowImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerPoroThrow.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#SmiteImage
+:SummonerSmiteImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerSmite.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MarkImage
+:SummonerSnowURFSnowball_MarkImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerSnowURFSnowball_Mark.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#MarkImage
+:SummonerSnowballImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerSnowball.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
+###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#TeleportImage
+:SummonerTeleportImage rdf:type owl:NamedIndividual ,
+                         :Image ;
+                :full "SummonerTeleport.png" ;
+                :sprite "spell0.png" ;
+                :group "spell" .
+
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
