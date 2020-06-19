@@ -44,11 +44,11 @@ def readFile():
                             cost = str(cost)[1:-1]
                             if(not(champions.__contains__(name))):
                                 print(
-                                    "###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name)
-                                print(":" + name, "rdf:type owl:NamedIndividual ,")
+                                    "###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + idA)
+                                print(":" + idA, "rdf:type owl:NamedIndividual ,")
                                 print("                         :SummonerSpell ;")
                                 print(
-                                    "                         :hasImage :" + name + "Image ;")
+                                    "                         :hasImage :" + idA + "Image ;")
                                 print(
                                     '                         :cooldown "' + co + '" ;')
                                 print(

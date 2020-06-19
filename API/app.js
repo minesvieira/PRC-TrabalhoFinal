@@ -6,9 +6,11 @@ var logger = require("morgan");
 
 var ontologyRouter = require("./routes/ontology");
 var usersRouter = require("./routes/users");
-var championRouter = require("./routes/champion");
+var championRouter = require("./routes/champions");
 var itemRouter = require("./routes/items");
 var runeRouter = require("./routes/runes");
+var summonerRouter = require("./routes/summonerSpells");
+
 
 var app = express();
 
@@ -48,6 +50,7 @@ app.use("/users", usersRouter);
 app.use("/champion", championRouter);
 app.use("/item", itemRouter);
 app.use("/rune", runeRouter);
+app.use("/summoner", summonerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

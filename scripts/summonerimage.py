@@ -39,7 +39,7 @@ def readFile():
                                     if(not(champions.__contains__(name))):
                                         print(
                                             "###  http://www.tartesdajulia.com/ontologies/LeagueOfLegends#" + name + "Image")
-                                        print(":" + name + "Image",
+                                        print(":" + full[0:-4] + "Image",
                                               "rdf:type owl:NamedIndividual ,")
                                         print(
                                             "                         :Image ;")

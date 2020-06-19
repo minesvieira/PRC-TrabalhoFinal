@@ -26,18 +26,28 @@
     - [x] Check if ontology is complete
     
 
-- [ ] Make API
-    - [ ] Controllers
+- [x] Make API
+    - [x] Controllers
         - [x] Ontology
         - [x] Champions
         - [x] Items
-        - [ ] Runes
-        - [ ] SummonerSpells
-    - [ ] Routes
+        - [x] Runes
+        - [x] SummonerSpells
+    - [x] Routes
         - [x] Ontology
             - [x] Champions
             - [x] Items
-            - [ ] Runes
-            - [ ] SummonerSpells
+            - [x] Runes
+            - [x] SummonerSpells
 
 - [ ] Make Interface
+    - [x] Display grid of champions
+        - [ ] Make it clickable and so it redirects to individual champion page
+    - [ ] Individual champion page
+        - [ ] Make it dynamic (Showing skins, altering background)
+    - [ ] Show rune trees as trees
+    - [ ] Show items
+        - [ ] Filter by itemTag and itemType
+        - [ ] Show buildpaths for items (buildsInto and buildsFrom)
+    
+

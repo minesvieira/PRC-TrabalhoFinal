@@ -15,7 +15,7 @@ Provides information about the ontology such as classes, individuals etc...
 
 ## /champions
 
-    /champions
+    /champion
         /:id
             /skins
             /abilities
@@ -33,7 +33,7 @@ Provides information about the ontology such as classes, individuals etc...
 
 Provides information and details about champions or a specific champion.
 
-## /items
+## /item
 
     /items
         /:id
@@ -54,7 +54,7 @@ Provides information and details about items
 
 ## /runes
 
-    /runes
+    /rune
         /:id
             /isFromTree
             /image
@@ -65,7 +65,7 @@ Provides information and details about runes
 
 ## /summonerSpells
 
-    /summonerSpells
+    /summoner
         /:id
             /image
             
