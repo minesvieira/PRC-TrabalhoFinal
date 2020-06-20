@@ -1,27 +1,5 @@
 <template >
-  <v-card class="ma-2 black" >
-    <v-toolbar color="#C5B358" height="50px">
-        <v-toolbar-title class="black--text">League of Legends</v-toolbar-title>
-            <v-btn icon class="hidden-xs-only">
-            </v-btn>
-            <v-spacer></v-spacer>
-        <v-btn text to="/itens">
-            <p >Items</p>
-        </v-btn>
-        <v-btn text to="/runes">
-            <p >Runes</p>
-        </v-btn>
-        <v-text-field
-        hide-details
-        single-line
-        ></v-text-field>
-    </v-toolbar>
-    <br>
-    <br>
-    <h1 class="white--text" style="margin-left:40px"> LOL CHAMPIONS</h1>
-    <br>
 
-  <template>
   <v-container class="black">
     <v-row no-gutters>
       <template v-for="item in champions">
@@ -32,19 +10,15 @@
             tile
             justify="left"
           >
+          <a :href="'/champions/' + item.ind">
              <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="100" width="100"> </v-img>
              <div class="white--text" justify="center" align="center"> {{ item.ind }} </div>
-             
+          </a>
           </v-card>
         </v-col>
       </template>
     </v-row>
   </v-container>
-</template>
-
-  </v-card>
-    
-  
 </template>
 
 <script>

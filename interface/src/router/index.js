@@ -10,19 +10,14 @@ Vue.use(VueRouter)
     component: () => import('../views/Principal.vue')
   },
   {
-    path: '/champions/info',
-    name: 'Consulta Champion',
-    component: () => import('../views/Consulta.vue')
-  },
-  {
-    path: '/atores/:id',
-    name: 'Consulta Ator',
-    component: () => import('../views/ConsultaAtor.vue')
-  },
-  {
     path: '/champions',
     name: 'Página de Champions',
     component: () => import('../views/PaginaChampions.vue')
+  },
+  {
+    path: '/champions/:id',
+    name: 'Página de Champion Individual',
+    component: () => import('../views/PaginaChampionIndividual.vue')
   },
   {
     path: '/itens',

@@ -1,23 +1,4 @@
-<template >
-  <v-card class="ma-2 black" >
-    <v-toolbar color="#C5B358" height="50px">
-        <v-toolbar-title class="black--text">League of Legends</v-toolbar-title>
-            <v-btn icon class="hidden-xs-only">
-            </v-btn>
-            <v-spacer></v-spacer>
-        <v-btn text to="/champions">
-            <p >Champions</p>
-        </v-btn>
-        <v-btn text to="/itens">
-            <p >Items</p>
-        </v-btn>
-    </v-toolbar>
-    <br>
-    <br>
-    <h1 class="white--text" style="margin-left:40px" align="center"> ALL RUNES</h1>
-    <br>
-
-  <template>
+<template>
   <v-container class="black">
     <v-row no-gutters>
       <template v-for="item in runes">
@@ -36,11 +17,6 @@
       </template>
     </v-row>
   </v-container>
-</template>
-
-  </v-card>
-    
-  
 </template>
 
 <script>
