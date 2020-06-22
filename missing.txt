@@ -1,0 +1,6 @@
+What is missing: 
+-Create 2 divs side by side.
+-radial gradient on the right one ( the one with the splash image)
+-maybe solid backgroud on the left?
+-add abilities
+-create tab for skins
