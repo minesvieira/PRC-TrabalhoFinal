@@ -42,8 +42,8 @@
 
 - [ ] Make Interface
     - [x] Display grid of champions
-        - [ ] Make it clickable and so it redirects to individual champion page
-    - [ ] Individual champion page
+        - [x] Make it clickable and so it redirects to individual champion page
+    - [x] Individual champion page
         - [ ] Make it dynamic (Showing skins, altering background)
     - [ ] Show rune trees as trees
     - [ ] Show items
