@@ -10,7 +10,7 @@
       <v-row align="center" justify="center">
         <v-col cols="5"  class="justify-center">
           <v-layout flex align-center justify-center>
-            <v-img justify-center class="text-center" align="center" src="..\assets\foto.jpg" aspect-ratio="1.3"></v-img>
+            <v-img justify-center class="text-center" align="center" src="..\assets\foto.jpg" aspect-ratio="1.3"/>
           </v-layout>
         </v-col>
       </v-row>
@@ -32,7 +32,6 @@
     </v-row>
     
   </v-card>
-  
 </template>
 
 <script>

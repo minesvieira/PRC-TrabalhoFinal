@@ -1,7 +1,5 @@
 <template>
-  <v-app v-bind:style="{ backgroundColor: color}">
     <Inicio/>
-  </v-app>
 </template>
 
 <script>
