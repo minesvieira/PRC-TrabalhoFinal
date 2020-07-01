@@ -1,37 +1,118 @@
 <template>
   <v-container>
-    <div class='filters'>
-      <div class="container" id="people">
-        <div class="filter">
-          <label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
-          <label v-for="type in this.types" :key='type.type'   ><input type="radio" v-model="selectedCategory" :value='type.type'> {{type.type}} </label>
+    <div class='root'>
+      <div class ='itemList'>
+        <div class='filters'>
+          <div class="container" id="people">
+            <div class="filter">
+              <label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
+              <label v-for="type in this.types" :key='type.type'   ><input type="radio" v-model="selectedCategory" :value='type.type'> {{type.type}} </label>
+            </div>
+            <!--
+            <ul class="people-list">
+              <li v-for="item in filteredItems" :key='item.itemID'>{{ item.name }}</li>
+            </ul>
+            -->
+          </div>
         </div>
-        <!--
-        <ul class="people-list">
-          <li v-for="item in filteredItems" :key='item.itemID'>{{ item.name }}</li>
-        </ul>
-        -->
+        <div class='items'>
+          <v-row no-gutters>
+            <template v-for="item in filteredItems">
+              <v-col :key="item.itemID">
+                <v-card
+                  class="black"
+                  outlined
+                  tile
+                  justify="left"
+                  @click="clickMethod(item.itemID)"
+                >
+                  <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="60" width="60"/> 
+                  <div justify="center" align="center"> {{ item.name }} </div>
+                  
+                </v-card>
+              </v-col>
+            </template>
+          </v-row>
+        </div>
+        
+      </div>
+      <div class='itemDetails' v-if = clicked >
+        <v-card outlined >
+          <div class='into' v-if ='clickedItem.buildsInto.length'>
+            <div class='builds'  v-for='into in clickedItem.buildsInto' :key="into.item" >
+              <div class='buildsInto'  v-for='itemInto in into' :key="itemInto.item" >
+              <v-img v-bind:src="require('@/assets/items/' + itemInto + '.png')" aspect-ratio="1" height="40" width="40" @click="clickMethod(itemInto)"/>
+              </div>
+            </div>
+          </div>
+
+          <div class='from' v-if ='clickedItem.buildsFrom.length'>
+            <div class='builds'  v-for='from in clickedItem.buildsFrom' :key="from.item" >
+              <div class='buildsFrom'  v-for='itemFrom in from' :key="itemFrom.item" >
+              <v-img v-bind:src="require('@/assets/items/' + itemFrom + '.png')" aspect-ratio="1" height="40" width="40" @click="clickMethod(itemFrom)"/>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <v-card-title> {{clickedItem.core[0].name}}</v-card-title>
+          <div class='itemImage'>
+            <v-img v-bind:src="require('@/assets' + clickedItem.image[0].imagePath)" aspect-ratio="1" height="60" width="60"/>
+          </div>
+          <div class='details' v-html=clickedItem.core[0].desc>
+             
+          </div>
+        </v-card>
       </div>
     </div>
-    <v-row no-gutters>
-      <template v-for="item in filteredItems">
-        <v-col :key="item.itemID">
-          <v-card
-            class="black"
-            outlined
-            tile
-            justify="left"
-          >
-             <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
-             <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
-             
-          </v-card>
-        </v-col>
-      </template>
-    </v-row>
   </v-container>
 </template>
 
+<style scoped>
+  .root {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;  
+    flex-wrap: wrap;
+  }
+  .itemList{
+    max-width: 60%;
+    flex: 0 0 65%;
+  }
+  .itemDetails{
+    flex: 1;
+    padding: top 50px;
+    display: block;
+  }
+  .details {
+    max-width: 50%;
+    padding:10px;
+  }
+  .itemImage {
+  }
+  .buildsFrom{
+    float:left;
+    justify-content:center;
+    margin-bottom:10px;
+    margin-top:10px;
+  }
+  .buildsInto {
+    position: relative;
+    margin-bottom:10px;
+    margin-top:10px;
+    float:left;
+    justify-content:center;
+    min-width: 0
+  }
+  .into{
+    justify-content:center;
+  }
+  .from{
+    justify-content:center;
+  }
+
+</style>
 
 <script>
 import axios from 'axios'
@@ -49,6 +130,8 @@ export default {
     Tools : [],
     Movement : [],
     Magic : [],
+    clickedItem : [],
+    clicked : false,
     filtrar: "",
     selectedCategory: "All",
   }),
@@ -107,6 +190,12 @@ export default {
       alert('Cliquei na personagem: ' + JSON.stringify(item))
       this.$router.push("/personagens/" + item.id);
     },
+    clickMethod : async function (item) {
+      this.clicked = true
+      let Response = await axios.get(lhost + "/item/" + item)
+      this.clickedItem = Response.data
+      console.log(JSON.stringify(this.clickedItem))
+    }
   }
   
 }
