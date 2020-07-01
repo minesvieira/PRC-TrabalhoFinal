@@ -10,10 +10,23 @@
           <v-tab-item>
             <div class="overview">
               <div class="textSide">
+                <!--Start of textSide, core information-->
                 <div class="core" >
-                  <h1> {{ champion['core']['0']['name'] }}, {{ champion['core']['0']['title'] }}  </h1>
-                  <p>Resource used: {{ champion['core']['0']['partype'] }} </p>
+                    <h1> 
+                      {{ champion['core']['0']['name'] }}, {{ champion['core']['0']['title'] }}  
+                    </h1>
+                    <div class='tags'>
+                      <v-chip class ='tags' label v-for="item in champion['tags']" :key="item.message" >
+                        {{ item.tag }} 
+                      </v-chip>
+                    </div>
+                    <div class='partype'>
+                      <v-chip label style="padding:4px" :color="this.partype" width='200'>
+                        <h3>Resource used: {{ champion['core']['0']['partype'] }} </h3>
+                      </v-chip>
+                    </div>
                 </div>
+                <!-- Start of champion information numbers-->
                 <div class="information">
                   <p>Attack: {{ this.champion['infoNumbers']['0']['attack'] }}</p>
                   <p>Defense: {{ this.champion['infoNumbers']['0']['defense'] }}</p>
@@ -23,6 +36,7 @@
                 <div class="lore" style="width:90%">
                 <p> Lore : {{ champion['core']['0']['lore'] }} </p>
                 </div>
+                <!-- Start of abilities expansion panels -->
                 <div class="abilities" style="width:90%">
                 <template>
                   <v-row justify="center">
@@ -91,6 +105,13 @@
   .imageCarousel{
     flex: 1 1 auto;
   }
+  .tags {
+    margin-bottom: 5px;
+    margin-right: 4px;
+  }
+  .partype {
+    margin-bottom: 10px;
+  }
 
 </style>
 
@@ -109,6 +130,7 @@ export default {
     champion: {} ,
     background: '',
     championInfo:[],
+    partype: '',
   }),
   computed: {
        
@@ -122,6 +144,32 @@ export default {
         this.background = this.champion['skins']['0']['splash'].replace('.png','.jpg')
         console.log(this.background)
         console.log(this.champion['core']['0']['name'])
+        switch (this.champion['core']['0']['partype']) {
+          case 'Mana':
+            this.partype='blue darken-4';
+            break;
+          case 'Crimson Rush':
+          case 'Blood Well':
+          case 'Fury':
+          case 'Heat':
+          case 'Rage':
+          case 'Grit':
+          case 'Ferocity':
+            this.partype='red darken-4'
+            break;
+          case 'Energy':
+            this.partype='amber darken-2'
+            break;
+          case 'Flow':
+          case 'Shield':
+          case 'None':
+              this.partype='grey darken-2'        
+              break;  
+          default:
+            break;
+        }
+        console.log(this.partype)
+
     } 
     catch (e) {
       return e; 
