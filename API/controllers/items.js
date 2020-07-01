@@ -23,14 +23,14 @@ var prefixes = `
 var getLink = "http://localhost:7200/repositories/LoLDEVELOPMENT" + "?query=";
 
 Item.getItems = async function () {
-  var query = `select  ?items ?name ?desc ?imagePath ?fullItem where {
-    ?items a lol:Item.
-    ?items lol:name ?name.
-    ?items lol:description ?desc.
-    ?items lol:hasImage ?image.
+  var query = `select  ?itemID ?name ?desc ?imagePath ?fullItem where {
+    ?item a lol:Item.
+    ?item lol:name ?name.
+    ?item lol:description ?desc.
+    ?item lol:hasImage ?image.
     ?image lol:path ?imagePath.
+    bind(strafter(str(?item),'LeagueOfLegends#') as ?itemID)
     BIND( EXISTS { ?items a lol:FullItem } as ?fullItem )
-   
 }`;
   var encoded = encodeURIComponent(prefixes + query);
   try {
@@ -40,6 +40,51 @@ Item.getItems = async function () {
     throw e;
   }
 };
+
+
+Item.getItemsTypes = async function () {
+  var query = `select  ?itemID ?type  where {
+    ?item a lol:Item.
+    ?item lol:hasItemTag ?tag.
+    ?tag lol:hasItemType ?typeLong.
+    bind(strafter(str(?item),'LeagueOfLegends#') as ?itemID)
+    bind(strafter(str(?typeLong),'LeagueOfLegends#') as ?type)
+  } ORDER BY (?itemID)`;
+  var encoded = encodeURIComponent(prefixes + query);
+  try {
+    var response = await axios.get(getLink + encoded);
+    return myNormalize(response.data);
+  } catch (e) {
+    throw e;
+  }
+};
+
+Item.getItems2 = async function () {
+  try {
+    var items     = await Item.getItems();
+    var types     = await Item.getItemsTypes();
+
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      items[i].type = []
+      for (let j = 0; j < types.length; j++) {
+        const type = types[j];
+        if(item.itemID == type.itemID) {
+          items[i].type.push(type.type)
+        }
+      }
+    }
+    var result = {
+      item:items,
+    };
+
+
+    return result;
+  } catch (e) {
+    throw e;
+  }
+};
+
 
 Item.getItem = async function (idItem) {
     try {
@@ -167,7 +212,8 @@ Item.getItemType = async function (idItem) {
 Item.getDistinctItemTags = async function () {
     var query = `select distinct ?tag where {
         ?items a lol:Item.
-        ?items lol:hasItemTag ?tag.
+        ?items lol:hasItemTag ?tagLong.
+        bind(strafter(str(?tagLong),'LeagueOfLegends#') as ?tag)
     }`;
     var encoded = encodeURIComponent(prefixes + query);
   
@@ -183,10 +229,10 @@ Item.getDistinctItemTypes = async function () {
     var query = `select distinct ?type where {
         ?items a lol:Item.
         ?items lol:hasItemTag ?tag.
-        ?tag lol:hasItemType ?type
+        ?tag lol:hasItemType ?typeLong
+        bind(strafter(str(?typeLong),'LeagueOfLegends#') as ?type)
     }`;
     var encoded = encodeURIComponent(prefixes + query);
-  
     try {
       var response = await axios.get(getLink + encoded);
       return myNormalize(response.data);
@@ -194,6 +240,23 @@ Item.getDistinctItemTypes = async function () {
       throw e;
     }
 };
+
+Item.getTagsbyType = async function () {
+  var query = `select ?type ?tag where {
+    ?tagLong a lol:ItemTag.
+    ?tagLong lol:hasItemType ?typeLong.
+    bind(strafter(str(?typeLong),'LeagueOfLegends#') as ?type)
+    bind(strafter(str(?tagLong),'LeagueOfLegends#') as ?tag)
+  }ORDER BY (?type)`;
+
+  var encoded = encodeURIComponent(prefixes + query);
+  try {
+    var response = await axios.get(getLink + encoded);
+    return myNormalize(response.data);
+  } catch (e) {
+    throw e;
+  }
+}
 
 Item.getItemsByTag = async function (tag) {
     var query = `select ?name ?itemsid where {
@@ -212,16 +275,22 @@ Item.getItemsByTag = async function (tag) {
     }
 };
 
+
+
+
 Item.getItemsByType = async function (type) {
-    var query = `select ?name ?itemsid where {
-        ?items a lol:Item.
-        ?items lol:name ?name.
-        ?items lol:hasItemTag ?tag.
-        ?tag lol:hasItemType lol:${type}
-        bind(strafter(str(?items),'LeagueOfLegends#') as ?itemsid)
+    var query = `select distinct ?itemID ?name ?desc ?imagePath ?fullItem  where {
+      ?items a lol:Item.
+      ?items lol:name ?name.
+      ?items lol:hasItemTag ?tag.
+    ?items lol:description ?desc.
+    ?items lol:hasImage ?image.
+    ?image lol:path ?imagePath.
+      ?tag lol:hasItemType lol:${type}
+      bind(strafter(str(?items),'LeagueOfLegends#') as ?itemID)
+    BIND( EXISTS { ?items a lol:FullItem } as ?fullItem )
     }`;
     var encoded = encodeURIComponent(prefixes + query);
-  
     try {
       var response = await axios.get(getLink + encoded);
       return myNormalize(response.data);
