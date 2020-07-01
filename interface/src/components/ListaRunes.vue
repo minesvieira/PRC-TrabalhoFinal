@@ -1,21 +1,75 @@
 <template>
-  <v-container class="black">
-    <v-row no-gutters>
-      <template v-for="item in runes">
-        <v-col :key="item.name">
-          <v-card
-            class="black"
-            outlined
-            tile
-            justify="left"
-          >
-             <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
-             <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
-             
-          </v-card>
+  <v-container class="bv-example-row">
+      <v-row
+        no-gutters
+      >
+        <p class="white--text"> PRECISION</p>
+        <v-col class="mb-2">
+          <v-list-item v-for="item in runes" :key="item.name">
+            <v-card
+              class="black"
+              outlined
+              tile
+              justify="left"
+            >
+              <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+              <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+            </v-card>
+          </v-list-item>
         </v-col>
-      </template>
-    </v-row>
+        <v-col class="mb-2">
+          <v-list-item v-for="item in runes" :key="item.name">
+            <v-card
+              class="black"
+              outlined
+              tile
+              justify="left"
+            >
+              <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+              <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+            </v-card>
+          </v-list-item>
+        </v-col>
+        <v-col class="mb-2">
+          <v-list-item v-for="item in runes" :key="item.name">
+            <v-card
+              class="black"
+              outlined
+              tile
+              justify="left"
+            >
+              <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+              <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+            </v-card>
+          </v-list-item>
+        </v-col>
+        <v-col class="mb-2">
+          <v-list-item v-for="item in runes" :key="item.name">
+            <v-card
+              class="black"
+              outlined
+              tile
+              justify="left"
+            >
+              <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+              <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+            </v-card>
+          </v-list-item>
+        </v-col>
+        <v-col class="mb-2">
+          <v-list-item v-for="item in runes" :key="item.name">
+            <v-card
+              class="black"
+              outlined
+              tile
+              justify="left"
+            >
+              <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+              <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
+            </v-card>
+          </v-list-item>
+        </v-col>
+      </v-row>
   </v-container>
 </template>
 

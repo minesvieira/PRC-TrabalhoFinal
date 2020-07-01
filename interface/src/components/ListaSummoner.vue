@@ -1,7 +1,7 @@
 <template>
   <v-container class="black">
     <v-row no-gutters>
-      <template v-for="item in runes">
+      <template v-for="item in summoner">
         <v-col :key="item.name">
           <v-card
             class="black"
@@ -9,7 +9,7 @@
             tile
             justify="left"
           >
-             <v-img v-bind:src="require('@/assets' + item.imagePath)" aspect-ratio="1" height="80" width="80"> </v-img>
+             <v-img v-bind:src="require('@/assets/spell/' + item.path)" aspect-ratio="1" height="80" width="80"> </v-img>
              <div class="white--text" justify="center" align="center"> {{ item.name }} </div>
              
           </v-card>
@@ -30,14 +30,14 @@ export default {
 
   data: () => ({
 
-    runes: [],
+    summoner: [],
     verPersonagem: mdiMovieOpen
   }),
 
   created: async function(){
     try {
-      let response = await axios.get(lhost + "/rune");
-      this.runes = response.data
+      let response = await axios.get(lhost + "/summoner");
+      this.summoner = response.data
     } 
     catch (e) {
       return e;
