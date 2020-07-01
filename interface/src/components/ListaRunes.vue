@@ -3,8 +3,8 @@
       <v-row
         no-gutters
       >
-        <p class="white--text"> PRECISION</p>
         <v-col class="mb-2">
+          <p class="white--text"> Precision </p>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -18,6 +18,7 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
+          <p class="white--text"> Domination </p>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -31,6 +32,7 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
+          <p class="white--text"> Sorcery </p>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -44,6 +46,7 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
+          <p class="white--text"> Resolve </p>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -57,6 +60,7 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
+          <p class="white--text"> Inspiration </p>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
