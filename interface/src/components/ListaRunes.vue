@@ -4,7 +4,9 @@
         no-gutters
       >
         <v-col class="mb-2">
-          <p class="white--text"> Precision </p>
+          <h3 class="white--text"> Precision </h3>
+          <v-img v-bind:src="require('@/assets/perk-images/Styles/7201_Precision.png')" aspect-ratio="1" height="40" width="40"> </v-img>
+          <v-space></v-space>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -18,7 +20,9 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
-          <p class="white--text"> Domination </p>
+          <h3 class="white--text"> Domination </h3>
+          <v-img v-bind:src="require('@/assets/perk-images/Styles/7200_Domination.png')" aspect-ratio="1" height="40" width="40"> </v-img>
+          <br>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -32,7 +36,8 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
-          <p class="white--text"> Sorcery </p>
+          <h3 class="white--text"> Sorcery </h3>
+          <v-img v-bind:src="require('@/assets/perk-images/Styles/7202_Sorcery.png')" aspect-ratio="1" height="40" width="40"> </v-img>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -46,7 +51,8 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
-          <p class="white--text"> Resolve </p>
+          <h3 class="white--text"> Resolve </h3>
+          <v-img v-bind:src="require('@/assets/perk-images/Styles/7204_Resolve.png')" aspect-ratio="1" height="40" width="40"> </v-img>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
@@ -60,7 +66,8 @@
           </v-list-item>
         </v-col>
         <v-col class="mb-2">
-          <p class="white--text"> Inspiration </p>
+          <h3 class="white--text"> Inspiration </h3>
+          <v-img v-bind:src="require('@/assets/perk-images/Styles/7203_Whimsy.png')" aspect-ratio="1" height="40" width="40"> </v-img>
           <v-list-item v-for="item in runes" :key="item.name">
             <v-card
               class="black"
