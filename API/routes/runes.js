@@ -9,6 +9,20 @@ router.get("/", function (req, res, next) { //Make this present some information
     .catch((e) => res.status(500).send(`Error listing classes: ${e}`));
 });
 
+
+router.get("/runeAndTree", function (req, res, next) { //Make this present some information...
+  Runes.getRuneWithTree()
+    .then((dados) => {{res.json(dados);}} )
+    .catch((e) => res.status(500).send(`Error listing runes and trees: ${e}`));
+});
+
+router.get("/trees", function (req, res) {
+  Runes.getTrees()
+    .then((dados) => res.jsonp(dados))
+    .catch((e) => res.status(500).send(`Error listing trees: ${e}`));
+});
+
+
 router.get("/:id", function (req, res) {
   Runes.getRuneCore(req.params.id)
     .then((dados) => res.jsonp(dados))
@@ -33,5 +47,6 @@ router.get("/fromTree/:id", function (req, res) {
       .then((dados) => res.jsonp(dados))
       .catch((e) => res.status(500).send(`Error listing classes: ${e}`));
   });
+
 
 module.exports = router;
