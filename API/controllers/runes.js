@@ -23,12 +23,15 @@ var prefixes = `
 var getLink = "http://localhost:7200/repositories/LoLDEVELOPMENT" + "?query=";
 
 Rune.getRunes = async function () {
-  var query = `select ?rune ?name ?desc ?imagePath where {
+  var query = `select ?runeID ?name ?desc ?imagePath ?tree where {
     ?rune a lol:Rune.
     ?rune lol:name ?name.
     ?rune lol:longDesc ?desc.
     ?rune lol:hasImage ?image.
     ?image lol:path ?imagePath.
+    ?rune lol:isFromTree ?treeLong.
+    bind(strafter(str(?treeLong),'LeagueOfLegends#') as ?tree)
+    bind(strafter(str(?rune),'LeagueOfLegends#') as ?runeID)
 }`;
   var encoded = encodeURIComponent(prefixes + query);
   try {
