@@ -42,6 +42,48 @@ Rune.getRunes = async function () {
   }
 };
 
+Rune.getRunesByTree = async function (idTree) {
+  var query = `select ?runeID ?name ?desc ?imagePath where {
+    ?rune a lol:Rune.
+    ?rune lol:name ?name.
+    ?rune lol:longDesc ?desc.
+    ?rune lol:hasImage ?image.
+    ?image lol:path ?imagePath.
+    ?rune lol:isFromTree lol:${idTree}.
+    bind(strafter(str(?rune),'LeagueOfLegends#') as ?runeID)
+}`;
+  var encoded = encodeURIComponent(prefixes + query);
+  try {
+    var response = await axios.get(getLink + encoded);
+    return myNormalize(response.data);
+  } catch (e) {
+    throw e;
+  }
+};
+
+var fs = require('fs')
+
+Rune.getRuneWithTree = async function () {
+  try {
+      var Domination = await Rune.getRuneTree('Domination');
+      var Precision = await Rune.getRuneTree('Precision');
+      var Inspiration = await Rune.getRuneTree('Inspiration');
+      var Resolve = await Rune.getRuneTree('Resolve');      
+      var Sorcery = await Rune.getRuneTree('Sorcery');
+
+      var result = {
+        Domination : Domination,
+        Precision : Precision,
+        Inspiration : Inspiration,
+        Resolve : Resolve,
+        Sorcery : Sorcery,
+      }
+      return result;
+    } catch (e) {
+      throw e;
+    }
+}
+
 Rune.getRuneImage = async function (idRune) {
     var query = `select ?imagePath where {
       lol:${idRune} a lol:Rune.
@@ -113,11 +155,31 @@ Rune.getFullRunes = async function (type) {
     }
 };
 
+Rune.getTrees = async function () {
+  var query = `select ?runeTree where {
+    ?runeTreeLong a lol:RuneTree . 
+    bind(strafter(str(?runeTreeLong),'LeagueOfLegends#') as ?runeTree)
+}`;
+  var encoded = encodeURIComponent(prefixes + query);
+
+  try {
+    var response = await axios.get(getLink + encoded);
+    return myNormalize(response.data);
+  } catch (e) {
+    throw e;
+  }
+};
+
+
 Rune.getRuneTree = async function (idTree) {
-    var query = `select ?rune ?runeName where {
+    var query = `select ?runeID ?name ?desc ?imagePath where {
         ?rune a lol:Rune.
+        ?rune lol:name ?name.
+        ?rune lol:longDesc ?desc.
+        ?rune lol:hasImage ?image.
+        ?image lol:path ?imagePath.
         ?rune lol:isFromTree lol:${idTree} . 
-        bind(strafter(str(?rune),'LeagueOfLegends#') as ?runeName)
+        bind(strafter(str(?rune),'LeagueOfLegends#') as ?runeID)
     }`;
     var encoded = encodeURIComponent(prefixes + query);
   
@@ -128,5 +190,4 @@ Rune.getRuneTree = async function (idTree) {
       throw e;
     }
 };
-
 
